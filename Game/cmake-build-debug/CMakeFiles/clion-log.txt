@@ -1,0 +1,5 @@
+/opt/clion-2020.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/rached/Bureau/CLion_SFML_HelloWorld/Game
+-- Found SFML 2.5.1 in /usr/include
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/rached/Bureau/CLion_SFML_HelloWorld/Game/cmake-build-debug

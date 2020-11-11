@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rached/Bureau/CLion_SFML_HelloWorld/Game/game/game.cpp
+SFML/Graphics.hpp
+-
+../ui/stopwatch.h
+/home/rached/Bureau/CLion_SFML_HelloWorld/Game/ui/stopwatch.h
+game.h
+/home/rached/Bureau/CLion_SFML_HelloWorld/Game/game/game.h
+
+/home/rached/Bureau/CLion_SFML_HelloWorld/Game/game/game.h
+
+/home/rached/Bureau/CLion_SFML_HelloWorld/Game/ui/stopwatch.h
+
