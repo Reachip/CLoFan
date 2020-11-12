@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/rached/Documents/CLoFan/game/player.cpp" "/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles/Game.dir/game/player.cpp.o"
   "/home/rached/Documents/CLoFan/main.cpp" "/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles/Game.dir/main.cpp.o"
-  "/home/rached/Documents/CLoFan/screens/cScreen.cpp" "/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles/Game.dir/screens/cScreen.cpp.o"
   "/home/rached/Documents/CLoFan/screens/gameBeginningScreen.cpp" "/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o"
   "/home/rached/Documents/CLoFan/screens/mainMenuScreen.cpp" "/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o"
   "/home/rached/Documents/CLoFan/ui/button.cpp" "/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles/Game.dir/ui/button.cpp.o"

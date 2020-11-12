@@ -3,7 +3,7 @@ project(Game)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp game/player.cpp game/player.h ui/button.cpp ui/button.h screens/cScreen.cpp screens/cScreen.h screens/mainMenuScreen.cpp screens/mainMenuScreen.h screens/gameBeginningScreen.cpp screens/gameBeginningScreen.h screens/screens.h)
+set(SOURCE_FILES main.cpp game/player.cpp game/player.h ui/button.cpp ui/button.h screens/cScreen.h screens/mainMenuScreen.cpp screens/mainMenuScreen.h screens/gameBeginningScreen.cpp screens/gameBeginningScreen.h screens/screens.h)
 add_executable(Game ${SOURCE_FILES})
 
 # Detect and add SFML
