@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rached/Documents/CLoFan/screens/cScreen.c
+mainMenu.h
+/home/rached/Documents/CLoFan/screens/mainMenu.h
+
+/home/rached/Documents/CLoFan/screens/mainMenu.c
+mainMenu.h
+/home/rached/Documents/CLoFan/screens/mainMenu.h
+SFML
+-
+
+/home/rached/Documents/CLoFan/screens/mainMenu.h
+SFML/Graphics.hpp
+-
+

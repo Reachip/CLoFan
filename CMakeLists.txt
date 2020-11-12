@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.7)
+project(Game)
+
+set(CMAKE_CXX_STANDARD 11)
+
+set(SOURCE_FILES main.cpp game/player.cpp game/player.h ui/button.cpp ui/button.h screens/cScreen.cpp screens/cScreen.h screens/mainMenuScreen.cpp screens/mainMenuScreen.h screens/gameBeginningScreen.cpp screens/gameBeginningScreen.h screens/screens.h)
+add_executable(Game ${SOURCE_FILES})
+
+# Detect and add SFML
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
+find_package(SFML 2 REQUIRED system graphics window network audio)
+if (SFML_FOUND)
+    include_directories(${SFML_INCLUDE_DIR})
+    target_link_libraries(${PROJECT_NAME} ${SFML_LIBRARIES})
+endif ()

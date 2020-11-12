@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rached/Documents/CLoFan/game/player.cpp
+player.h
+/home/rached/Documents/CLoFan/game/player.h
+
+/home/rached/Documents/CLoFan/game/player.h
+string
+-
+SFML/Graphics.hpp
+-
+
