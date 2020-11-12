@@ -2,9 +2,9 @@
 #define HEIGHT 1080
 #define WIDTH 1920
 #define WINDOWTITLE "CLoFan"
-#define MUSIC_PATH "../assets/music.ogg"
+#define MUSIC_PATH "./assets/music.ogg"
 #define MUSIC_VOLUME 2
-#define PLAYER_SPRIT_PATH "../assets/sprites/people/male_spellcast.png"
+#define PLAYER_SPRIT_PATH "./assets/sprites/people/male_spellcast.png"
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
@@ -15,13 +15,13 @@
 using namespace sf;
 
 int main() {
-    sf::Music music;
+    /*sf::Music music;
     music.setVolume(MUSIC_VOLUME);
 
     if (!music.openFromFile(MUSIC_PATH))
         return -1; // erreur
 
-    music.play();
+    music.play();*/
     int screen = 0;
 
     Player p1("rached", PLAYER_SPRIT_PATH);

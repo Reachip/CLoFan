@@ -2,7 +2,7 @@
 // Created by rached on 11/11/2020.
 //
 
-#define FONT_PATH "../assets/LiberationSerif-Regular.ttf"
+#define FONT_PATH "./assets/LiberationSerif-Regular.ttf"
 
 #include "mainMenuScreen.h"
 #include "../ui/button.h"
