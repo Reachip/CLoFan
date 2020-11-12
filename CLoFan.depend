@@ -1,0 +1,56 @@
+# depslib dependency file v1.0
+1605126346 source:/home/rached/Documents/CLoFan/game/game.cpp
+	<SFML/Graphics.hpp>
+	"../utils.h"
+	"game.h"
+
+1605094022 /home/rached/Documents/CLoFan/ui/stopwatch.h
+
+1605121613 /home/rached/Documents/CLoFan/game/game.h
+
+1605090413 source:/home/rached/Documents/CLoFan/game/map.cpp
+	"map.h"
+
+1605090413 /home/rached/Documents/CLoFan/game/map.h
+
+1605040482 source:/home/rached/Documents/CLoFan/game/player.cpp
+	"stdio.h"
+	"player.h"
+
+1605034274 /home/rached/Documents/CLoFan/game/player.h
+
+1605127740 source:/home/rached/Documents/CLoFan/main.cpp
+	"screens/cScreen.h"
+
+1605089663 /home/rached/Documents/CLoFan/ui/menu.h
+
+1605090601 source:/home/rached/Documents/CLoFan/ui/button.cpp
+	<SFML/Graphics.hpp>
+	"button.h"
+	<iostream>
+
+1605087920 /home/rached/Documents/CLoFan/ui/button.h
+
+1605127816 source:/home/rached/Documents/CLoFan/ui/menu.cpp
+	<SFML/Graphics.hpp>
+	"button.h"
+	"menu.h"
+
+1605101070 source:/home/rached/Documents/CLoFan/ui/stopwatch.cpp
+	<string>
+	"SFML/Graphics.hpp"
+	"stopwatch.h"
+
+1605126185 source:/home/rached/Documents/CLoFan/utils.cpp
+	<SFML/Graphics.hpp>
+	"utils.h"
+
+1605126204 /home/rached/Documents/CLoFan/utils.h
+
+1605127587 source:/home/rached/Documents/CLoFan/screens/cScreen.c
+
+1605127103 source:/home/rached/Documents/CLoFan/screens/mainMenu.c
+
+1605127727 /home/rached/Documents/CLoFan/screens/cScreen.h
+	<SFML/Graphics.hpp>
+

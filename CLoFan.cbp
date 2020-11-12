@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="CLoFan" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/CLoFan" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="sfml-graphics" />
+					<Add library="sfml-window" />
+					<Add library="sfml-system" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/CLoFan" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="sfml-graphics" />
+					<Add library="sfml-window" />
+					<Add library="sfml-system" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="assets/LiberationSerif-Regular.ttf" />
+		<Unit filename="assets/bg.gif" />
+		<Unit filename="cb.bmp" />
+		<Unit filename="game/player.cpp" />
+		<Unit filename="game/player.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="screens/cScreen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="screens/cScreen.h" />
+		<Unit filename="screens/mainMenu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="screens/mainMenu.h" />
+		<Unit filename="ui/button.cpp" />
+		<Unit filename="ui/button.h" />
+		<Unit filename="ui/menu.cpp" />
+		<Unit filename="ui/menu.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
