@@ -6,9 +6,47 @@
 
 #IncludeRegexTransform: 
 
+/home/rached/Documents/CLoFan/game/player.cpp
+player.h
+/home/rached/Documents/CLoFan/game/player.h
+
+/home/rached/Documents/CLoFan/game/player.h
+string
+-
+SFML/Graphics.hpp
+-
+
+/home/rached/Documents/CLoFan/main.cpp
+SFML/Graphics.hpp
+-
+SFML/Audio.hpp
+-
+screens/screens.h
+/home/rached/Documents/CLoFan/screens/screens.h
+game/player.h
+/home/rached/Documents/CLoFan/game/player.h
+
+/home/rached/Documents/CLoFan/screens/cScreen.cpp
+cScreen.h
+/home/rached/Documents/CLoFan/screens/cScreen.h
+
 /home/rached/Documents/CLoFan/screens/cScreen.h
 SFML/Graphics.hpp
 -
+
+/home/rached/Documents/CLoFan/screens/gameBeginningScreen.cpp
+SFML/Graphics.hpp
+-
+gameBeginningScreen.h
+/home/rached/Documents/CLoFan/screens/gameBeginningScreen.h
+../game/player.h
+/home/rached/Documents/CLoFan/game/player.h
+
+/home/rached/Documents/CLoFan/screens/gameBeginningScreen.h
+../game/player.h
+/home/rached/Documents/CLoFan/game/player.h
+cScreen.h
+/home/rached/Documents/CLoFan/screens/cScreen.h
 
 /home/rached/Documents/CLoFan/screens/mainMenuScreen.cpp
 mainMenuScreen.h
@@ -19,6 +57,22 @@ mainMenuScreen.h
 /home/rached/Documents/CLoFan/screens/mainMenuScreen.h
 cScreen.h
 /home/rached/Documents/CLoFan/screens/cScreen.h
+
+/home/rached/Documents/CLoFan/screens/screens.h
+cScreen.h
+/home/rached/Documents/CLoFan/screens/cScreen.h
+mainMenuScreen.h
+/home/rached/Documents/CLoFan/screens/mainMenuScreen.h
+gameBeginningScreen.h
+/home/rached/Documents/CLoFan/screens/gameBeginningScreen.h
+
+/home/rached/Documents/CLoFan/ui/button.cpp
+SFML/Graphics.hpp
+-
+button.h
+/home/rached/Documents/CLoFan/ui/button.h
+iostream
+-
 
 /home/rached/Documents/CLoFan/ui/button.h
 
