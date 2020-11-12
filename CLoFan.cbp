@@ -15,9 +15,9 @@
 					<Add option="-g" />
 				</Compiler>
 				<Linker>
-					<Add library="sfml-graphics" />
-					<Add library="sfml-window" />
-					<Add library="sfml-system" />
+					<Add library="sfml-graphics-d" />
+					<Add library="sfml-window-d" />
+					<Add library="sfml-system-d" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -38,25 +38,22 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="C:/Program Files (x86)/CodeBlocks/SFML-2.5.1/include" />
 		</Compiler>
-		<Unit filename="assets/LiberationSerif-Regular.ttf" />
-		<Unit filename="assets/bg.gif" />
+		<Linker>
+			<Add library="mingw32" />
+			<Add library="user32" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add library="dxguid" />
+			<Add directory="C:/Program Files (x86)/CodeBlocks/SFML-2.5.1/lib" />
+		</Linker>
 		<Unit filename="cb.bmp" />
-		<Unit filename="game/player.cpp" />
-		<Unit filename="game/player.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="screens/cScreen.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="screens/cScreen.h" />
-		<Unit filename="screens/mainMenu.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="screens/mainMenu.h" />
-		<Unit filename="ui/button.cpp" />
-		<Unit filename="ui/button.h" />
-		<Unit filename="ui/menu.cpp" />
-		<Unit filename="ui/menu.h" />
-		<Extensions />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
