@@ -1,3 +1,0 @@
-/home/rached/Bureau/CLion_SFML_HelloWorld/Game/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/rached/Bureau/CLion_SFML_HelloWorld/Game/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/rached/Bureau/CLion_SFML_HelloWorld/Game/cmake-build-debug/CMakeFiles/Game.dir
