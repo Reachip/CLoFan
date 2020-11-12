@@ -4,3 +4,4 @@ bin/
 *.layout
 obj/
 .idea/
+cmake-build-debug/Game
