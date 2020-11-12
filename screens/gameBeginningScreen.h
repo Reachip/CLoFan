@@ -14,7 +14,6 @@ private:
 
 public:
     gameBeginningScreen(Player &player);
-
     virtual int Run(sf::RenderWindow &App);
 };
 

@@ -7,9 +7,7 @@
 #include "mainMenuScreen.h"
 #include "../ui/button.h"
 
-mainMenuScreen::mainMenuScreen(void) {
-
-}
+mainMenuScreen::mainMenuScreen(void) {}
 
 int mainMenuScreen::Run(sf::RenderWindow &App) {
     bool Running = true;

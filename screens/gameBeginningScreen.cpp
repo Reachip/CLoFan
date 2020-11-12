@@ -14,6 +14,9 @@ int gameBeginningScreen::Run(sf::RenderWindow &App) {
     sf::Event event;
     bool Running = true;
 
+    player.move_up();
+    player.currentPosition.setPosition(120, 20);
+
     while (Running) {
         while (App.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
@@ -35,7 +38,7 @@ int gameBeginningScreen::Run(sf::RenderWindow &App) {
                 player.move_on_right();
 
             App.clear();
-            player.update(App);
+            App.draw(player.currentPosition);
             App.display();
         }
     }
