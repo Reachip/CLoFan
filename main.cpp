@@ -15,14 +15,18 @@
 using namespace sf;
 
 int main() {
-    /*sf::Music music;
+    sf::Music music;
     music.setVolume(MUSIC_VOLUME);
 
     if (!music.openFromFile(MUSIC_PATH))
         return -1; // erreur
 
-    music.play();*/
+    music.play();
     int screen = 0;
+
+    VideoMode videoMode = VideoMode(WIDTH, HEIGHT);
+    RenderWindow App(videoMode, WINDOWTITLE);
+    App.setFramerateLimit(FPS);
 
     Player p1("rached", PLAYER_SPRIT_PATH);
     std::vector<cScreen *> Screens;
@@ -34,10 +38,6 @@ int main() {
     Screens.push_back(&mainMenu);
     Screens.push_back(&gameBeginning1);
     Screens.push_back(&gameBeginning);
-
-    VideoMode videoMode = VideoMode(WIDTH, HEIGHT);
-    RenderWindow App(videoMode, WINDOWTITLE);
-    App.setFramerateLimit(FPS);
 
     while (screen >= 0)
         screen = Screens[screen]->Run(App);
