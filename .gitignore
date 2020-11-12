@@ -1,3 +1,6 @@
 bin/
+*.cbp
+*.depend
+*.layout
 obj/
 .idea/
