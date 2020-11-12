@@ -10,6 +10,7 @@ CMakeFiles/Game.dir/main.cpp.o
  /home/rached/Documents/CLoFan/screens/cScreen.h
  /home/rached/Documents/CLoFan/screens/gameBeginningScreen.h
  /home/rached/Documents/CLoFan/screens/mainMenuScreen.h
+ /home/rached/Documents/CLoFan/screens/scene1Screen.h
  /home/rached/Documents/CLoFan/screens/screens.h
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o
  /home/rached/Documents/CLoFan/game/player.h
@@ -21,6 +22,10 @@ CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o
  /home/rached/Documents/CLoFan/screens/mainMenuScreen.cpp
  /home/rached/Documents/CLoFan/screens/mainMenuScreen.h
  /home/rached/Documents/CLoFan/ui/button.h
+CMakeFiles/Game.dir/screens/scene1Screen.cpp.o
+ /home/rached/Documents/CLoFan/screens/cScreen.h
+ /home/rached/Documents/CLoFan/screens/scene1Screen.cpp
+ /home/rached/Documents/CLoFan/screens/scene1Screen.h
 CMakeFiles/Game.dir/ui/button.cpp.o
  /home/rached/Documents/CLoFan/ui/button.cpp
  /home/rached/Documents/CLoFan/ui/button.h

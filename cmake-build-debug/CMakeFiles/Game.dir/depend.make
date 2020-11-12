@@ -9,6 +9,7 @@ CMakeFiles/Game.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Game.dir/main.cpp.o: ../screens/cScreen.h
 CMakeFiles/Game.dir/main.cpp.o: ../screens/gameBeginningScreen.h
 CMakeFiles/Game.dir/main.cpp.o: ../screens/mainMenuScreen.h
+CMakeFiles/Game.dir/main.cpp.o: ../screens/scene1Screen.h
 CMakeFiles/Game.dir/main.cpp.o: ../screens/screens.h
 
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../game/player.h
@@ -20,6 +21,10 @@ CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../screens/cScreen.h
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../screens/mainMenuScreen.cpp
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../screens/mainMenuScreen.h
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../ui/button.h
+
+CMakeFiles/Game.dir/screens/scene1Screen.cpp.o: ../screens/cScreen.h
+CMakeFiles/Game.dir/screens/scene1Screen.cpp.o: ../screens/scene1Screen.cpp
+CMakeFiles/Game.dir/screens/scene1Screen.cpp.o: ../screens/scene1Screen.h
 
 CMakeFiles/Game.dir/ui/button.cpp.o: ../ui/button.cpp
 CMakeFiles/Game.dir/ui/button.cpp.o: ../ui/button.h

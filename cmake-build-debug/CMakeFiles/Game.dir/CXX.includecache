@@ -6,3 +6,15 @@
 
 #IncludeRegexTransform: 
 
+/home/rached/Documents/CLoFan/screens/cScreen.h
+SFML/Graphics.hpp
+-
+
+/home/rached/Documents/CLoFan/screens/scene1Screen.cpp
+scene1Screen.h
+/home/rached/Documents/CLoFan/screens/scene1Screen.h
+
+/home/rached/Documents/CLoFan/screens/scene1Screen.h
+cScreen.h
+/home/rached/Documents/CLoFan/screens/cScreen.h
+

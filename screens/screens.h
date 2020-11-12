@@ -9,6 +9,7 @@
 #include "cScreen.h"
 #include "mainMenuScreen.h"
 #include "gameBeginningScreen.h"
+#include "scene1Screen.h"
 
 extern const std::string FONT_PATH = "../assets/LiberationSerif-Regular.ttf";
 

@@ -251,6 +251,33 @@ screens/mainMenuScreen.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.s
 .PHONY : screens/mainMenuScreen.cpp.s
 
+screens/scene1Screen.o: screens/scene1Screen.cpp.o
+
+.PHONY : screens/scene1Screen.o
+
+# target to build an object file
+screens/scene1Screen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/screens/scene1Screen.cpp.o
+.PHONY : screens/scene1Screen.cpp.o
+
+screens/scene1Screen.i: screens/scene1Screen.cpp.i
+
+.PHONY : screens/scene1Screen.i
+
+# target to preprocess a source file
+screens/scene1Screen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/screens/scene1Screen.cpp.i
+.PHONY : screens/scene1Screen.cpp.i
+
+screens/scene1Screen.s: screens/scene1Screen.cpp.s
+
+.PHONY : screens/scene1Screen.s
+
+# target to generate assembly for a file
+screens/scene1Screen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/screens/scene1Screen.cpp.s
+.PHONY : screens/scene1Screen.cpp.s
+
 ui/button.o: ui/button.cpp.o
 
 .PHONY : ui/button.o
@@ -299,6 +326,9 @@ help:
 	@echo "... screens/mainMenuScreen.o"
 	@echo "... screens/mainMenuScreen.i"
 	@echo "... screens/mainMenuScreen.s"
+	@echo "... screens/scene1Screen.o"
+	@echo "... screens/scene1Screen.i"
+	@echo "... screens/scene1Screen.s"
 	@echo "... ui/button.o"
 	@echo "... ui/button.i"
 	@echo "... ui/button.s"

@@ -33,11 +33,11 @@ int main() {
 
     mainMenuScreen mainMenu;
     gameBeginningScreen gameBeginning(p1);
-    gameBeginningScreen gameBeginning1(p1);
+    scene1Screen scene1;
 
     Screens.push_back(&mainMenu);
-    Screens.push_back(&gameBeginning1);
     Screens.push_back(&gameBeginning);
+    Screens.push_back(&scene1);
 
     while (screen >= 0)
         screen = Screens[screen]->Run(App);

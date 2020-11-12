@@ -30,7 +30,6 @@ int mainMenuScreen::Run(sf::RenderWindow &App) {
             if (Event.type == sf::Event::Closed)
                 Running = false;
 
-
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
                 return 1;
 

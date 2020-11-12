@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Game.dir/main.cpp.o"
   "CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o"
   "CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o"
+  "CMakeFiles/Game.dir/screens/scene1Screen.cpp.o"
   "CMakeFiles/Game.dir/ui/button.cpp.o"
   "Game"
   "Game.pdb"
