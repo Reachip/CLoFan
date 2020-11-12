@@ -1,14 +1,13 @@
-#define FPS 60
-#define HEIGHT 1080
-#define WIDTH 1920
+#define FPS 30
+#define HEIGHT 600
+#define WIDTH 1058
 #define WINDOWTITLE "CLoFan"
 #define MUSIC_PATH "./assets/music.ogg"
 #define MUSIC_VOLUME 2
-#define PLAYER_SPRIT_PATH "./assets/sprites/people/male_spellcast.png"
+#define PLAYER_SPRIT_PATH "./assets/fumiko.png"
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-
 #include "screens/screens.h"
 #include "game/player.h"
 
@@ -24,7 +23,7 @@ int main() {
     music.play();
     int screen = 0;
 
-    VideoMode videoMode = VideoMode(WIDTH, HEIGHT);
+    VideoMode videoMode = VideoMode(WIDTH, HEIGHT, sf::Style::Fullscreen);
     RenderWindow App(videoMode, WINDOWTITLE);
     App.setFramerateLimit(FPS);
 
