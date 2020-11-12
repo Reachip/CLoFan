@@ -6,13 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/rached/Documents/CLoFan/game/player.cpp
-player.h
-/home/rached/Documents/CLoFan/game/player.h
-
-/home/rached/Documents/CLoFan/game/player.h
-string
--
+/home/rached/Documents/CLoFan/screens/cScreen.h
 SFML/Graphics.hpp
 -
+
+/home/rached/Documents/CLoFan/screens/mainMenuScreen.cpp
+mainMenuScreen.h
+/home/rached/Documents/CLoFan/screens/mainMenuScreen.h
+../ui/button.h
+/home/rached/Documents/CLoFan/ui/button.h
+
+/home/rached/Documents/CLoFan/screens/mainMenuScreen.h
+cScreen.h
+/home/rached/Documents/CLoFan/screens/cScreen.h
+
+/home/rached/Documents/CLoFan/ui/button.h
 
