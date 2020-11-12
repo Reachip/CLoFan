@@ -6,15 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/home/rached/Documents/CLoFan/screens/cScreen.h
+/home/rached/CLionProjects/untitled1/game/player.h
+string
+-
 SFML/Graphics.hpp
 -
 
-/home/rached/Documents/CLoFan/screens/scene1Screen.cpp
-scene1Screen.h
-/home/rached/Documents/CLoFan/screens/scene1Screen.h
+/home/rached/CLionProjects/untitled1/screens/cScreen.h
+SFML/Graphics.hpp
+-
 
-/home/rached/Documents/CLoFan/screens/scene1Screen.h
+/home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.cpp
+SFML/Graphics.hpp
+-
+gameBeginningScreen.h
+/home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.h
+../game/player.h
+/home/rached/CLionProjects/untitled1/game/player.h
+
+/home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.h
+../game/player.h
+/home/rached/CLionProjects/untitled1/game/player.h
 cScreen.h
-/home/rached/Documents/CLoFan/screens/cScreen.h
+/home/rached/CLionProjects/untitled1/screens/cScreen.h
 

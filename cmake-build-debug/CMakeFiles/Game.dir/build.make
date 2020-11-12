@@ -63,10 +63,10 @@ RM = /opt/clion-2020.2.4/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rached/Documents/CLoFan
+CMAKE_SOURCE_DIR = /home/rached/CLionProjects/untitled1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rached/Documents/CLoFan/cmake-build-debug
+CMAKE_BINARY_DIR = /home/rached/CLionProjects/untitled1/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Game.dir/depend.make
@@ -79,81 +79,81 @@ include CMakeFiles/Game.dir/flags.make
 
 CMakeFiles/Game.dir/main.cpp.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Game.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/main.cpp.o -c /home/rached/Documents/CLoFan/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Game.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/main.cpp.o -c /home/rached/CLionProjects/untitled1/main.cpp
 
 CMakeFiles/Game.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rached/Documents/CLoFan/main.cpp > CMakeFiles/Game.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rached/CLionProjects/untitled1/main.cpp > CMakeFiles/Game.dir/main.cpp.i
 
 CMakeFiles/Game.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rached/Documents/CLoFan/main.cpp -o CMakeFiles/Game.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rached/CLionProjects/untitled1/main.cpp -o CMakeFiles/Game.dir/main.cpp.s
 
 CMakeFiles/Game.dir/game/player.cpp.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/player.cpp.o: ../game/player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Game.dir/game/player.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/player.cpp.o -c /home/rached/Documents/CLoFan/game/player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Game.dir/game/player.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/player.cpp.o -c /home/rached/CLionProjects/untitled1/game/player.cpp
 
 CMakeFiles/Game.dir/game/player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rached/Documents/CLoFan/game/player.cpp > CMakeFiles/Game.dir/game/player.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rached/CLionProjects/untitled1/game/player.cpp > CMakeFiles/Game.dir/game/player.cpp.i
 
 CMakeFiles/Game.dir/game/player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rached/Documents/CLoFan/game/player.cpp -o CMakeFiles/Game.dir/game/player.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rached/CLionProjects/untitled1/game/player.cpp -o CMakeFiles/Game.dir/game/player.cpp.s
 
 CMakeFiles/Game.dir/ui/button.cpp.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/ui/button.cpp.o: ../ui/button.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Game.dir/ui/button.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/ui/button.cpp.o -c /home/rached/Documents/CLoFan/ui/button.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Game.dir/ui/button.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/ui/button.cpp.o -c /home/rached/CLionProjects/untitled1/ui/button.cpp
 
 CMakeFiles/Game.dir/ui/button.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/ui/button.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rached/Documents/CLoFan/ui/button.cpp > CMakeFiles/Game.dir/ui/button.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rached/CLionProjects/untitled1/ui/button.cpp > CMakeFiles/Game.dir/ui/button.cpp.i
 
 CMakeFiles/Game.dir/ui/button.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/ui/button.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rached/Documents/CLoFan/ui/button.cpp -o CMakeFiles/Game.dir/ui/button.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rached/CLionProjects/untitled1/ui/button.cpp -o CMakeFiles/Game.dir/ui/button.cpp.s
 
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../screens/mainMenuScreen.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o -c /home/rached/Documents/CLoFan/screens/mainMenuScreen.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o -c /home/rached/CLionProjects/untitled1/screens/mainMenuScreen.cpp
 
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rached/Documents/CLoFan/screens/mainMenuScreen.cpp > CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rached/CLionProjects/untitled1/screens/mainMenuScreen.cpp > CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.i
 
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rached/Documents/CLoFan/screens/mainMenuScreen.cpp -o CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rached/CLionProjects/untitled1/screens/mainMenuScreen.cpp -o CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.s
 
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../screens/gameBeginningScreen.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o -c /home/rached/Documents/CLoFan/screens/gameBeginningScreen.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o -c /home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.cpp
 
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rached/Documents/CLoFan/screens/gameBeginningScreen.cpp > CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.cpp > CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.i
 
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rached/Documents/CLoFan/screens/gameBeginningScreen.cpp -o CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.cpp -o CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.s
 
 CMakeFiles/Game.dir/screens/scene1Screen.cpp.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/screens/scene1Screen.cpp.o: ../screens/scene1Screen.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Game.dir/screens/scene1Screen.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/screens/scene1Screen.cpp.o -c /home/rached/Documents/CLoFan/screens/scene1Screen.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Game.dir/screens/scene1Screen.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/screens/scene1Screen.cpp.o -c /home/rached/CLionProjects/untitled1/screens/scene1Screen.cpp
 
 CMakeFiles/Game.dir/screens/scene1Screen.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/screens/scene1Screen.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rached/Documents/CLoFan/screens/scene1Screen.cpp > CMakeFiles/Game.dir/screens/scene1Screen.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rached/CLionProjects/untitled1/screens/scene1Screen.cpp > CMakeFiles/Game.dir/screens/scene1Screen.cpp.i
 
 CMakeFiles/Game.dir/screens/scene1Screen.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/screens/scene1Screen.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rached/Documents/CLoFan/screens/scene1Screen.cpp -o CMakeFiles/Game.dir/screens/scene1Screen.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rached/CLionProjects/untitled1/screens/scene1Screen.cpp -o CMakeFiles/Game.dir/screens/scene1Screen.cpp.s
 
 # Object files for target Game
 Game_OBJECTS = \
@@ -180,7 +180,7 @@ Game: /usr/lib64/libsfml-window.so
 Game: /usr/lib64/libsfml-network.so
 Game: /usr/lib64/libsfml-audio.so
 Game: CMakeFiles/Game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Game.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -193,6 +193,6 @@ CMakeFiles/Game.dir/clean:
 .PHONY : CMakeFiles/Game.dir/clean
 
 CMakeFiles/Game.dir/depend:
-	cd /home/rached/Documents/CLoFan/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rached/Documents/CLoFan /home/rached/Documents/CLoFan /home/rached/Documents/CLoFan/cmake-build-debug /home/rached/Documents/CLoFan/cmake-build-debug /home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles/Game.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rached/CLionProjects/untitled1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rached/CLionProjects/untitled1 /home/rached/CLionProjects/untitled1 /home/rached/CLionProjects/untitled1/cmake-build-debug /home/rached/CLionProjects/untitled1/cmake-build-debug /home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Game.dir/depend
 

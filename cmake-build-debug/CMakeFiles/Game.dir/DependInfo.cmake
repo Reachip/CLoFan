@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/rached/Documents/CLoFan/game/player.cpp" "/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles/Game.dir/game/player.cpp.o"
-  "/home/rached/Documents/CLoFan/main.cpp" "/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles/Game.dir/main.cpp.o"
-  "/home/rached/Documents/CLoFan/screens/gameBeginningScreen.cpp" "/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o"
-  "/home/rached/Documents/CLoFan/screens/mainMenuScreen.cpp" "/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o"
-  "/home/rached/Documents/CLoFan/screens/scene1Screen.cpp" "/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles/Game.dir/screens/scene1Screen.cpp.o"
-  "/home/rached/Documents/CLoFan/ui/button.cpp" "/home/rached/Documents/CLoFan/cmake-build-debug/CMakeFiles/Game.dir/ui/button.cpp.o"
+  "/home/rached/CLionProjects/untitled1/game/player.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/game/player.cpp.o"
+  "/home/rached/CLionProjects/untitled1/main.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/main.cpp.o"
+  "/home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o"
+  "/home/rached/CLionProjects/untitled1/screens/mainMenuScreen.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o"
+  "/home/rached/CLionProjects/untitled1/screens/scene1Screen.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/screens/scene1Screen.cpp.o"
+  "/home/rached/CLionProjects/untitled1/ui/button.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/ui/button.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
