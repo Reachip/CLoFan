@@ -11,13 +11,13 @@ int scene1Screen::Run(sf::RenderWindow &App) {
     bool Running = true;
 
     while (Running) {
-        while(App.pollEvent(event)) {
+        while (App.pollEvent(event)) {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) || event.type == sf::Event::Closed)
                 Running = false;
-
-            App.clear();
-            App.display();
         }
+
+        App.clear();
+        App.display();
     }
 
     return 0; // Va au menu principal

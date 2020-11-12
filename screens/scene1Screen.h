@@ -10,8 +10,9 @@
 
 class scene1Screen : public cScreen {
 public:
-        scene1Screen(void);
-        virtual int Run(sf::RenderWindow &App);
+    scene1Screen(void);
+
+    virtual int Run(sf::RenderWindow &App);
 };
 
 
