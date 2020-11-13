@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/rached/CLionProjects/untitled1/game/player.cpp
+player.h
+/home/rached/CLionProjects/untitled1/game/player.h
+
 /home/rached/CLionProjects/untitled1/game/player.h
 string
 -
@@ -23,6 +27,20 @@ SFML/Graphics/Texture.hpp
 -
 SFML/Graphics/RenderTarget.hpp
 -
+
+/home/rached/CLionProjects/untitled1/main.cpp
+SFML/Graphics.hpp
+-
+SFML/Audio.hpp
+-
+screens/screens.h
+/home/rached/CLionProjects/untitled1/screens/screens.h
+game/player.h
+/home/rached/CLionProjects/untitled1/game/player.h
+
+/home/rached/CLionProjects/untitled1/screens/cScreen.cpp
+cScreen.h
+/home/rached/CLionProjects/untitled1/screens/cScreen.h
 
 /home/rached/CLionProjects/untitled1/screens/cScreen.h
 SFML/Graphics.hpp
@@ -45,4 +63,40 @@ gameBeginningScreen.h
 /home/rached/CLionProjects/untitled1/game/player.h
 cScreen.h
 /home/rached/CLionProjects/untitled1/screens/cScreen.h
+
+/home/rached/CLionProjects/untitled1/screens/mainMenuScreen.cpp
+iostream
+-
+../game/player.h
+/home/rached/CLionProjects/untitled1/game/player.h
+mainMenuScreen.h
+/home/rached/CLionProjects/untitled1/screens/mainMenuScreen.h
+../ui/button.h
+/home/rached/CLionProjects/untitled1/ui/button.h
+
+/home/rached/CLionProjects/untitled1/screens/mainMenuScreen.h
+cScreen.h
+/home/rached/CLionProjects/untitled1/screens/cScreen.h
+../game/player.h
+/home/rached/CLionProjects/untitled1/game/player.h
+
+/home/rached/CLionProjects/untitled1/screens/scene1Screen.cpp
+scene1Screen.h
+/home/rached/CLionProjects/untitled1/screens/scene1Screen.h
+
+/home/rached/CLionProjects/untitled1/screens/scene1Screen.h
+cScreen.h
+/home/rached/CLionProjects/untitled1/screens/cScreen.h
+
+/home/rached/CLionProjects/untitled1/screens/screens.h
+cScreen.h
+/home/rached/CLionProjects/untitled1/screens/cScreen.h
+mainMenuScreen.h
+/home/rached/CLionProjects/untitled1/screens/mainMenuScreen.h
+gameBeginningScreen.h
+/home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.h
+scene1Screen.h
+/home/rached/CLionProjects/untitled1/screens/scene1Screen.h
+
+/home/rached/CLionProjects/untitled1/ui/button.h
 
