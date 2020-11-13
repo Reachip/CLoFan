@@ -8,6 +8,8 @@
 
 Player::Player(std::string name, std::string spritePath) {
     this->name = name;
+    this->animation = sf::Vector2i(1, 1);
+    this->clock = sf::Clock();
 
     sf::Texture texture;
 
@@ -24,20 +26,32 @@ void Player::_addSprite(sf::IntRect spritePosition) {
 
 void Player::move_up() {
     this->currentPosition.move(0, -STEP);
-    _addSprite(sf::IntRect(0, 0, 64, 64));
+    this->animation.y = 4;
 }
 
 void Player::move_down() {
     this->currentPosition.move(0, STEP);
-    _addSprite(sf::IntRect(0, 64 * 2, 64, 64));
+    this->animation.y = 2;
 }
 
 void Player::move_on_left() {
     this->currentPosition.move(-STEP, 0);
-    _addSprite(sf::IntRect(0, 64 * 1, 64, 64));
+    this->animation.y = 3;
 }
 
 void Player::move_on_right() {
     this->currentPosition.move(STEP, 0);
-    _addSprite(sf::IntRect(0, 64 * 3, 64, 64));
+    this->animation.y = 1;
+}
+
+void Player::update() {
+    // Affiche une nouvelle texture toutes les 50 millisecondes.
+    if (clock.getElapsedTime().asMilliseconds() >= 50) {
+        if (this->animation.x * 24 > (5 * 24))
+            this->animation.x = 0;
+
+        this->animation.x += 1;
+        _addSprite(sf::IntRect(animation.x * 24, animation.y * 32, 24, 32));
+        clock.restart();
+    }
 }
