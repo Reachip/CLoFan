@@ -5,19 +5,27 @@
 #define FONT_PATH "./assets/LiberationSerif-Regular.ttf"
 #define MENU_BG "./assets/menu_sfml.png"
 
+#include <iostream>
+
+#include "../game/player.h"
 #include "mainMenuScreen.h"
 #include "../ui/button.h"
 
-mainMenuScreen::mainMenuScreen(void) {}
+mainMenuScreen::mainMenuScreen(Player &player) : player(player) {
+    this->player = player;
+}
 
 int mainMenuScreen::Run(sf::RenderWindow &App) {
     bool Running = true;
+    bool stopUpdatingPlayer = false;
+
     sf::Texture bg;
     sf::Event Event;
     sf::Sprite bgSprite;
     sf::Text quitButton = quitMenuButton();
     sf::Text startButton = startMenuButton();
     sf::Font font;
+    player.currentPosition.setPosition(0, 530);
 
     if (!bg.loadFromFile(MENU_BG) || !font.loadFromFile(FONT_PATH)) {
         throw;
@@ -45,10 +53,15 @@ int mainMenuScreen::Run(sf::RenderWindow &App) {
                 Running = false;
         }
 
+
+        player.move_on_right();
+        player.update();
+
         App.clear();
         App.draw(bgSprite);
         App.draw(quitButton);
         App.draw(startButton);
+        App.draw(player.currentPosition);
         App.display();
     }
 
