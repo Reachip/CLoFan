@@ -1,9 +1,12 @@
 //
 // Created by rached on 11/11/2020.
 //
-
+#include <iostream>
 #include <SFML/Graphics.hpp>
 #include "gameBeginningScreen.h"
+
+#define ECART_DE_PIXEL_COLLISION_FENETRE 25
+
 #include "../game/player.h"
 
 gameBeginningScreen::gameBeginningScreen(Player &player) : player(player) {
@@ -47,6 +50,7 @@ int gameBeginningScreen::Run(sf::RenderWindow &App) {
         if (animPlayer)
             player.update();
 
+        handleOutOfWindow(App, player);
         App.draw(player.currentPosition);
         App.display();
         App.clear();
