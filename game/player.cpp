@@ -5,6 +5,8 @@
 #include "player.h"
 
 #define STEP 6
+#define WIDTH 24
+#define HEIGHT 32
 
 Player::Player(std::string name, std::string spritePath) {
     this->name = name;
@@ -47,11 +49,18 @@ void Player::move_on_right() {
 void Player::update() {
     // Affiche une nouvelle texture toutes les 50 millisecondes.
     if (clock.getElapsedTime().asMilliseconds() >= 100) {
-        if (this->animation.x * 24 > (5 * 24))
+        if (this->animation.x * WIDTH > (4 * WIDTH))
             this->animation.x = 0;
 
         this->animation.x += 1;
-        _addSprite(sf::IntRect(animation.x * 24, animation.y * 32, 24, 32));
+        _addSprite(sf::IntRect(animation.x * WIDTH, animation.y * 32, WIDTH, HEIGHT));
         clock.restart();
     }
+}
+
+
+void Player::draw(sf::RenderTarget &target, sf::RenderStates states) const {
+    states.transform *= getTransform();
+    states.texture = &texture;
+    target.draw(currentPosition, states);
 }

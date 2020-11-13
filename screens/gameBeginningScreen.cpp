@@ -4,6 +4,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "gameBeginningScreen.h"
+#include "../game/tilemap.h"
 
 #define ECART_DE_PIXEL_COLLISION_FENETRE 25
 
@@ -12,6 +13,21 @@ gameBeginningScreen::gameBeginningScreen(Player &player) : player(player) {
 }
 
 int gameBeginningScreen::Run(sf::RenderWindow &App) {
+    const int level[] =
+    {
+            0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+            0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0,
+            1, 1, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3,
+            0, 1, 0, 0, 2, 0, 3, 3, 3, 0, 1, 1, 1, 0, 0, 0,
+            0, 1, 1, 0, 3, 3, 3, 0, 0, 0, 1, 1, 1, 2, 0, 0,
+            0, 0, 1, 0, 3, 0, 2, 2, 0, 0, 1, 1, 1, 1, 2, 0,
+            2, 0, 1, 0, 3, 0, 2, 2, 2, 0, 1, 1, 1, 1, 1, 1,
+            0, 0, 1, 0, 3, 2, 2, 2, 0, 0, 0, 0, 1, 1, 1, 1,
+    };
+
+    // on crée la tilemap avec le niveau précédemment défini
+    TileMap map("./assets/tiles.png", sf::Vector2u(64, 64), level, 16, 8);
+
     sf::Event event;
     sf::View view;
     sf::CircleShape circle(100);
@@ -53,10 +69,7 @@ int gameBeginningScreen::Run(sf::RenderWindow &App) {
             player.update();
 
         handleOutOfWindow(App, player);
-        view.zoom(1);
-        //App.setView(view);
-        App.draw(player.currentPosition);
-        App.draw(circle);
+        App.draw(player);
         App.display();
         App.clear();
     }

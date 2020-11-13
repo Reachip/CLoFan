@@ -8,7 +8,7 @@
 #include <string>
 #include <SFML/Graphics.hpp>
 
-class Player {
+class Player : public sf::Drawable,  public sf::Transformable {
 private:
     sf::Texture texture;
     std::string name;
@@ -19,6 +19,7 @@ private:
 public:
     Player(std::string name, std::string spritePath);
     sf::Sprite currentPosition;
+    virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
     void move_on_left();
     void move_on_right();
     void move_up();

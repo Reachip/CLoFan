@@ -61,7 +61,7 @@ int mainMenuScreen::Run(sf::RenderWindow &App) {
         App.draw(bgSprite);
         App.draw(quitButton);
         App.draw(startButton);
-        App.draw(player.currentPosition);
+        App.draw(player);
         App.display();
     }
 

@@ -43,7 +43,7 @@ int scene5Screen::Run(sf::RenderWindow &App) {
         if (animPlayer)
             player.update();
 
-        App.draw(player.currentPosition);
+        App.draw(player);
         App.display();
         App.clear();
     }
