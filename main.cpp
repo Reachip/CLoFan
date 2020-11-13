@@ -30,7 +30,7 @@ int main() {
     Player p1("rached", PLAYER_SPRIT_PATH);
     std::vector<cScreen *> Screens;
 
-    mainMenuScreen mainMenu;
+    mainMenuScreen mainMenu(p1);
     gameBeginningScreen gameBeginning(p1);
     scene1Screen scene1;
 
