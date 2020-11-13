@@ -3,7 +3,7 @@
 #define WIDTH 1058
 #define WINDOWTITLE "CLoFan"
 #define MUSIC_PATH "./assets/music.ogg"
-#define MUSIC_VOLUME 2
+#define MUSIC_VOLUME 0
 #define PLAYER_SPRIT_PATH "./assets/fumiko.png"
 
 #include <SFML/Graphics.hpp>
