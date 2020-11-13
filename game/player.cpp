@@ -46,7 +46,7 @@ void Player::move_on_right() {
 
 void Player::update() {
     // Affiche une nouvelle texture toutes les 50 millisecondes.
-    if (clock.getElapsedTime().asMilliseconds() >= 50) {
+    if (clock.getElapsedTime().asMilliseconds() >= 100) {
         if (this->animation.x * 24 > (5 * 24))
             this->animation.x = 0;
 
