@@ -12,6 +12,10 @@ CMakeFiles/Game.dir/main.cpp.o
  /home/rached/CLionProjects/untitled1/screens/mainMenuScreen.h
  /home/rached/CLionProjects/untitled1/screens/scene1Screen.h
  /home/rached/CLionProjects/untitled1/screens/screens.h
+CMakeFiles/Game.dir/screens/cScreen.cpp.o
+ /home/rached/CLionProjects/untitled1/game/player.h
+ /home/rached/CLionProjects/untitled1/screens/cScreen.cpp
+ /home/rached/CLionProjects/untitled1/screens/cScreen.h
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o
  /home/rached/CLionProjects/untitled1/game/player.h
  /home/rached/CLionProjects/untitled1/screens/cScreen.h
@@ -24,6 +28,7 @@ CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o
  /home/rached/CLionProjects/untitled1/screens/mainMenuScreen.h
  /home/rached/CLionProjects/untitled1/ui/button.h
 CMakeFiles/Game.dir/screens/scene1Screen.cpp.o
+ /home/rached/CLionProjects/untitled1/game/player.h
  /home/rached/CLionProjects/untitled1/screens/cScreen.h
  /home/rached/CLionProjects/untitled1/screens/scene1Screen.cpp
  /home/rached/CLionProjects/untitled1/screens/scene1Screen.h

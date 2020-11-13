@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/rached/CLionProjects/untitled1/game/player.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/game/player.cpp.o"
   "/home/rached/CLionProjects/untitled1/main.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/main.cpp.o"
+  "/home/rached/CLionProjects/untitled1/screens/cScreen.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/screens/cScreen.cpp.o"
   "/home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o"
   "/home/rached/CLionProjects/untitled1/screens/mainMenuScreen.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o"
   "/home/rached/CLionProjects/untitled1/screens/scene1Screen.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/screens/scene1Screen.cpp.o"

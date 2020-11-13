@@ -15,22 +15,22 @@ SFML/Graphics.hpp
 /home/rached/CLionProjects/untitled1/screens/cScreen.h
 SFML/Graphics.hpp
 -
+../game/player.h
+/home/rached/CLionProjects/untitled1/game/player.h
 
-/home/rached/CLionProjects/untitled1/screens/mainMenuScreen.cpp
+/home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.cpp
 iostream
 -
+SFML/Graphics.hpp
+-
+gameBeginningScreen.h
+/home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.h
 ../game/player.h
 /home/rached/CLionProjects/untitled1/game/player.h
-mainMenuScreen.h
-/home/rached/CLionProjects/untitled1/screens/mainMenuScreen.h
-../ui/button.h
-/home/rached/CLionProjects/untitled1/ui/button.h
 
-/home/rached/CLionProjects/untitled1/screens/mainMenuScreen.h
+/home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.h
+../game/player.h
+/home/rached/CLionProjects/untitled1/game/player.h
 cScreen.h
 /home/rached/CLionProjects/untitled1/screens/cScreen.h
-../game/player.h
-/home/rached/CLionProjects/untitled1/game/player.h
-
-/home/rached/CLionProjects/untitled1/ui/button.h
 

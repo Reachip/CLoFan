@@ -197,6 +197,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+screens/cScreen.o: screens/cScreen.cpp.o
+
+.PHONY : screens/cScreen.o
+
+# target to build an object file
+screens/cScreen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/screens/cScreen.cpp.o
+.PHONY : screens/cScreen.cpp.o
+
+screens/cScreen.i: screens/cScreen.cpp.i
+
+.PHONY : screens/cScreen.i
+
+# target to preprocess a source file
+screens/cScreen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/screens/cScreen.cpp.i
+.PHONY : screens/cScreen.cpp.i
+
+screens/cScreen.s: screens/cScreen.cpp.s
+
+.PHONY : screens/cScreen.s
+
+# target to generate assembly for a file
+screens/cScreen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/screens/cScreen.cpp.s
+.PHONY : screens/cScreen.cpp.s
+
 screens/gameBeginningScreen.o: screens/gameBeginningScreen.cpp.o
 
 .PHONY : screens/gameBeginningScreen.o
@@ -320,6 +347,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... screens/cScreen.o"
+	@echo "... screens/cScreen.i"
+	@echo "... screens/cScreen.s"
 	@echo "... screens/gameBeginningScreen.o"
 	@echo "... screens/gameBeginningScreen.i"
 	@echo "... screens/gameBeginningScreen.s"
