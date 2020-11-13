@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/rached/CLionProjects/untitled1/game/player.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/game/player.cpp.o"
+  "/home/rached/CLionProjects/untitled1/game/tilemap.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/game/tilemap.cpp.o"
   "/home/rached/CLionProjects/untitled1/main.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/main.cpp.o"
   "/home/rached/CLionProjects/untitled1/screens/cScreen.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/screens/cScreen.cpp.o"
   "/home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o"

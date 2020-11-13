@@ -170,6 +170,33 @@ game/player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/player.cpp.s
 .PHONY : game/player.cpp.s
 
+game/tilemap.o: game/tilemap.cpp.o
+
+.PHONY : game/tilemap.o
+
+# target to build an object file
+game/tilemap.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/tilemap.cpp.o
+.PHONY : game/tilemap.cpp.o
+
+game/tilemap.i: game/tilemap.cpp.i
+
+.PHONY : game/tilemap.i
+
+# target to preprocess a source file
+game/tilemap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/tilemap.cpp.i
+.PHONY : game/tilemap.cpp.i
+
+game/tilemap.s: game/tilemap.cpp.s
+
+.PHONY : game/tilemap.s
+
+# target to generate assembly for a file
+game/tilemap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/tilemap.cpp.s
+.PHONY : game/tilemap.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -344,6 +371,9 @@ help:
 	@echo "... game/player.o"
 	@echo "... game/player.i"
 	@echo "... game/player.s"
+	@echo "... game/tilemap.o"
+	@echo "... game/tilemap.i"
+	@echo "... game/tilemap.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

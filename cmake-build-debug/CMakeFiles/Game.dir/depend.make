@@ -4,6 +4,9 @@
 CMakeFiles/Game.dir/game/player.cpp.o: ../game/player.cpp
 CMakeFiles/Game.dir/game/player.cpp.o: ../game/player.h
 
+CMakeFiles/Game.dir/game/tilemap.cpp.o: ../game/tilemap.cpp
+CMakeFiles/Game.dir/game/tilemap.cpp.o: ../game/tilemap.h
+
 CMakeFiles/Game.dir/main.cpp.o: ../game/player.h
 CMakeFiles/Game.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Game.dir/main.cpp.o: ../screens/cScreen.h
@@ -17,6 +20,7 @@ CMakeFiles/Game.dir/screens/cScreen.cpp.o: ../screens/cScreen.cpp
 CMakeFiles/Game.dir/screens/cScreen.cpp.o: ../screens/cScreen.h
 
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../game/player.h
+CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../game/tilemap.h
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../screens/cScreen.h
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../screens/gameBeginningScreen.cpp
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../screens/gameBeginningScreen.h

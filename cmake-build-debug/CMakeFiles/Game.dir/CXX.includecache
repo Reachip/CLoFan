@@ -12,6 +12,18 @@ string
 SFML/Graphics.hpp
 -
 
+/home/rached/CLionProjects/untitled1/game/tilemap.h
+SFML/Graphics/Drawable.hpp
+-
+SFML/Graphics/Transformable.hpp
+-
+SFML/Graphics/VertexArray.hpp
+-
+SFML/Graphics/Texture.hpp
+-
+SFML/Graphics/RenderTarget.hpp
+-
+
 /home/rached/CLionProjects/untitled1/screens/cScreen.h
 SFML/Graphics.hpp
 -
@@ -25,6 +37,8 @@ SFML/Graphics.hpp
 -
 gameBeginningScreen.h
 /home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.h
+../game/tilemap.h
+/home/rached/CLionProjects/untitled1/game/tilemap.h
 
 /home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.h
 ../game/player.h

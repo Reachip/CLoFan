@@ -4,6 +4,9 @@
 CMakeFiles/Game.dir/game/player.cpp.o
  /home/rached/CLionProjects/untitled1/game/player.cpp
  /home/rached/CLionProjects/untitled1/game/player.h
+CMakeFiles/Game.dir/game/tilemap.cpp.o
+ /home/rached/CLionProjects/untitled1/game/tilemap.cpp
+ /home/rached/CLionProjects/untitled1/game/tilemap.h
 CMakeFiles/Game.dir/main.cpp.o
  /home/rached/CLionProjects/untitled1/game/player.h
  /home/rached/CLionProjects/untitled1/main.cpp
@@ -18,6 +21,7 @@ CMakeFiles/Game.dir/screens/cScreen.cpp.o
  /home/rached/CLionProjects/untitled1/screens/cScreen.h
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o
  /home/rached/CLionProjects/untitled1/game/player.h
+ /home/rached/CLionProjects/untitled1/game/tilemap.h
  /home/rached/CLionProjects/untitled1/screens/cScreen.h
  /home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.cpp
  /home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.h
