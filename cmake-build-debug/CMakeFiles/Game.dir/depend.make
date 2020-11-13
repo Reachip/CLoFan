@@ -17,6 +17,7 @@ CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../screens/cScreen.h
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../screens/gameBeginningScreen.cpp
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../screens/gameBeginningScreen.h
 
+CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../game/player.h
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../screens/cScreen.h
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../screens/mainMenuScreen.cpp
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../screens/mainMenuScreen.h
