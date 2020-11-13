@@ -12,6 +12,8 @@ class Player {
 private:
     sf::Texture texture;
     std::string name;
+    sf::Clock clock;
+    sf::Vector2i animation;
     void _addSprite(sf::IntRect);
 
 public:
@@ -21,6 +23,7 @@ public:
     void move_on_right();
     void move_up();
     void move_down();
+    void update();
 };
 
 #endif //GAME_PLAYER_H
