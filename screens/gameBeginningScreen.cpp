@@ -7,17 +7,19 @@
 
 #define ECART_DE_PIXEL_COLLISION_FENETRE 25
 
-#include "../game/player.h"
-
 gameBeginningScreen::gameBeginningScreen(Player &player) : player(player) {
     this->player = player;
 }
 
 int gameBeginningScreen::Run(sf::RenderWindow &App) {
     sf::Event event;
+    sf::View view;
+    sf::CircleShape circle(100);
     bool Running = true;
 
     player.currentPosition.setPosition(120, 20);
+    circle.setPosition(100, 90);
+
     player.move_up();
     player.update();
 
@@ -51,7 +53,10 @@ int gameBeginningScreen::Run(sf::RenderWindow &App) {
             player.update();
 
         handleOutOfWindow(App, player);
+        view.zoom(1);
+        //App.setView(view);
         App.draw(player.currentPosition);
+        App.draw(circle);
         App.display();
         App.clear();
     }
