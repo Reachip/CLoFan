@@ -3,9 +3,9 @@
 //
 
 #define TAILLE_BOUTON 40
-#define POSITION_X 600
-#define POSITION_Y 400
-#define ECART_BOUTON 100
+#define POSITION_X 520
+#define POSITION_Y 290
+#define ECART_BOUTON 200
 
 #include <SFML/Graphics.hpp>
 #include "button.h"
@@ -35,7 +35,7 @@ sf::Text createButton(std::string text) {
  */
 sf::Text quitMenuButton() {
     sf::Text quit = createButton("Quitter");
-    quit.setPosition(POSITION_X, POSITION_Y - ECART_BOUTON);
+    quit.setPosition(POSITION_X - ECART_BOUTON, POSITION_Y);
 
     return quit;
 }
