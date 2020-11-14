@@ -6,8 +6,17 @@
 #define GAME_DOOR_H
 
 
-class door {
+#include <SFML/Graphics.hpp>
+#include <SFML/Graphics.hpp>
 
+class door : public sf::Drawable, public sf::Transformable {
+public:
+    door(void);
+    virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
+
+private:
+    sf::Texture texture;
+    sf::Sprite sprite;
 };
 
 
