@@ -143,6 +143,33 @@ Game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/build
 .PHONY : Game/fast
 
+game/door.o: game/door.cpp.o
+
+.PHONY : game/door.o
+
+# target to build an object file
+game/door.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/door.cpp.o
+.PHONY : game/door.cpp.o
+
+game/door.i: game/door.cpp.i
+
+.PHONY : game/door.i
+
+# target to preprocess a source file
+game/door.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/door.cpp.i
+.PHONY : game/door.cpp.i
+
+game/door.s: game/door.cpp.s
+
+.PHONY : game/door.s
+
+# target to generate assembly for a file
+game/door.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/door.cpp.s
+.PHONY : game/door.cpp.s
+
 game/player.o: game/player.cpp.o
 
 .PHONY : game/player.o
@@ -368,6 +395,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Game"
+	@echo "... game/door.o"
+	@echo "... game/door.i"
+	@echo "... game/door.s"
 	@echo "... game/player.o"
 	@echo "... game/player.i"
 	@echo "... game/player.s"

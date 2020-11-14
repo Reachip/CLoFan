@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Game.dir/game/door.cpp.o"
   "CMakeFiles/Game.dir/game/player.cpp.o"
   "CMakeFiles/Game.dir/game/tilemap.cpp.o"
   "CMakeFiles/Game.dir/main.cpp.o"
