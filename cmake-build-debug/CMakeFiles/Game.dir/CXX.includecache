@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/home/rached/CLionProjects/untitled1/game/door.cpp
+door.h
+/home/rached/CLionProjects/untitled1/game/door.h
+
+/home/rached/CLionProjects/untitled1/game/door.h
+SFML/Graphics.hpp
+-
+SFML/Graphics.hpp
+-
+
 /home/rached/CLionProjects/untitled1/game/player.h
 string
 -
