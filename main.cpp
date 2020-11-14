@@ -32,7 +32,7 @@ int main() {
 
     mainMenuScreen mainMenu(p1);
     gameBeginningScreen gameBeginning(p1);
-    scene1Screen scene1;
+    scene1Screen scene1(p1);
 
     Screens.push_back(&mainMenu);
     Screens.push_back(&gameBeginning);
