@@ -4,7 +4,7 @@
 
 #include "scene1Screen.h"
 
-scene1Screen::scene1Screen(void) {}
+scene1Screen::scene1Screen(Player &player) : cScreen(player) {}
 
 int scene1Screen::Run(sf::RenderWindow &App) {
     sf::Event event;

@@ -9,9 +9,6 @@
 #include "../game/player.h"
 
 class mainMenuScreen : public cScreen {
-private:
-    Player player;
-
 public:
     mainMenuScreen(Player &player);
     virtual int Run(sf::RenderWindow &App);

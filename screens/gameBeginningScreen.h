@@ -9,9 +9,6 @@
 #include "cScreen.h"
 
 class gameBeginningScreen : public cScreen {
-private:
-    Player player;
-
 public:
     gameBeginningScreen(Player &player);
     virtual int Run(sf::RenderWindow &App);

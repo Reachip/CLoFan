@@ -8,7 +8,7 @@
 #include "cScreen.h"
 #define ECART_DE_PIXEL_COLLISION_FENETRE 25
 
-void cScreen::handleOutOfWindow(sf::RenderWindow &App, Player &player) {
+void cScreen::handleOutOfWindow(sf::RenderWindow &App) {
     sf::Vector2f playerPosition = player.currentPosition.getPosition();
     sf::Vector2i windowPosition = sf::Vector2i(WIDTH, HEIGHT);
 
@@ -27,4 +27,8 @@ void cScreen::handleOutOfWindow(sf::RenderWindow &App, Player &player) {
     if (playerPosition.x > windowPosition.x - ECART_DE_PIXEL_COLLISION_FENETRE) {
         player.currentPosition.setPosition(windowPosition.x - ECART_DE_PIXEL_COLLISION_FENETRE, playerPosition.y);
     }
+}
+
+cScreen::cScreen(Player &player) : player(player)  {
+    player = player;
 }

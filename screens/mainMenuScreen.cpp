@@ -11,7 +11,7 @@
 #include "mainMenuScreen.h"
 #include "../ui/button.h"
 
-mainMenuScreen::mainMenuScreen(Player &player) : player(player) {
+mainMenuScreen::mainMenuScreen(Player &player) : cScreen(player) {
     this->player = player;
 }
 

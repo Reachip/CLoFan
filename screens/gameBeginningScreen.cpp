@@ -8,25 +8,23 @@
 
 #define ECART_DE_PIXEL_COLLISION_FENETRE 25
 
-gameBeginningScreen::gameBeginningScreen(Player &player) : player(player) {
-    this->player = player;
-}
+gameBeginningScreen::gameBeginningScreen(Player &player) : cScreen(player) {}
 
 int gameBeginningScreen::Run(sf::RenderWindow &App) {
     const int level[] =
     {
-            0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-            0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0,
-            1, 1, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3,
-            0, 1, 0, 0, 2, 0, 3, 3, 3, 0, 1, 1, 1, 0, 0, 0,
-            0, 1, 1, 0, 3, 3, 3, 0, 0, 0, 1, 1, 1, 2, 0, 0,
-            0, 0, 1, 0, 3, 0, 2, 2, 0, 0, 1, 1, 1, 1, 2, 0,
+            2, 20, 45, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+            2, 11, 1, 1, 1, 1, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0,
+            2, 1, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3,
+            2, 11, 0, 0, 2, 0, 3, 3, 3, 0, 1, 1, 1, 0, 0, 0,
+            2, 1, 1, 0, 3, 3, 3, 0, 0, 0, 1, 1, 1, 2, 0, 0,
+            2, 0, 1, 0, 3, 0, 2, 2, 0, 0, 1, 1, 1, 1, 2, 0,
             2, 0, 1, 0, 3, 0, 2, 2, 2, 0, 1, 1, 1, 1, 1, 1,
-            0, 0, 1, 0, 3, 2, 2, 2, 0, 0, 0, 0, 1, 1, 1, 1,
+            2, 0, 1, 0, 3, 2, 2, 2, 0, 0, 0, 0, 1, 1, 1, 1,
     };
 
     // on crée la tilemap avec le niveau précédemment défini
-    TileMap map("./assets/tiles.png", sf::Vector2u(64, 64), level, 16, 8);
+    TileMap map("./assets/duengon2.png", sf::Vector2u(16, 16), level, 16, 8);
 
     sf::Event event;
     sf::View view;
@@ -68,8 +66,9 @@ int gameBeginningScreen::Run(sf::RenderWindow &App) {
         if (animPlayer)
             player.update();
 
-        handleOutOfWindow(App, player);
+        handleOutOfWindow(App);
         App.draw(player);
+        App.draw(map);
         App.display();
         App.clear();
     }
