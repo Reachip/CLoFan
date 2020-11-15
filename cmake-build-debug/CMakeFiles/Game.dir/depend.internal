@@ -45,6 +45,7 @@ CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o
  /home/rached/CLionProjects/untitled1/screens/cScreen.h
  /home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.cpp
  /home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.h
+ /home/rached/CLionProjects/untitled1/ui/messageBox.h
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o
  /home/rached/CLionProjects/untitled1/game/background.h
  /home/rached/CLionProjects/untitled1/game/door.h
@@ -64,3 +65,6 @@ CMakeFiles/Game.dir/screens/scene1Screen.cpp.o
 CMakeFiles/Game.dir/ui/button.cpp.o
  /home/rached/CLionProjects/untitled1/ui/button.cpp
  /home/rached/CLionProjects/untitled1/ui/button.h
+CMakeFiles/Game.dir/ui/messageBox.cpp.o
+ /home/rached/CLionProjects/untitled1/ui/messageBox.cpp
+ /home/rached/CLionProjects/untitled1/ui/messageBox.h

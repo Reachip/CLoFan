@@ -10,10 +10,6 @@
 entitie.h
 /home/rached/CLionProjects/untitled1/game/entitie.h
 
-/home/rached/CLionProjects/untitled1/game/door.cpp
-door.h
-/home/rached/CLionProjects/untitled1/game/door.h
-
 /home/rached/CLionProjects/untitled1/game/door.h
 SFML/Graphics.hpp
 -
@@ -51,10 +47,16 @@ SFML/Graphics.hpp
 -
 gameBeginningScreen.h
 /home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.h
+../ui/messageBox.h
+/home/rached/CLionProjects/untitled1/ui/messageBox.h
 
 /home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.h
 ../game/entities.h
 /home/rached/CLionProjects/untitled1/game/entities.h
 cScreen.h
 /home/rached/CLionProjects/untitled1/screens/cScreen.h
+
+/home/rached/CLionProjects/untitled1/ui/messageBox.h
+SFML/Graphics.hpp
+-
 

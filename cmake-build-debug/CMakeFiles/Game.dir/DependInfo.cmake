@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/rached/CLionProjects/untitled1/screens/mainMenuScreen.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o"
   "/home/rached/CLionProjects/untitled1/screens/scene1Screen.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/screens/scene1Screen.cpp.o"
   "/home/rached/CLionProjects/untitled1/ui/button.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/ui/button.cpp.o"
+  "/home/rached/CLionProjects/untitled1/ui/messageBox.cpp" "/home/rached/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/Game.dir/ui/messageBox.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

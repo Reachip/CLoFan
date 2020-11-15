@@ -440,6 +440,33 @@ ui/button.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/ui/button.cpp.s
 .PHONY : ui/button.cpp.s
 
+ui/messageBox.o: ui/messageBox.cpp.o
+
+.PHONY : ui/messageBox.o
+
+# target to build an object file
+ui/messageBox.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/ui/messageBox.cpp.o
+.PHONY : ui/messageBox.cpp.o
+
+ui/messageBox.i: ui/messageBox.cpp.i
+
+.PHONY : ui/messageBox.i
+
+# target to preprocess a source file
+ui/messageBox.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/ui/messageBox.cpp.i
+.PHONY : ui/messageBox.cpp.i
+
+ui/messageBox.s: ui/messageBox.cpp.s
+
+.PHONY : ui/messageBox.s
+
+# target to generate assembly for a file
+ui/messageBox.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/ui/messageBox.cpp.s
+.PHONY : ui/messageBox.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -482,6 +509,9 @@ help:
 	@echo "... ui/button.o"
 	@echo "... ui/button.i"
 	@echo "... ui/button.s"
+	@echo "... ui/messageBox.o"
+	@echo "... ui/messageBox.i"
+	@echo "... ui/messageBox.s"
 .PHONY : help
 
 

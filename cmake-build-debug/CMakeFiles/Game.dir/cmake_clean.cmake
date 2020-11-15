@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o"
   "CMakeFiles/Game.dir/screens/scene1Screen.cpp.o"
   "CMakeFiles/Game.dir/ui/button.cpp.o"
+  "CMakeFiles/Game.dir/ui/messageBox.cpp.o"
   "Game"
   "Game.pdb"
 )
