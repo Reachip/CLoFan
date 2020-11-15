@@ -7,7 +7,7 @@
 
 #include <iostream>
 
-#include "../game/player.h"
+#include "../game/entities.h"
 #include "mainMenuScreen.h"
 #include "../ui/button.h"
 
@@ -16,29 +16,21 @@ mainMenuScreen::mainMenuScreen(Player &player) : cScreen(player) {
 }
 
 int mainMenuScreen::Run(sf::RenderWindow &App) {
-    bool Running = true;
-    bool stopUpdatingPlayer = false;
+    player.currentPosition.setPosition(0, 530);
 
-    sf::Texture bg;
     sf::Event Event;
-    sf::Sprite bgSprite;
     sf::Text quitButton = quitMenuButton();
     sf::Text startButton = startMenuButton();
     sf::Font font;
-    player.currentPosition.setPosition(0, 530);
+    background background("./assets/menu_sfml.png");
 
-    if (!bg.loadFromFile(MENU_BG) || !font.loadFromFile(FONT_PATH)) {
-        throw;
-    }
-
-    bgSprite.setTexture(bg);
     startButton.setFont(font);
     quitButton.setFont(font);
 
-    while (Running) {
+    while (is_running) {
         while (App.pollEvent(Event)) {
             if (Event.type == sf::Event::Closed)
-                Running = false;
+                is_running = false;
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
@@ -50,15 +42,13 @@ int mainMenuScreen::Run(sf::RenderWindow &App) {
             }
 
             if (buttonIsTouched(quitButton, App))
-                Running = false;
+                is_running = false;
         }
-
 
         player.move_on_right();
         player.update();
-
         App.clear();
-        App.draw(bgSprite);
+        App.draw(background);
         App.draw(quitButton);
         App.draw(startButton);
         App.draw(player);

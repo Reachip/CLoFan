@@ -16,6 +16,7 @@ public:
 
 protected:
     Player player;
+    bool is_running;
 };
 
 

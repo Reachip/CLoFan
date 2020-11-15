@@ -5,3 +5,4 @@ bin/
 obj/
 .idea/
 cmake-build-debug/Game
+cmake-build-debug/
