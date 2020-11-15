@@ -3,22 +3,18 @@
 //
 
 #include "player.h"
+#include "entitie.h"
 
 #define STEP 6
 #define WIDTH 24
 #define HEIGHT 32
+#define PLAYER_SPRIT_PATH "./assets/fumiko.png"
 
-Player::Player(std::string name, std::string spritePath) {
+
+Player::Player(std::string name) : entitie(PLAYER_SPRIT_PATH) {
     this->name = name;
     this->animation = sf::Vector2i(1, 1);
     this->clock = sf::Clock();
-
-    sf::Texture texture;
-
-    if (!texture.loadFromFile(spritePath))
-        throw;
-
-    this->texture = texture;
 }
 
 void Player::_addSprite(sf::IntRect spritePosition) {

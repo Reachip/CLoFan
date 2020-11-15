@@ -5,12 +5,9 @@
 #ifndef GAME_SCREENS_H
 #define GAME_SCREENS_H
 
-
 #include "cScreen.h"
 #include "mainMenuScreen.h"
 #include "gameBeginningScreen.h"
 #include "scene1Screen.h"
-
-extern const std::string FONT_PATH = "../assets/LiberationSerif-Regular.ttf";
 
 #endif //GAME_SCREENS_H

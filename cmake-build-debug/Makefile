@@ -143,6 +143,33 @@ Game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/build
 .PHONY : Game/fast
 
+game/background.o: game/background.cpp.o
+
+.PHONY : game/background.o
+
+# target to build an object file
+game/background.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/background.cpp.o
+.PHONY : game/background.cpp.o
+
+game/background.i: game/background.cpp.i
+
+.PHONY : game/background.i
+
+# target to preprocess a source file
+game/background.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/background.cpp.i
+.PHONY : game/background.cpp.i
+
+game/background.s: game/background.cpp.s
+
+.PHONY : game/background.s
+
+# target to generate assembly for a file
+game/background.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/background.cpp.s
+.PHONY : game/background.cpp.s
+
 game/door.o: game/door.cpp.o
 
 .PHONY : game/door.o
@@ -169,6 +196,33 @@ game/door.s: game/door.cpp.s
 game/door.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/door.cpp.s
 .PHONY : game/door.cpp.s
+
+game/entitie.o: game/entitie.cpp.o
+
+.PHONY : game/entitie.o
+
+# target to build an object file
+game/entitie.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/entitie.cpp.o
+.PHONY : game/entitie.cpp.o
+
+game/entitie.i: game/entitie.cpp.i
+
+.PHONY : game/entitie.i
+
+# target to preprocess a source file
+game/entitie.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/entitie.cpp.i
+.PHONY : game/entitie.cpp.i
+
+game/entitie.s: game/entitie.cpp.s
+
+.PHONY : game/entitie.s
+
+# target to generate assembly for a file
+game/entitie.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/entitie.cpp.s
+.PHONY : game/entitie.cpp.s
 
 game/player.o: game/player.cpp.o
 
@@ -395,9 +449,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Game"
+	@echo "... game/background.o"
+	@echo "... game/background.i"
+	@echo "... game/background.s"
 	@echo "... game/door.o"
 	@echo "... game/door.i"
 	@echo "... game/door.s"
+	@echo "... game/entitie.o"
+	@echo "... game/entitie.i"
+	@echo "... game/entitie.s"
 	@echo "... game/player.o"
 	@echo "... game/player.i"
 	@echo "... game/player.s"

@@ -7,17 +7,17 @@
 
 #include <string>
 #include <SFML/Graphics.hpp>
+#include "entitie.h"
 
-class Player : public sf::Drawable,  public sf::Transformable {
+class Player :  public entitie {
 private:
-    sf::Texture texture;
     std::string name;
     sf::Clock clock;
     sf::Vector2i animation;
     void _addSprite(sf::IntRect);
 
 public:
-    Player(std::string name, std::string spritePath);
+    Player(std::string name);
     sf::Sprite currentPosition;
     virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
     void move_on_left();

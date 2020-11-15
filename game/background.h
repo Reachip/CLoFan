@@ -5,9 +5,12 @@
 #ifndef GAME_BACKGROUND_H
 #define GAME_BACKGROUND_H
 
+#include "entitie.h"
 
-class background {
-
+class background : public entitie {
+public:
+    background(std::string spritePath);
+    virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 };
 
 

@@ -31,4 +31,5 @@ void cScreen::handleOutOfWindow(sf::RenderWindow &App) {
 
 cScreen::cScreen(Player &player) : player(player)  {
     player = player;
+    is_running = true;
 }

@@ -5,7 +5,7 @@
 #ifndef GAME_GAMEBEGINNINGSCREEN_H
 #define GAME_GAMEBEGINNINGSCREEN_H
 
-#include "../game/player.h"
+#include "../game/entities.h"
 #include "cScreen.h"
 
 class gameBeginningScreen : public cScreen {

@@ -5,18 +5,19 @@
 #ifndef GAME_DOOR_H
 #define GAME_DOOR_H
 
-
 #include <SFML/Graphics.hpp>
-#include <SFML/Graphics.hpp>
+#include "entitie.h"
 
-class door : public sf::Drawable, public sf::Transformable {
+class door : public entitie {
 public:
     door(void);
-    virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
+    void open();
+    void close();
 
 private:
-    sf::Texture texture;
-    sf::Sprite sprite;
+    sf::Texture openedDoor;
+    sf::Texture closedDoor;
+
 };
 
 

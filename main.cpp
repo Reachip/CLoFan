@@ -1,15 +1,13 @@
 #define FPS 30
-#define HEIGHT 600
-#define WIDTH 1058
-#define WINDOWTITLE "CLoFan"
+#define HEIGHT 683
+#define WIDTH 960
+#define WINDOWTITLE "A Way Out"
 #define MUSIC_PATH "./assets/music.ogg"
 #define MUSIC_VOLUME 0
-#define PLAYER_SPRIT_PATH "./assets/fumiko.png"
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include "screens/screens.h"
-#include "game/player.h"
 
 using namespace sf;
 
@@ -27,7 +25,7 @@ int main() {
     RenderWindow App(videoMode, WINDOWTITLE);
     App.setFramerateLimit(FPS);
 
-    Player p1("rached", PLAYER_SPRIT_PATH);
+    Player p1("rached");
     std::vector<cScreen *> Screens;
 
     mainMenuScreen mainMenu(p1);
