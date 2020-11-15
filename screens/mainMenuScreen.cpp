@@ -24,6 +24,9 @@ int mainMenuScreen::Run(sf::RenderWindow &App) {
     sf::Font font;
     background background("./assets/menu_sfml.png");
 
+    if (!font.loadFromFile(FONT_PATH))
+        throw;
+
     startButton.setFont(font);
     quitButton.setFont(font);
 
