@@ -4,6 +4,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "gameBeginningScreen.h"
+#include "../ui/messageBox.h"
 
 #define ECART_DE_PIXEL_COLLISION_FENETRE 25
 #define BACKGROUND_PATH "./assets/map_bois.png"
@@ -13,9 +14,14 @@ gameBeginningScreen::gameBeginningScreen(Player &player) : cScreen(player) {}
 int gameBeginningScreen::Run(sf::RenderWindow &App) {
     sf::Event event;
     sf::View view;
+
     background bg(BACKGROUND_PATH);
-    door d;
-    d.setPosition(120, 120);
+    door doorA;
+
+
+    messageBox message("Utilisez la fleche du haut pour vous deplacer ...");
+
+    doorA.setPosition(120, 120);
     player.currentPosition.setPosition(0, 0);
     player.move_up();
     player.update();
@@ -46,11 +52,18 @@ int gameBeginningScreen::Run(sf::RenderWindow &App) {
         else
             animPlayer = false;
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-            d.open();
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+            doorA.open();
+            message.update("Appuie sur la touche D");
+        }
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::H))
-            d.close();
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::H)) {
+            doorA.close();
+            message.update("Appuie sur la touche H");
+        }
+
+        if (!message.animationIsFinish())
+            message.animate();
 
         if (animPlayer)
             player.update();
@@ -58,7 +71,8 @@ int gameBeginningScreen::Run(sf::RenderWindow &App) {
         handleOutOfWindow(App);
         App.draw(bg);
         App.draw(player);
-        App.draw(d);
+        App.draw(doorA);
+        App.draw(message);
         App.display();
         App.clear();
     }

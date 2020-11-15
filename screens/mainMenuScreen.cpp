@@ -22,7 +22,7 @@ int mainMenuScreen::Run(sf::RenderWindow &App) {
     sf::Text quitButton = quitMenuButton();
     sf::Text startButton = startMenuButton();
     sf::Font font;
-    
+
     background background(MENU_BG);
 
     if (!font.loadFromFile(FONT_PATH))
