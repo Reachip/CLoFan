@@ -8,12 +8,11 @@ scene1Screen::scene1Screen(Player &player) : cScreen(player) {}
 
 int scene1Screen::Run(sf::RenderWindow &App) {
     sf::Event event;
-    bool Running = true;
 
-    while (Running) {
+    while (is_running) {
         while (App.pollEvent(event)) {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) || event.type == sf::Event::Closed)
-                Running = false;
+                is_running = false;
         }
 
         App.clear();

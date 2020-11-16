@@ -7,20 +7,19 @@
 #include "../ui/messageBox.h"
 
 #define ECART_DE_PIXEL_COLLISION_FENETRE 25
-#define BACKGROUND_PATH "./assets/map_bois.png"
+#define BACKGROUND_PATH "./assets/Map_Scene_base_1.png"
 
 gameBeginningScreen::gameBeginningScreen(Player &player) : cScreen(player) {}
 
 int gameBeginningScreen::Run(sf::RenderWindow &App) {
     sf::Event event;
-    sf::View view;
 
     background bg(BACKGROUND_PATH);
     messageBox message("Lorem ipsum");
-    door door1(850, 300);
+    door door1(490, 500);
 
     player.move_on_right();
-    player.currentPosition.setPosition(100, 300);
+    player.currentPosition.setPosition(490, 480);
     player.update();
 
     while (is_running) {
@@ -57,19 +56,12 @@ int gameBeginningScreen::Run(sf::RenderWindow &App) {
         if (animPlayer)
             player.update();
 
-        sf::Sprite playerSprite = player.getSprite();
-
-        if (door1.is_touched(playerSprite))
-            door1.open();
-
-        else
-            door1.close();
-
         handleOutOfWindow(App);
+
         App.draw(bg);
+        App.draw(door1);
         App.draw(message);
         App.draw(player);
-        App.draw(door1);
         App.display();
         App.clear();
     }
