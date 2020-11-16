@@ -41,6 +41,10 @@ void messageBox::animate() {
     message.setPosition(POSITION_X, new_x_position);
 }
 
+void messageBox::clear() {
+    message.setString("");
+}
+
 bool messageBox::animationIsFinish() {
     if (message.getPosition().y >= 2)
         return true;

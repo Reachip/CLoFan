@@ -14,6 +14,7 @@ public:
     virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
     bool animationIsFinish();
     void update(std::string newText);
+    void clear();
 
 private:
     sf::Text message;
