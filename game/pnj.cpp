@@ -3,3 +3,5 @@
 //
 
 #include "pnj.h"
+
+pnj::pnj(std::string spritePath, int x, int y) : entitie(spritePath, x, y) {}
