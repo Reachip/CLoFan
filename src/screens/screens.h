@@ -9,5 +9,6 @@
 #include "mainMenuScreen.h"
 #include "gameBeginningScreen.h"
 #include "scene1Screen.h"
+#include "scene5Screen.h"
 
 #endif //GAME_SCREENS_H
