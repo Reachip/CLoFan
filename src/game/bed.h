@@ -4,10 +4,11 @@
 
 #ifndef GAME_BED_H
 #define GAME_BED_H
+#include "entitie.h"
 
-
-class bed {
-
+class bed : public entitie {
+public:
+    bed(int x, int y);
 };
 
 

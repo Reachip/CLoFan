@@ -9,4 +9,9 @@
 #include "door.h"
 #include "background.h"
 #include "pnj.h"
+#include "library.h"
+#include "key.h"
+#include "money.h"
+#include "table.h"
+
 #endif //GAME_ENTITIES_H

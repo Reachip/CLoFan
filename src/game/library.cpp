@@ -3,3 +3,6 @@
 //
 
 #include "library.h"
+#define LIBRARY "../assets/bibli.png"
+
+library::library(int x, int y) : entitie(LIBRARY, x, y) {}

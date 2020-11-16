@@ -5,9 +5,11 @@
 #ifndef GAME_KEY_H
 #define GAME_KEY_H
 
+#include "entitie.h"
 
-class key {
-
+class key : public entitie {
+public:
+    key(int x, int y);
 };
 
 

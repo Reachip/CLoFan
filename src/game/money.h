@@ -5,9 +5,11 @@
 #ifndef GAME_MONEY_H
 #define GAME_MONEY_H
 
+#include "entitie.h"
 
-class money {
-
+class money : public entitie {
+public:
+    money(int x, int y);
 };
 
 

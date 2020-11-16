@@ -5,12 +5,12 @@
 #ifndef GAME_TABLE_H
 #define GAME_TABLE_H
 
+#include "entitie.h"
 
-
-class table {
-
+class table : public entitie {
+public:
+    table(int x, int y);
 };
-
 
 
 #endif //GAME_TABLE_H

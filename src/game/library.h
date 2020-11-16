@@ -5,9 +5,11 @@
 #ifndef GAME_LIBRARY_H
 #define GAME_LIBRARY_H
 
+#include "entitie.h"
 
-class library {
-
+class library : public entitie {
+public:
+    library(int x, int y);
 };
 
 

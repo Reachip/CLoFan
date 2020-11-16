@@ -3,3 +3,6 @@
 //
 
 #include "money.h"
+#define MONEY "../assets/argent.png"
+
+money::money(int x, int y) : entitie(MONEY, x, y) {}

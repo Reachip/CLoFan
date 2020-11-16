@@ -5,9 +5,11 @@
 #ifndef GAME_CHAIR_H
 #define GAME_CHAIR_H
 
+#include "entitie.h"
 
-class chair {
-
+class chair : public entitie {
+public:
+    chair(int x, int y);
 };
 
 
