@@ -11,7 +11,7 @@
 #define PLAYER_SPRIT_PATH "./assets/fumiko.png"
 
 
-Player::Player(std::string name) : entitie(PLAYER_SPRIT_PATH) {
+Player::Player(std::string name) : entitie(PLAYER_SPRIT_PATH, 0, 0) {
     this->name = name;
     this->animation = sf::Vector2i(1, 1);
     this->clock = sf::Clock();
@@ -20,6 +20,10 @@ Player::Player(std::string name) : entitie(PLAYER_SPRIT_PATH) {
 void Player::_addSprite(sf::IntRect spritePosition) {
     this->currentPosition.setTexture(this->texture);
     this->currentPosition.setTextureRect(spritePosition);
+}
+
+sf::Sprite Player::getSprite() {
+    return currentPosition;
 }
 
 void Player::move_up() {
