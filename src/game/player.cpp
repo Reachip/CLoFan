@@ -8,7 +8,7 @@
 #define STEP 6
 #define WIDTH 24
 #define HEIGHT 32
-#define PLAYER_SPRIT_PATH "./assets/fumiko.png"
+#define PLAYER_SPRIT_PATH "../assets/fumiko.png"
 
 
 Player::Player(std::string name) : entitie(PLAYER_SPRIT_PATH, 0, 0) {

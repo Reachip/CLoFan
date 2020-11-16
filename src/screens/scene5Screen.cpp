@@ -6,7 +6,7 @@
 #define WIDTH 24
 #define HEIGHT 32
 
-#define TILEMAP_SPRIT_PATH "./assets/tiles/dungeon_tiles.png"
+#define TILEMAP_SPRIT_PATH "../assets/tiles/dungeon_tiles.png"
 using namespace sf;
 
 
@@ -23,11 +23,11 @@ int scene5Screen::Run(sf::RenderWindow &App)
     player.move_up();
     player.update();
 
-    background background("./assets/scene2.png", 0, 0);
+    background background("../assets/scene2.png", 0, 0);
 
     sf::Image details;
-    details.loadFromFile("./assets/scene2_details.png");
-    
+    details.loadFromFile("../assets/scene2_details.png");
+
     while (is_running)
     {
         bool animPlayer = true;

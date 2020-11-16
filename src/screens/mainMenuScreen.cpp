@@ -2,8 +2,8 @@
 // Created by rached on 11/11/2020.
 //
 
-#define FONT_PATH "./assets/LiberationSerif-Regular.ttf"
-#define MENU_BG "./assets/menu_sfml.png"
+#define FONT_PATH "../assets/LiberationSerif-Regular.ttf"
+#define MENU_BG "../assets/menu_sfml.png"
 
 #include "../game/entities.h"
 #include "mainMenuScreen.h"
