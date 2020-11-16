@@ -5,9 +5,6 @@
 #include "cScreen.h"
 
 class scene5Screen : public cScreen {
-private:
-    Player player;
-
 public:
     scene5Screen(Player &player);
     virtual int Run(sf::RenderWindow &App);

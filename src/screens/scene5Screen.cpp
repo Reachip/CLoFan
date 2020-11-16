@@ -1,52 +1,77 @@
+#include <iostream>
 #include <SFML/Graphics.hpp>
 #include "scene5Screen.h"
-#include "../game/player.h"
+#include "../game/background.h"
 
-scene5Screen::scene5Screen(Player &player) : player(player) {
-    this->player = player;
-}
+#define WIDTH 24
+#define HEIGHT 32
 
-int scene5Screen::Run(sf::RenderWindow &App) {
+#define TILEMAP_SPRIT_PATH "./assets/tiles/dungeon_tiles.png"
+using namespace sf;
+
+
+scene5Screen::scene5Screen(Player &player) : cScreen(player){}
+
+
+
+int scene5Screen::Run(sf::RenderWindow &App)
+{
+    bool collision = false;
     sf::Event event;
-    bool Running = true;
 
-    player.currentPosition.setPosition(120, 20);
+    player.currentPosition.setPosition(270, 350);
     player.move_up();
     player.update();
 
-    while (Running) {
+    background background("./assets/scene2.png", 0, 0);
+
+    sf::Image details;
+    details.loadFromFile("./assets/scene2_details.png");
+    
+    while (is_running)
+    {
         bool animPlayer = true;
 
-        while (App.pollEvent(event)) {
+        while (App.pollEvent(event))
+        {
             if (event.type == sf::Event::Closed)
-                Running = false;
+                is_running = false;
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
             return 0;
 
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-            player.move_up();
+        {
+            handleUp(details);
+        }
 
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-            player.move_down();
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
+            handleDown(details);
+        }
 
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-            player.move_on_left();
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
+            handleLeft(details);
+        }
 
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-            player.move_on_right();
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
+            handleRight(details);
+        }
 
         else
             animPlayer = false;
 
-        if (animPlayer)
+        if(animPlayer)
             player.update();
 
+
+        App.clear();
+        App.draw(background);
         App.draw(player);
         App.display();
-        App.clear();
     }
+
+
 
     return (-1);
 }
