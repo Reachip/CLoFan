@@ -7,6 +7,11 @@
 
 #include "entitie.h"
 
+/*
+ * La classe background sert à appliquer une image de fond à une scène.
+ * Son constructeur prend en paramètre le chemin vers l'image de fond
+ * qui doit correspondre et la même hauteur et largeur que la fenetre SFML.
+ */
 class background : public entitie {
 public:
     background(std::string spritePath);

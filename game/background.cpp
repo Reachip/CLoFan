@@ -4,10 +4,7 @@
 
 #include "background.h"
 
-background::background(std::string backgroundPath) : entitie(backgroundPath) {
-    sprite.setPosition(0, 0);
-}
-
+background::background(std::string spritePath) : entitie(spritePath, 0, 0) {}
 void background::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     states.transform *= getTransform();
     states.texture = &texture;
