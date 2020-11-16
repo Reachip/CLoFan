@@ -5,8 +5,6 @@
 #define FONT_PATH "./assets/LiberationSerif-Regular.ttf"
 #define MENU_BG "./assets/menu_sfml.png"
 
-#include <iostream>
-
 #include "../game/entities.h"
 #include "mainMenuScreen.h"
 #include "../ui/button.h"
@@ -23,7 +21,7 @@ int mainMenuScreen::Run(sf::RenderWindow &App) {
     sf::Text startButton = startMenuButton();
     sf::Font font;
 
-    background background(MENU_BG);
+    background background(MENU_BG, 0, 0);
 
     if (!font.loadFromFile(FONT_PATH))
         throw;
