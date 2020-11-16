@@ -31,9 +31,10 @@ int main() {
     mainMenuScreen mainMenu(p1);
     gameBeginningScreen gameBeginning(p1);
     scene1Screen scene1(p1);
+    scene2Screen scene2(p1);
     scene5Screen scene5(p1);
 
-    Screens.push_back(&mainMenu);
+    Screens.push_back(&scene2);
     Screens.push_back(&scene5);
     Screens.push_back(&scene1);
 
