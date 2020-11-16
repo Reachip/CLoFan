@@ -5,7 +5,7 @@
 #include "player.h"
 #include "entitie.h"
 
-#define STEP 6
+#define STEP 1
 #define WIDTH 24
 #define HEIGHT 32
 #define PLAYER_SPRIT_PATH "../assets/fumiko.png"

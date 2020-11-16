@@ -49,7 +49,7 @@ void cScreen::handleUp(sf::Image details)  {
     for(int i=0; i<=WIDTH; i++)
     {
         int joueurx = player.currentPosition.getPosition().x;
-        int joueury = player.currentPosition.getPosition().y;
+        int joueury = player.currentPosition.getPosition().y+HEIGHT/2;
 
         if(details.getPixel(joueurx+i, joueury) == sf::Color::Red)
         {
@@ -83,10 +83,10 @@ void cScreen::handleDown(sf::Image details) {
 
 void cScreen::handleLeft(sf::Image details) {
     bool collision = false;
-    for(int i=0; i<=HEIGHT; i++)
+    for(int i=2; i<=HEIGHT/2-2; i++)
     {
-        int joueurx = player.currentPosition.getPosition().x;
-        int joueury = player.currentPosition.getPosition().y;
+        int joueurx = player.currentPosition.getPosition().x-1;
+        int joueury = player.currentPosition.getPosition().y+HEIGHT/2;
 
         if(details.getPixel(joueurx, joueury+i) == sf::Color::Red)
         {
@@ -102,10 +102,10 @@ void cScreen::handleLeft(sf::Image details) {
 void cScreen::handleRight(sf::Image details) {
     bool collision = false;
 
-    for(int i=0; i<=HEIGHT; i++)
+    for(int i=2; i<=HEIGHT/2-2; i++)
     {
-        int joueurx = player.currentPosition.getPosition().x+WIDTH;
-        int joueury = player.currentPosition.getPosition().y;
+        int joueurx = player.currentPosition.getPosition().x+WIDTH+1;
+        int joueury = player.currentPosition.getPosition().y+HEIGHT/2;
 
         if(details.getPixel(joueurx, joueury+i) == sf::Color::Red)
         {
