@@ -6,7 +6,7 @@
 #define TAILLE 20
 #define POSITION_X 300
 #define POSITION_Y -30
-#define FONT_PATH "./assets/LiberationSerif-Regular.ttf"
+#define FONT_PATH "../assets/LiberationSerif-Regular.ttf"
 #define ANIMATION_SPEED 2
 
 #include <iostream>
