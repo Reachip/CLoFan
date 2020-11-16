@@ -4,9 +4,3 @@ bin/
 *.layout
 obj/
 .idea/
-CMakeCache.txt
-cmake_install.cmake
-Game
-Game.cbp
-Makefile
-CMakeFiles/

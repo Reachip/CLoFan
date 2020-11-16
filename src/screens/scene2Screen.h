@@ -6,8 +6,12 @@
 #define GAME_SCENE2SCREEN_H
 
 
-class scene2Screen {
+#include "cScreen.h"
 
+class scene2Screen : public cScreen {
+public:
+    scene2Screen(Player &player);
+    virtual int Run(sf::RenderWindow &App) = 0;
 };
 
 
