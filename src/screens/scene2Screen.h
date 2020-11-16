@@ -11,7 +11,7 @@
 class scene2Screen : public cScreen {
 public:
     scene2Screen(Player &player);
-    virtual int Run(sf::RenderWindow &App) = 0;
+    virtual int Run(sf::RenderWindow &App);
 };
 
 

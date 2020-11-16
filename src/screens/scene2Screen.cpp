@@ -4,6 +4,7 @@
 
 #include "scene2Screen.h"
 #include "../game/entities.h"
+#include <iostream>
 
 #define SCENE2_MAP "./"
 #define SCENE2_DETAILS "./"
@@ -11,13 +12,18 @@
 scene2Screen::scene2Screen(Player &player) : cScreen(player) {}
 
 int scene2Screen::Run(sf::RenderWindow &App) {
+    library library(0, 0);
+    money money(0, 0);
+    key key(0, 0);
+    table(0, 0);
+
     sf::Image details;
     bool animPlayer = true;
 
-     if (!details.loadFromFile(SCENE2_DETAILS))
-        throw;
+     //if (!details.loadFromFile(SCENE2_DETAILS))
+        //throw;
 
-    background background(SCENE2_MAP, 0, 0);
+    //background background(SCENE2_MAP, 0, 0);
     sf::Event event;
 
     player.move_up();
@@ -51,9 +57,8 @@ int scene2Screen::Run(sf::RenderWindow &App) {
             player.update();
 
         App.clear();
-        App.draw(background);
         App.display();
     }
 
-    return 0;
+    return -1;
 }
