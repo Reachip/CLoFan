@@ -16,14 +16,11 @@ int gameBeginningScreen::Run(sf::RenderWindow &App) {
     sf::View view;
 
     background bg(BACKGROUND_PATH);
-    door doorA;
+    messageBox message("Lorem ipsum");
+    door door1(850, 300);
 
-
-    messageBox message("Utilisez la fleche du haut pour vous deplacer ...");
-
-    doorA.setPosition(120, 120);
-    player.currentPosition.setPosition(0, 0);
-    player.move_up();
+    player.move_on_right();
+    player.currentPosition.setPosition(100, 300);
     player.update();
 
     while (is_running) {
@@ -46,21 +43,13 @@ int gameBeginningScreen::Run(sf::RenderWindow &App) {
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
             player.move_on_left();
 
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+            message.clear();
             player.move_on_right();
+        }
 
         else
             animPlayer = false;
-
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-            doorA.open();
-            message.update("Appuie sur la touche D");
-        }
-
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::H)) {
-            doorA.close();
-            message.update("Appuie sur la touche H");
-        }
 
         if (!message.animationIsFinish())
             message.animate();
@@ -68,11 +57,19 @@ int gameBeginningScreen::Run(sf::RenderWindow &App) {
         if (animPlayer)
             player.update();
 
+        sf::Sprite playerSprite = player.getSprite();
+
+        if (door1.is_touched(playerSprite))
+            door1.open();
+
+        else
+            door1.close();
+
         handleOutOfWindow(App);
         App.draw(bg);
-        App.draw(player);
-        App.draw(doorA);
         App.draw(message);
+        App.draw(player);
+        App.draw(door1);
         App.display();
         App.clear();
     }
