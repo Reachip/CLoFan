@@ -56,7 +56,7 @@ int gameBeginningScreen::Run(sf::RenderWindow &App) {
         if (animPlayer)
             player.update();
 
-        handleOutOfWindow(App);
+        handleOutOfBackground(App);
 
         App.draw(bg);
         App.draw(door1);

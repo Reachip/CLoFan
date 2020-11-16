@@ -12,7 +12,7 @@ class cScreen {
 public:
     cScreen(Player &player);
     virtual int Run(sf::RenderWindow &App) = 0;
-    void handleOutOfWindow(sf::RenderWindow &App);
+    void handleOutOfBackground(sf::RenderWindow &App);
 
 protected:
     Player player;
