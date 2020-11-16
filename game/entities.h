@@ -8,5 +8,5 @@
 #include "player.h"
 #include "door.h"
 #include "background.h"
-
+#include "pnj.h"
 #endif //GAME_ENTITIES_H
