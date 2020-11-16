@@ -62,6 +62,12 @@ gameBeginningScreen.h
 cScreen.h
 /home/rached/CLionProjects/untitled1/screens/cScreen.h
 
+/home/rached/CLionProjects/untitled1/ui/messageBox.cpp
+iostream
+-
+messageBox.h
+/home/rached/CLionProjects/untitled1/ui/messageBox.h
+
 /home/rached/CLionProjects/untitled1/ui/messageBox.h
 SFML/Graphics.hpp
 -
