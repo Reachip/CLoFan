@@ -11,7 +11,7 @@ set(
         src/screens/scene5Screen.cpp src/screens/scene3Screen.cpp src/screens/screens.h src/game/background.cpp src/game/background.h
         src/game/door.cpp src/game/door.h src/game/entitie.cpp src/game/entitie.h src/game/entities.h src/game/player.cpp
         src/game/player.h  src/game/pnj.cpp src/game/pnj.h
-)
+        src/game/library.cpp src/game/library.h src/game/bed.cpp src/game/bed.h src/game/chair.cpp src/game/chair.h src/game/table.cpp src/game/table.h src/game/key.cpp src/game/key.h src/game/money.cpp src/game/money.h)
 add_executable(Game ${SOURCE_FILES})
 
 # Detect and add SFML
