@@ -6,6 +6,7 @@
 #define MUSIC_VOLUME 0
 
 #include <SFML/Graphics.hpp>
+#include <iostream>
 #include <SFML/Audio.hpp>
 #include "screens/screens.h"
 
@@ -30,9 +31,10 @@ int main() {
     mainMenuScreen mainMenu(p1);
     gameBeginningScreen gameBeginning(p1);
     scene1Screen scene1(p1);
+    scene5Screen scene5(p1);
 
     Screens.push_back(&mainMenu);
-    Screens.push_back(&gameBeginning);
+    Screens.push_back(&scene5);
     Screens.push_back(&scene1);
 
     while (screen >= 0)
