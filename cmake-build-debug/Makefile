@@ -251,32 +251,32 @@ game/player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/player.cpp.s
 .PHONY : game/player.cpp.s
 
-game/tilemap.o: game/tilemap.cpp.o
+game/pnj.o: game/pnj.cpp.o
 
-.PHONY : game/tilemap.o
+.PHONY : game/pnj.o
 
 # target to build an object file
-game/tilemap.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/tilemap.cpp.o
-.PHONY : game/tilemap.cpp.o
+game/pnj.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/pnj.cpp.o
+.PHONY : game/pnj.cpp.o
 
-game/tilemap.i: game/tilemap.cpp.i
+game/pnj.i: game/pnj.cpp.i
 
-.PHONY : game/tilemap.i
+.PHONY : game/pnj.i
 
 # target to preprocess a source file
-game/tilemap.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/tilemap.cpp.i
-.PHONY : game/tilemap.cpp.i
+game/pnj.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/pnj.cpp.i
+.PHONY : game/pnj.cpp.i
 
-game/tilemap.s: game/tilemap.cpp.s
+game/pnj.s: game/pnj.cpp.s
 
-.PHONY : game/tilemap.s
+.PHONY : game/pnj.s
 
 # target to generate assembly for a file
-game/tilemap.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/tilemap.cpp.s
-.PHONY : game/tilemap.cpp.s
+game/pnj.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/pnj.cpp.s
+.PHONY : game/pnj.cpp.s
 
 main.o: main.cpp.o
 
@@ -488,9 +488,9 @@ help:
 	@echo "... game/player.o"
 	@echo "... game/player.i"
 	@echo "... game/player.s"
-	@echo "... game/tilemap.o"
-	@echo "... game/tilemap.i"
-	@echo "... game/tilemap.s"
+	@echo "... game/pnj.o"
+	@echo "... game/pnj.i"
+	@echo "... game/pnj.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

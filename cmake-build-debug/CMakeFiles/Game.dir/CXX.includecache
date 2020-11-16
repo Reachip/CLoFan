@@ -49,6 +49,8 @@ gameBeginningScreen.h
 /home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.h
 ../ui/messageBox.h
 /home/rached/CLionProjects/untitled1/ui/messageBox.h
+iostream
+-
 
 /home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.h
 ../game/entities.h
