@@ -3,7 +3,7 @@ project(Game)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp game/player.cpp game/player.h ui/button.cpp ui/button.h screens/cScreen.h screens/mainMenuScreen.cpp screens/mainMenuScreen.h screens/gameBeginningScreen.cpp screens/gameBeginningScreen.h screens/screens.h screens/scene1Screen.cpp screens/scene1Screen.h screens/cScreen.cpp game/door.cpp game/door.h game/entitie.cpp game/entitie.h game/entities.h game/background.cpp game/background.h ui/messageBox.cpp ui/messageBox.h game/pnj.cpp game/pnj.h)
+set(SOURCE_FILES src/main.cpp src/game/player.cpp src/game/player.h src/ui/button.cpp src/ui/button.h src/screens/cScreen.h src/screens/mainMenuScreen.cpp src/screens/mainMenuScreen.h src/screens/gameBeginningScreen.cpp src/screens/gameBeginningScreen.h src/screens/screens.h src/screens/scene1Screen.cpp src/screens/scene1Screen.h src/screens/cScreen.cpp src/game/door.cpp src/game/door.h src/game/entitie.cpp src/game/entitie.h src/game/entities.h src/game/background.cpp src/game/background.h src/ui/messageBox.cpp src/ui/messageBox.h src/game/pnj.cpp src/game/pnj.h)
 add_executable(Game ${SOURCE_FILES})
 
 # Detect and add SFML
