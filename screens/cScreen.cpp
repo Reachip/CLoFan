@@ -2,14 +2,14 @@
 // Created by rached on 13/11/2020.
 //
 
-#define HEIGHT 600
-#define WIDTH 1058
+#define HEIGHT 683
+#define WIDTH 960
 
 #include "cScreen.h"
 #define ECART_DE_PIXEL_COLLISION_FENETRE 25
 
 void cScreen::handleOutOfWindow(sf::RenderWindow &App) {
-    sf::Vector2f playerPosition = player.currentPosition.getPosition();
+    sf::Vector2f playerPosition = player.getSprite().getPosition();
     sf::Vector2i windowPosition = sf::Vector2i(WIDTH, HEIGHT);
 
     if (playerPosition.x < 0) {
