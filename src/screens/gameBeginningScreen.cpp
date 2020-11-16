@@ -7,7 +7,7 @@
 #include "../ui/messageBox.h"
 
 #define ECART_DE_PIXEL_COLLISION_FENETRE 25
-#define BACKGROUND_PATH "../assets/map_bois.png"
+#define BACKGROUND_PATH "./assets/map_bois.png"
 
 gameBeginningScreen::gameBeginningScreen(Player &player) : cScreen(player) {}
 

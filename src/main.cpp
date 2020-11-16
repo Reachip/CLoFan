@@ -2,7 +2,7 @@
 #define HEIGHT 683
 #define WIDTH 960
 #define WINDOWTITLE "A Way Out"
-#define MUSIC_PATH "../assets/music.ogg"
+#define MUSIC_PATH "./assets/music.ogg"
 #define MUSIC_VOLUME 0
 
 #include <SFML/Graphics.hpp>
