@@ -3,14 +3,15 @@
 #include "scene5Screen.h"
 #include "../game/background.h"
 
+#define FULLSTEP 6
+
 #define WIDTH 24
 #define HEIGHT 32
 
-#define TILEMAP_SPRIT_PATH "../assets/tiles/dungeon_tiles.png"
 using namespace sf;
 
 
-scene5Screen::scene5Screen(Player &player) : cScreen(player){}
+scene5Screen::scene5Screen(Player &player) : cScreen(player) {}
 
 
 
@@ -43,19 +44,34 @@ int scene5Screen::Run(sf::RenderWindow &App)
 
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
         {
-            handleUp(details);
+            for(int i=0; i<FULLSTEP; i++)
+            {
+                handleUp(details);
+            }
         }
 
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
-            handleDown(details);
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+        {
+            for(int i=0; i<FULLSTEP; i++)
+            {
+                handleDown(details);
+            }
         }
 
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
-            handleLeft(details);
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+        {
+            for(int i=0; i<FULLSTEP; i++)
+            {
+                handleLeft(details);
+            }
         }
 
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
-            handleRight(details);
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+        {
+            for(int i=0; i<FULLSTEP; i++)
+            {
+                handleRight(details);
+            }
         }
 
         else
