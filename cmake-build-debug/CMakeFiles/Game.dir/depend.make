@@ -16,14 +16,16 @@ CMakeFiles/Game.dir/game/player.cpp.o: ../game/entitie.h
 CMakeFiles/Game.dir/game/player.cpp.o: ../game/player.cpp
 CMakeFiles/Game.dir/game/player.cpp.o: ../game/player.h
 
-CMakeFiles/Game.dir/game/tilemap.cpp.o: ../game/tilemap.cpp
-CMakeFiles/Game.dir/game/tilemap.cpp.o: ../game/tilemap.h
+CMakeFiles/Game.dir/game/pnj.cpp.o: ../game/entitie.h
+CMakeFiles/Game.dir/game/pnj.cpp.o: ../game/pnj.cpp
+CMakeFiles/Game.dir/game/pnj.cpp.o: ../game/pnj.h
 
 CMakeFiles/Game.dir/main.cpp.o: ../game/background.h
 CMakeFiles/Game.dir/main.cpp.o: ../game/door.h
 CMakeFiles/Game.dir/main.cpp.o: ../game/entitie.h
 CMakeFiles/Game.dir/main.cpp.o: ../game/entities.h
 CMakeFiles/Game.dir/main.cpp.o: ../game/player.h
+CMakeFiles/Game.dir/main.cpp.o: ../game/pnj.h
 CMakeFiles/Game.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Game.dir/main.cpp.o: ../screens/cScreen.h
 CMakeFiles/Game.dir/main.cpp.o: ../screens/gameBeginningScreen.h
@@ -41,6 +43,7 @@ CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../game/door.h
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../game/entitie.h
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../game/entities.h
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../game/player.h
+CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../game/pnj.h
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../screens/cScreen.h
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../screens/gameBeginningScreen.cpp
 CMakeFiles/Game.dir/screens/gameBeginningScreen.cpp.o: ../screens/gameBeginningScreen.h
@@ -51,6 +54,7 @@ CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../game/door.h
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../game/entitie.h
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../game/entities.h
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../game/player.h
+CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../game/pnj.h
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../screens/cScreen.h
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../screens/mainMenuScreen.cpp
 CMakeFiles/Game.dir/screens/mainMenuScreen.cpp.o: ../screens/mainMenuScreen.h

@@ -27,12 +27,18 @@ door.h
 /home/rached/CLionProjects/untitled1/game/door.h
 background.h
 /home/rached/CLionProjects/untitled1/game/background.h
+pnj.h
+/home/rached/CLionProjects/untitled1/game/pnj.h
 
 /home/rached/CLionProjects/untitled1/game/player.h
 string
 -
 SFML/Graphics.hpp
 -
+entitie.h
+/home/rached/CLionProjects/untitled1/game/entitie.h
+
+/home/rached/CLionProjects/untitled1/game/pnj.h
 entitie.h
 /home/rached/CLionProjects/untitled1/game/entitie.h
 
@@ -49,14 +55,18 @@ gameBeginningScreen.h
 /home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.h
 ../ui/messageBox.h
 /home/rached/CLionProjects/untitled1/ui/messageBox.h
-iostream
--
 
 /home/rached/CLionProjects/untitled1/screens/gameBeginningScreen.h
 ../game/entities.h
 /home/rached/CLionProjects/untitled1/game/entities.h
 cScreen.h
 /home/rached/CLionProjects/untitled1/screens/cScreen.h
+
+/home/rached/CLionProjects/untitled1/ui/messageBox.cpp
+iostream
+-
+messageBox.h
+/home/rached/CLionProjects/untitled1/ui/messageBox.h
 
 /home/rached/CLionProjects/untitled1/ui/messageBox.h
 SFML/Graphics.hpp
