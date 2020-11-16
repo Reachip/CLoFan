@@ -13,8 +13,9 @@ gameBeginningScreen::gameBeginningScreen(Player &player) : cScreen(player) {}
 
 int gameBeginningScreen::Run(sf::RenderWindow &App) {
     sf::Event event;
+    sf::Image details;
 
-    background bg(BACKGROUND_PATH);
+    background bg(BACKGROUND_PATH, 0, 0);
     messageBox message("Lorem ipsum");
     door door1(490, 500);
 
@@ -57,7 +58,6 @@ int gameBeginningScreen::Run(sf::RenderWindow &App) {
             player.update();
 
         handleOutOfBackground(App);
-
         App.draw(bg);
         App.draw(door1);
         App.draw(message);
