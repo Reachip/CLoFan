@@ -6,8 +6,9 @@
 #define DOOR_SPRITE_IS_OPEN_PATH "./assets/porteo.png"
 
 #include "door.h"
+#include <iostream>
 
-door::door() : entitie(DOOR_SPRITE_PATH) {
+door::door(int x, int y) : entitie(DOOR_SPRITE_PATH, x, y) {
     openedDoor = texture;
 }
 

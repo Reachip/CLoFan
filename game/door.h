@@ -8,10 +8,24 @@
 #include <SFML/Graphics.hpp>
 #include "entitie.h"
 
+/*
+ * La classe door représente une porte dans le jeu.
+ * Son constructeur réclame la position initiale
+ * en x et en y de l'objet.
+ */
 class door : public entitie {
 public:
-    door(void);
+    door(int x, int y);
+    /*
+     * La méthode open permet de changer le sprite d'une
+     * porte fermée par un sprite d'une porte ouverte.
+     */
     void open();
+
+    /*
+    * La méthode close permet de changer le sprite d'une
+    * porte ouverte par un sprite d'une porte fermée.
+    */
     void close();
 
 private:
