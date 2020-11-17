@@ -6,8 +6,13 @@
 #define GAME_SCENE3SCREEN_H
 
 
-class scene3Screen {
+#include "cScreen.h"
 
+class scene3Screen : public cScreen {
+public:
+    scene3Screen(Player &player);
+
+    virtual int Run(sf::RenderWindow &App);
 };
 
 
