@@ -1,10 +1,9 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "scene2Screen.h"
-#include "../game/background.h"
+#include "../game/entities.h"
 #include "../ui/messageBox.h"
-#include "../game/bed.h"
-
+#include "iostream"
 #define FULLSTEP 6
 
 #define MAP "../assets/scene2.png"
@@ -14,16 +13,24 @@
 #define HEIGHT 32
 
 using namespace sf;
+using namespace std;
 
 scene2Screen::scene2Screen(Player &player) : cScreen(player) {}
 
 int scene2Screen::Run(sf::RenderWindow &App) {
-    bed lit(530, 560);
-    messageBox message("truc");
+    bool chairIsTouched = false;
+    bool bedIsTouched = false;
+    bool keyIsFound = false;
+
+    timer timer(80);
+    bed bed(530, 560);
+    chair chair(45, 300);
+
+    messageBox message("");
 
     sf::Event event;
 
-    player.currentPosition.setPosition(530, 500);
+    player.currentPosition.setPosition(452, 604);
     player.move_up();
     player.update();
 
@@ -33,20 +40,56 @@ int scene2Screen::Run(sf::RenderWindow &App) {
     details.loadFromFile(DETAILS);
 
     while (is_running) {
-
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-            player.currentPosition.setPosition(sf::Mouse::getPosition().x - 490, sf::Mouse::getPosition().y - 200);
+        while (App.pollEvent(event)) {
+            if (event.type == sf::Event::Closed)
+                is_running = false;
         }
 
         if (!message.animationIsFinish()) {
             message.animate();
         }
 
+        if (timer.isFinish()) {
+            // Game over
+        }
+
+        else {
+            timer.update();
+        }
+
         bool animPlayer = true;
 
-        while (App.pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
-                is_running = false;
+        if (chair.is_touched(player.currentPosition) && !chairIsTouched && !keyIsFound) {
+            message.update("Vous trouvez une cle sous la chaise. Appuyez sur S pour saisir cette cle. ");
+            chairIsTouched = true;
+        }
+
+        if (chair.is_touched(player.currentPosition) && !chairIsTouched && keyIsFound) {
+            message.update("Rien par ici, sauf une toile d'arraignee sous la chaise.\nVous aviez ramasse une cle par ici non ?");
+            chairIsTouched = true;
+        }
+
+        if (chair.is_touched(player.currentPosition) && !keyIsFound && sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+            message.update("Vous venez de vous munir de la cle.");
+            timer.restart();
+            keyIsFound = true;
+        }
+
+        if (!chair.is_touched(player.currentPosition)) {
+            chairIsTouched = false;
+        }
+
+        if (bed.is_touched(player.currentPosition) && !bedIsTouched) {
+            message.update("Dormir ou coder ?");
+            bedIsTouched = true;
+        }
+
+        if (!bed.is_touched(player.currentPosition)) {
+            bedIsTouched = false;
+        }
+
+        if (!bed.is_touched(player.currentPosition) && !chair.is_touched(player.currentPosition)) {
+            message.clear();
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
@@ -66,10 +109,13 @@ int scene2Screen::Run(sf::RenderWindow &App) {
         if (animPlayer)
             player.update();
 
+        system("clear");
         App.clear();
         App.draw(background);
+        App.draw(timer);
         App.draw(message);
-        App.draw(lit);
+        App.draw(bed);
+        App.draw(chair);
         App.draw(player);
         App.display();
     }
