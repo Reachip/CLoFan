@@ -29,14 +29,16 @@ int main() {
     std::vector<cScreen *> Screens;
 
     mainMenuScreen mainMenu(p1);
-    gameBeginningScreen gameBeginning(p1);
     scene1Screen scene1(p1);
     scene2Screen scene2(p1);
-    scene5Screen scene5(p1);
+    scene3Screen scene3(p1);
+    scene4Screen scene4(p1);
 
-    Screens.push_back(&scene2);
-    Screens.push_back(&scene5);
+    Screens.push_back(&mainMenu);
     Screens.push_back(&scene1);
+    Screens.push_back(&scene2);
+    Screens.push_back(&scene3);
+    Screens.push_back(&scene4);
 
     while (screen >= 0)
         screen = Screens[screen]->Run(App);
