@@ -14,5 +14,7 @@
 #include "money.h"
 #include "table.h"
 #include "timer.h"
+#include "bed.h"
+#include "chair.h"
 
 #endif //GAME_ENTITIES_H
