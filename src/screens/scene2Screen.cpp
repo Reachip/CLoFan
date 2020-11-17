@@ -23,7 +23,6 @@ scene2Screen::scene2Screen(Player &player) : cScreen(player) {}
 int scene2Screen::Run(sf::RenderWindow &App) {
     bool chairIsTouched1 = false;
     bool chairIsTouched2 = false;
-    bool bedIsTouched = false;
     bool keyIsFound = false;
     bool doorIsTouched = false;
     bool pnj1IsTouched = false;
@@ -50,7 +49,6 @@ int scene2Screen::Run(sf::RenderWindow &App) {
     timer timer(80);
     pnj pnj1(PNJ, 98, 300);
     pnj pnj2(PNJ, 792, 300);
-    bed bed(530, 560);
     chair chair(45, 300);
     library library1(320, 70);
     library library2(350, 70);
@@ -168,23 +166,6 @@ int scene2Screen::Run(sf::RenderWindow &App) {
             doorIsTouched = false;
         }
 
-        // LIT
-        if (bed.is_touched(player.currentPosition) && !bedIsTouched) {
-            message.update("Dormir ou coder ?");
-            bedIsTouched = true;
-        }
-
-        if (!bed.is_touched(player.currentPosition)) {
-            bedIsTouched = false;
-        }
-
-        if (!bed.is_touched(player.currentPosition) && !chair.is_touched(player.currentPosition) &&
-            !chair2.is_touched(player.currentPosition) && !pnj1.is_touched(player.currentPosition) &&
-            !door.is_touched(player.currentPosition)) {
-            message.clear();
-        }
-
-
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
             return 0;
 
@@ -206,7 +187,6 @@ int scene2Screen::Run(sf::RenderWindow &App) {
         App.draw(background);
         App.draw(timer);
         App.draw(message);
-        App.draw(bed);
         App.draw(chair);
         App.draw(pnj1);
         App.draw(pnj2);
