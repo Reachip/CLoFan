@@ -22,6 +22,8 @@ int scene4Screen::Run(sf::RenderWindow &App) {
     bool statueIsTouched;
     bool biblioIsTouched;
     bool litIsTouched;
+
+    std::string taskList = "NULL";
 //Initialisation des variables propres � la sc�ne================================================================================================================================
 
 
@@ -95,19 +97,34 @@ int scene4Screen::Run(sf::RenderWindow &App) {
 
 
         if (statue.is_touched(player.currentPosition) && !statueIsTouched) {
-            message.update("Le temps est au repos, vivez une journ�e normale.");
+
+                if(taskList=="NULL"){
+            message.update("Le temps est au repos, vivez une journee normale.");
+            taskList = "S";
+                }
+
+                if(taskList=="SB"){
+            message.update("Prendre le temps de s'instruire est capital.");
+                }
+
+
+
             statueIsTouched = true;
         }
+
 
         if (biblio.is_touched(player.currentPosition) && !biblioIsTouched) {
             message.update("Le savoir est la plus grande des armes.");
             biblioIsTouched = true;
         }
 
+        if(taskList=='S'){
         if (lit.is_touched(player.currentPosition) && !litIsTouched) {
             message.update("ZZZZzzzzz...");
+            taskList = "SB";
             litIsTouched = true;
-}
+            }
+        }
 
         if(lit.is_touched(player.currentPosition)){
             player.sleep();
