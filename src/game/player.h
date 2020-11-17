@@ -54,6 +54,8 @@ public:
 
     void move_down();
 
+    void sleep();
+
     /*
      * Met à jour le sprite pour produire l'animation.
      */

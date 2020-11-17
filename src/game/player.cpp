@@ -46,6 +46,18 @@ void Player::move_on_right() {
     this->animation.y = 1;
 }
 
+void Player::sleep(){
+    this->animation.y = 1;
+if (clock.getElapsedTime().asMilliseconds() >= 1000) {
+        if (this->animation.x * WIDTH > (2 * WIDTH))
+            this->animation.x = 0;
+
+        this->animation.x += 1;
+        _addSprite(sf::IntRect(animation.x * WIDTH + 5*WIDTH, animation.y * HEIGHT, WIDTH, HEIGHT));
+        clock.restart();
+    }
+}
+
 void Player::update() {
     // Affiche une nouvelle texture toutes les 50 millisecondes.
     if (clock.getElapsedTime().asMilliseconds() >= 100) {
