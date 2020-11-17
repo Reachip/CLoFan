@@ -55,10 +55,6 @@ int scene1Screen::Run(sf::RenderWindow &App) {
             message.animate();
         }
 
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-            player.currentPosition.setPosition(sf::Mouse::getPosition().x - 490, sf::Mouse::getPosition().y - 200);
-        }
-
         bool animPlayer = true;
 
         while (App.pollEvent(event)) {
@@ -86,7 +82,7 @@ int scene1Screen::Run(sf::RenderWindow &App) {
 
 
         if (chaise.is_touched(player.currentPosition) && !chaiseisTouched) {
-            message.update("Pas eu le temps de coder ça.");
+            message.update("Pas eu le temps de coder ï¿½a.");
             chaiseisTouched = true;
         }
         if (table.is_touched(player.currentPosition) && !tableisTouched) {
