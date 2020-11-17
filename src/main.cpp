@@ -23,7 +23,7 @@ int main() {
     int screen = 0;
 
     VideoMode videoMode = VideoMode(WIDTH, HEIGHT, sf::Style::Fullscreen);
-    RenderWindow App(videoMode, WINDOWTITLE);
+    RenderWindow App(videoMode, WINDOWTITLE, sf::Style::Titlebar | sf::Style::Close);
     App.setFramerateLimit(FPS);
     Player p1("rached");
     std::vector<cScreen *> Screens;
