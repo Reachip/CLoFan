@@ -13,5 +13,6 @@
 #include "key.h"
 #include "money.h"
 #include "table.h"
+#include "timer.h"
 
 #endif //GAME_ENTITIES_H

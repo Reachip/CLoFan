@@ -5,6 +5,7 @@
 #include "scene2Screen.h"
 #include "../game/entities.h"
 #include <iostream>
+#include <math.h>
 
 #define SCENE2_MAP "./"
 #define SCENE2_DETAILS "./"
@@ -12,12 +13,15 @@
 scene2Screen::scene2Screen(Player &player) : cScreen(player) {}
 
 int scene2Screen::Run(sf::RenderWindow &App) {
+    timer timer(8);
+
     library library(0, 0);
     money money(0, 0);
     key key(0, 0);
     table(0, 0);
 
     sf::Image details;
+
     bool animPlayer = true;
 
      //if (!details.loadFromFile(SCENE2_DETAILS))
@@ -30,6 +34,14 @@ int scene2Screen::Run(sf::RenderWindow &App) {
     player.update();
 
     while (is_running) {
+        if (!timer.isFinish())
+            timer.update();
+
+        else {
+            std::cout << "Game over" << std::endl;
+            timer.destroy();
+        }
+
         while (App.pollEvent(event)) {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) || event.type == sf::Event::Closed)
                 is_running = false;
@@ -57,6 +69,7 @@ int scene2Screen::Run(sf::RenderWindow &App) {
             player.update();
 
         App.clear();
+        App.draw(timer);
         App.display();
     }
 
