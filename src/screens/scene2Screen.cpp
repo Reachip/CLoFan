@@ -95,7 +95,7 @@ int scene2Screen::Run(sf::RenderWindow &App) {
 
         // CHAISE 1
         if (chair.is_touched(player.currentPosition) && !chairIsTouched1 && !keyIsFound) {
-            message.update("Vous trouvez une cle sous la chaise. Appuyez sur S pour saisir cette cle. ");
+            message.update("Vous trouvez une cle sous la chaise. Appuyez sur J pour saisir cette cle. ");
             chairIsTouched1 = true;
         }
 
@@ -158,7 +158,7 @@ int scene2Screen::Run(sf::RenderWindow &App) {
             doorIsTouched = true;
         }
 
-        if (door.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && !keyIsFound) {
+        if (door.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::J) && !keyIsFound) {
             message.update("Impossible d'ouvrir la porte ...");
             doorIsTouched = true;
         }
