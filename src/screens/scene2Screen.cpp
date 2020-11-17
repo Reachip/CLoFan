@@ -139,6 +139,7 @@ int scene2Screen::Run(sf::RenderWindow &App) {
 
         if (pnj1.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
             displayParcheminStatue1 = true;
+            pnj1IsTouched = true;
         }
 
         if (!pnj1.is_touched(player.currentPosition)) {
@@ -165,6 +166,11 @@ int scene2Screen::Run(sf::RenderWindow &App) {
         if (!door.is_touched(player.currentPosition)) {
             doorIsTouched = false;
         }
+
+        if (!door.is_touched(player.currentPosition) && !pnj1.is_touched(player.currentPosition) &&
+        !chair2.is_touched(player.currentPosition) && !chair.is_touched(player.currentPosition)
+        )
+            message.clear();
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
             return 0;
