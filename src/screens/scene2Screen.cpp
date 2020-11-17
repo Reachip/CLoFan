@@ -1,49 +1,54 @@
-//
-// Created by rached on 16/11/2020.
-//
-
-#include "scene2Screen.h"
-#include "../game/entities.h"
 #include <iostream>
-#include <math.h>
+#include <SFML/Graphics.hpp>
+#include "scene2Screen.h"
+#include "../game/background.h"
+#include "../ui/messageBox.h"
+#include "../game/bed.h"
 
-#define SCENE2_MAP "./"
-#define SCENE2_DETAILS "./"
+#define FULLSTEP 6
+
+#define MAP "../assets/scene2.png"
+#define DETAILS "../assets/scene2_details.png"
+
+#define WIDTH 24
+#define HEIGHT 32
+
+using namespace sf;
 
 scene2Screen::scene2Screen(Player &player) : cScreen(player) {}
+int scene2Screen::Run(sf::RenderWindow &App)
+{
+    bed lit(530, 560);
+    messageBox message("truc");
 
-int scene2Screen::Run(sf::RenderWindow &App) {
-    timer timer(8);
-
-    library library(0, 0);
-    money money(0, 0);
-    key key(0, 0);
-    table(0, 0);
-
-    sf::Image details;
-
-    bool animPlayer = true;
-
-     //if (!details.loadFromFile(SCENE2_DETAILS))
-        //throw;
-
-    //background background(SCENE2_MAP, 0, 0);
     sf::Event event;
 
+    player.currentPosition.setPosition(530, 500);
     player.move_up();
     player.update();
 
-    while (is_running) {
-        if (!timer.isFinish())
-            timer.update();
+    background background(MAP, 0, 0);
 
-        else {
-            std::cout << "Game over" << std::endl;
-            timer.destroy();
+    sf::Image details;
+    details.loadFromFile(DETAILS);
+
+    while (is_running)
+    {
+
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+            player.currentPosition.setPosition(sf::Mouse::getPosition().x-490, sf::Mouse::getPosition().y-200);
         }
 
-        while (App.pollEvent(event)) {
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) || event.type == sf::Event::Closed)
+        if(!message.animationIsFinish())
+        {
+            message.animate();
+        }
+
+        bool animPlayer = true;
+
+        while (App.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
                 is_running = false;
         }
 
@@ -51,27 +56,38 @@ int scene2Screen::Run(sf::RenderWindow &App) {
             return 0;
 
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+        {
             handleUp(details);
+        }
 
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+        {
             handleDown(details);
+        }
 
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+        {
             handleLeft(details);
+        }
 
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+        {
             handleRight(details);
+        }
 
         else
             animPlayer = false;
 
-        if (animPlayer)
+        if(animPlayer)
             player.update();
 
         App.clear();
-        App.draw(timer);
+        App.draw(background);
+        App.draw(message);
+        App.draw(lit);
+        App.draw(player);
         App.display();
     }
 
-    return -1;
+    return (-1);
 }

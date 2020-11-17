@@ -7,8 +7,6 @@
 #include "../ui/messageBox.h"
 #include "../game/bed.h"
 
-#define FULLSTEP 6
-
 #define WIDTH 24
 #define HEIGHT 32
 
@@ -62,34 +60,22 @@ int scene5Screen::Run(sf::RenderWindow &App)
 
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
         {
-            for(int i=0; i<FULLSTEP; i++)
-            {
-                handleUp(details);
-            }
+            handleUp(details);
         }
 
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
         {
-            for(int i=0; i<FULLSTEP; i++)
-            {
-                handleDown(details);
-            }
+            handleDown(details);
         }
 
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
         {
-            for(int i=0; i<FULLSTEP; i++)
-            {
-                handleLeft(details);
-            }
+            handleLeft(details);
         }
 
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
         {
-            for(int i=0; i<FULLSTEP; i++)
-            {
-                handleRight(details);
-            }
+            handleRight(details);
         }
 
         else
@@ -99,18 +85,15 @@ int scene5Screen::Run(sf::RenderWindow &App)
             player.update();
 
 
-            if(lit.is_touched(player.currentPosition)&&nbTouch<1)
-            {
-                message.update("ZZZZzzzzz");
-                nbTouch++;
-            }
-            if(!(lit.is_touched(player.currentPosition))){
-                message.clear();
-                nbTouch = 0;
-            }
-
-
-
+        if(lit.is_touched(player.currentPosition)&&nbTouch<1)
+        {
+            message.update("ZZZZzzzzz");
+            nbTouch++;
+        }
+        if(!(lit.is_touched(player.currentPosition))){
+            message.clear();
+            nbTouch = 0;
+        }
 
         App.clear();
         App.draw(background);

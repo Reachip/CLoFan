@@ -7,6 +7,8 @@
 
 #define WIDTH 24
 #define HEIGHT 32
+#define FULLSTEP 6
+
 
 #include "cScreen.h"
 #define ECART_DE_PIXEL_COLLISION_FENETRE 25
@@ -45,75 +47,83 @@ cScreen::cScreen(Player &player) : player(player)  {
 
 void cScreen::handleUp(sf::Image details)  {
     bool collision = false;
-
-    for(int i=0; i<=WIDTH; i++)
-    {
-        int joueurx = player.currentPosition.getPosition().x;
-        int joueury = player.currentPosition.getPosition().y+HEIGHT/2;
-
-        if(details.getPixel(joueurx+i, joueury) == sf::Color::Red)
+    for(int i=0; i < FULLSTEP; i++) {
+        for(int i=0; i<=WIDTH; i++)
         {
-            collision = true;
-        }
-    }
+            int joueurx = player.currentPosition.getPosition().x;
+            int joueury = player.currentPosition.getPosition().y+HEIGHT/2;
 
-    if(!collision){
-        player.move_up();
+            if(details.getPixel(joueurx+i, joueury) == sf::Color::Red)
+            {
+                collision = true;
+            }
+        }
+
+        if(!collision){
+            player.move_up();
+        }
     }
 }
 
 void cScreen::handleDown(sf::Image details) {
     bool collision = false;
 
-    for(int i=0; i<=WIDTH; i++)
-    {
-        int joueurx = player.currentPosition.getPosition().x;
-        int joueury = player.currentPosition.getPosition().y+HEIGHT;
-
-        if(details.getPixel(joueurx+i, joueury) == sf::Color::Red)
+    for(int i=0; i < FULLSTEP; i++) {
+        for(int i=0; i<=WIDTH; i++)
         {
-            collision = true;
-        }
-    }
+            int joueurx = player.currentPosition.getPosition().x;
+            int joueury = player.currentPosition.getPosition().y+HEIGHT;
 
-    if(!collision){
-        player.move_down();
+            if(details.getPixel(joueurx+i, joueury) == sf::Color::Red)
+            {
+                collision = true;
+            }
+        }
+
+        if(!collision){
+            player.move_down();
+        }
     }
 }
 
 void cScreen::handleLeft(sf::Image details) {
     bool collision = false;
-    for(int i=2; i<=HEIGHT/2-2; i++)
-    {
-        int joueurx = player.currentPosition.getPosition().x-1;
-        int joueury = player.currentPosition.getPosition().y+HEIGHT/2;
 
-        if(details.getPixel(joueurx, joueury+i) == sf::Color::Red)
+    for(int i=0; i < FULLSTEP; i++) {
+        for(int i=2; i<=HEIGHT/2-2; i++)
         {
-            collision = true;
-        }
-    }
+            int joueurx = player.currentPosition.getPosition().x-1;
+            int joueury = player.currentPosition.getPosition().y+HEIGHT/2;
 
-    if(!collision){
-        player.move_on_left();
+            if(details.getPixel(joueurx, joueury+i) == sf::Color::Red)
+            {
+                collision = true;
+            }
+        }
+
+        if(!collision){
+            player.move_on_left();
+        }
     }
 }
 
 void cScreen::handleRight(sf::Image details) {
     bool collision = false;
 
-    for(int i=2; i<=HEIGHT/2-2; i++)
-    {
-        int joueurx = player.currentPosition.getPosition().x+WIDTH+1;
-        int joueury = player.currentPosition.getPosition().y+HEIGHT/2;
-
-        if(details.getPixel(joueurx, joueury+i) == sf::Color::Red)
+    for(int i=0; i < FULLSTEP; i++) {
+        for(int i=2; i<=HEIGHT/2-2; i++)
         {
-            collision = true;
-        }
-    }
+            int joueurx = player.currentPosition.getPosition().x+WIDTH+1;
+            int joueury = player.currentPosition.getPosition().y+HEIGHT/2;
 
-    if(!collision){
-        player.move_on_right();
+            if(details.getPixel(joueurx, joueury+i) == sf::Color::Red)
+            {
+                collision = true;
+            }
+        }
+
+        if(!collision){
+            player.move_on_right();
+        }
     }
 }
