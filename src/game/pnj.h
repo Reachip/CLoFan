@@ -19,6 +19,7 @@
  * aucune autre fonctionnalitée, bien qu'elle ait été créee pour faciliter la compréhension du code.
  */
 class pnj : public entitie {
+    public:
     pnj(std::string spritePath, int x, int y);
 };
 
