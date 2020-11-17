@@ -35,7 +35,12 @@ bool timer::isFinish() {
 
 void timer::destroy() {
     text.setString("");
-    clock.restart();
+    time = 0;
+}
+
+void timer::restart() {
+    text.setString("");
+    time = 60;
 }
 
 void timer::draw(sf::RenderTarget &target, sf::RenderStates states) const {

@@ -18,6 +18,8 @@ public:
 
     void update();
 
+    void restart();
+
     void destroy();
 
     virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
