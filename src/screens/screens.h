@@ -10,5 +10,6 @@
 #include "scene1Screen.h"
 #include "scene4Screen.h"
 #include "scene2Screen.h"
+#include "scene3Screen.h"
 
 #endif //GAME_SCREENS_H
