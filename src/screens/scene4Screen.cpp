@@ -1,6 +1,6 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "scene5Screen.h"
+#include "scene4Screen.h"
 #include "../game/background.h"
 #include "../game/entities.h"
 
@@ -14,25 +14,23 @@
 using namespace sf;
 
 
-scene5Screen::scene5Screen(Player &player) : cScreen(player) {}
+scene4Screen::scene4Screen(Player &player) : cScreen(player) {}
+int scene4Screen::Run(sf::RenderWindow &App) {
 
 
-int scene5Screen::Run(sf::RenderWindow &App) {
-
-
-//Initialisation des variables propres à la scène================================================================================================================================
+//Initialisation des variables propres ï¿½ la scï¿½ne================================================================================================================================
     bool statueIsTouched;
     bool biblioIsTouched;
     bool litIsTouched;
-//Initialisation des variables propres à la scène================================================================================================================================
+//Initialisation des variables propres ï¿½ la scï¿½ne================================================================================================================================
 
 
-//Initialisation des entités=====================================================================================================================================================
+//Initialisation des entitï¿½s=====================================================================================================================================================
     pnj statue("../assets/statue1.png", 445, 550);
     bed lit(174, 280);
     messageBox message("Bienvenue dans la scene 4");
     library biblio(30, 185);
-//Initialisation des entités=====================================================================================================================================================
+//Initialisation des entitï¿½s=====================================================================================================================================================
 
     sf::Event event;
 
@@ -69,15 +67,15 @@ int scene5Screen::Run(sf::RenderWindow &App) {
 
 
 
-//Prise en charge du retour à l'écran titre======================================================================================================================================
+//Prise en charge du retour ï¿½ l'ï¿½cran titre======================================================================================================================================
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
             return 0;
-//Prise en charge du retour à l'écran titre======================================================================================================================================
+//Prise en charge du retour ï¿½ l'ï¿½cran titre======================================================================================================================================
 
 
 
 
-//Prise en charge du déplacement du joueur=======================================================================================================================================
+//Prise en charge du dï¿½placement du joueur=======================================================================================================================================
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
             handleUp(details);
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
@@ -91,13 +89,13 @@ int scene5Screen::Run(sf::RenderWindow &App) {
 
         if (animPlayer)
             player.update();
-//Prise en charge du déplacement du joueur=======================================================================================================================================
+//Prise en charge du dï¿½placement du joueur=======================================================================================================================================
 
 
 
 
         if (statue.is_touched(player.currentPosition) && !statueIsTouched) {
-            message.update("Le temps est au repos, vivez une journée normale.");
+            message.update("Le temps est au repos, vivez une journï¿½e normale.");
             statueIsTouched = true;
         }
 

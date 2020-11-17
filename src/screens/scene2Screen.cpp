@@ -4,11 +4,14 @@
 #include "../game/entities.h"
 #include "../ui/messageBox.h"
 #include "iostream"
+
 #define FULLSTEP 6
 
 #define MAP "../assets/scene2.png"
 #define DETAILS "../assets/scene2_details.png"
-
+#define PARCHEMIN_CHAISE_2 "../assets/parchemin_chaise.png"
+#define PARCHEMIN_STATUE_1 "../assets/parchemin_statue.png"
+#define PNJ "../assets/statue1.png"
 #define WIDTH 24
 #define HEIGHT 32
 
@@ -18,13 +21,45 @@ using namespace std;
 scene2Screen::scene2Screen(Player &player) : cScreen(player) {}
 
 int scene2Screen::Run(sf::RenderWindow &App) {
-    bool chairIsTouched = false;
+    bool chairIsTouched1 = false;
+    bool chairIsTouched2 = false;
     bool bedIsTouched = false;
     bool keyIsFound = false;
+    bool doorIsTouched = false;
+    bool pnj1IsTouched = false;
+    bool pnj2IsTouched = false;
+    bool levelUnlocked = false;
+
+
+    sf::Texture parcheminChaise2Texture;
+    if (!parcheminChaise2Texture.loadFromFile(PARCHEMIN_CHAISE_2)) {
+        throw;
+    }
+    sf::Sprite parcheminChaise2;
+    parcheminChaise2.setTexture(parcheminChaise2Texture);
+
+    sf::Texture parcheminStatue1Texture;
+
+    if (!parcheminStatue1Texture.loadFromFile(PARCHEMIN_STATUE_1)) {
+        throw;
+    }
+
+    sf::Sprite parcheminStatue1;
+    parcheminStatue1.setTexture(parcheminStatue1Texture);
 
     timer timer(80);
+    pnj pnj1(PNJ, 98, 300);
+    pnj pnj2(PNJ, 792, 300);
     bed bed(530, 560);
     chair chair(45, 300);
+    library library1(320, 70);
+    library library2(350, 70);
+
+    door door(425, 30);
+    door.close();
+
+    library library3(380, 70);
+    class chair chair2(320, 100);
 
     messageBox message("");
 
@@ -40,6 +75,9 @@ int scene2Screen::Run(sf::RenderWindow &App) {
     details.loadFromFile(DETAILS);
 
     while (is_running) {
+        bool displayParcheminStatue1 = false;
+        bool displayParcheminChaise2 = false;
+
         while (App.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 is_running = false;
@@ -51,34 +89,86 @@ int scene2Screen::Run(sf::RenderWindow &App) {
 
         if (timer.isFinish()) {
             // Game over
-        }
-
-        else {
+        } else {
             timer.update();
         }
 
         bool animPlayer = true;
 
-        if (chair.is_touched(player.currentPosition) && !chairIsTouched && !keyIsFound) {
+        // CHAISE 1
+        if (chair.is_touched(player.currentPosition) && !chairIsTouched1 && !keyIsFound) {
             message.update("Vous trouvez une cle sous la chaise. Appuyez sur S pour saisir cette cle. ");
-            chairIsTouched = true;
+            chairIsTouched1 = true;
         }
 
-        if (chair.is_touched(player.currentPosition) && !chairIsTouched && keyIsFound) {
-            message.update("Rien par ici, sauf une toile d'arraignee sous la chaise.\nVous aviez ramasse une cle par ici non ?");
-            chairIsTouched = true;
+        if (chair.is_touched(player.currentPosition) && !chairIsTouched1 && keyIsFound) {
+            message.update(
+                    "Rien par ici, sauf une toile d'arraignee sous la chaise.\nVous aviez ramasse une cle par ici non ?");
+            chairIsTouched1 = true;
         }
 
         if (chair.is_touched(player.currentPosition) && !keyIsFound && sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
             message.update("Vous venez de vous munir de la cle.");
             timer.restart();
+            chairIsTouched1 = true;
             keyIsFound = true;
         }
 
         if (!chair.is_touched(player.currentPosition)) {
-            chairIsTouched = false;
+            chairIsTouched1 = false;
         }
 
+
+        // CHAISE 2
+        if (chair2.is_touched(player.currentPosition) && !chairIsTouched2) {
+            message.update("Vous venez de trouver un parchemin. Maintenez sur entrer pour l'ouvrir.");
+            chairIsTouched2 = true;
+        }
+
+        if (chair2.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
+            displayParcheminChaise2 = true;
+        }
+
+        if (!chair2.is_touched(player.currentPosition)) {
+            chairIsTouched2 = false;
+        }
+
+        // PNJ 1
+        if (pnj1.is_touched(player.currentPosition) && !pnj1IsTouched) {
+            message.update("Vous venez de trouver un parchemin. Maintenez sur entrer pour l'ouvrir.");
+            pnj1IsTouched = true;
+        }
+
+        if (pnj1.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
+            displayParcheminStatue1 = true;
+        }
+
+        if (!pnj1.is_touched(player.currentPosition)) {
+            pnj1IsTouched = false;
+        }
+
+        // PORTE
+        if (door.is_touched(player.currentPosition) && !doorIsTouched) {
+            message.update("Appuyer sur entrer pour essayer d'ouvrir la porte");
+            doorIsTouched = true;
+        }
+
+        if (door.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && keyIsFound) {
+            message.update("Entrez !");
+            levelUnlocked = true;
+            doorIsTouched = true;
+        }
+
+        if (door.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && !keyIsFound) {
+            message.update("Impossible d'ouvrir la porte ...");
+            doorIsTouched = true;
+        }
+
+        if (!door.is_touched(player.currentPosition)) {
+            doorIsTouched = false;
+        }
+
+        // LIT
         if (bed.is_touched(player.currentPosition) && !bedIsTouched) {
             message.update("Dormir ou coder ?");
             bedIsTouched = true;
@@ -88,9 +178,12 @@ int scene2Screen::Run(sf::RenderWindow &App) {
             bedIsTouched = false;
         }
 
-        if (!bed.is_touched(player.currentPosition) && !chair.is_touched(player.currentPosition)) {
+        if (!bed.is_touched(player.currentPosition) && !chair.is_touched(player.currentPosition) &&
+            !chair2.is_touched(player.currentPosition) && !pnj1.is_touched(player.currentPosition) &&
+            !door.is_touched(player.currentPosition)) {
             message.clear();
         }
+
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
             return 0;
@@ -115,7 +208,24 @@ int scene2Screen::Run(sf::RenderWindow &App) {
         App.draw(message);
         App.draw(bed);
         App.draw(chair);
+        App.draw(pnj1);
+        App.draw(pnj2);
+        App.draw(chair2);
+        App.draw(library1);
+        App.draw(library2);
+        App.draw(library3);
         App.draw(player);
+
+        if (displayParcheminChaise2)
+            App.draw(parcheminChaise2);
+
+        if (displayParcheminStatue1)
+            App.draw(parcheminStatue1);
+
+        if (levelUnlocked)
+            door.open();
+
+        App.draw(door);
         App.display();
     }
 

@@ -4,9 +4,9 @@
 #include "../game/player.h"
 #include "cScreen.h"
 
-class scene5Screen : public cScreen {
+class scene4Screen : public cScreen {
 public:
-    scene5Screen(Player &player);
+    scene4Screen(Player &player);
 
     virtual int Run(sf::RenderWindow &App);
 };

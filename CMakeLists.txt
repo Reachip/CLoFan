@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(
         SOURCE_FILES src/main.cpp src/ui/button.cpp src/ui/button.h src/ui/messageBox.cpp src/ui/messageBox.h
-        src/screens/cScreen.h src/screens/cScreen.cpp src/screens/gameBeginningScreen.cpp src/screens/gameBeginningScreen.h
+        src/screens/cScreen.h src/screens/cScreen.cpp
         src/screens/mainMenuScreen.cpp src/screens/mainMenuScreen.h src/screens/scene1Screen.cpp src/screens/scene1Screen.h
         src/screens/scene2Screen.cpp src/screens/scene2Screen.h src/screens/scene3Screen.cpp src/screens/scene3Screen.h
         src/screens/scene5Screen.cpp src/screens/scene3Screen.cpp src/screens/screens.h src/game/background.cpp src/game/background.h
