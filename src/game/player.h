@@ -16,7 +16,6 @@
  */
 class Player : public entitie {
 private:
-    std::string name;
     sf::Clock clock;
     /*
      * Vecteur qui permet de jouer l'animation en fonction de la touche pressé.
@@ -29,7 +28,7 @@ private:
     void _addSprite(sf::IntRect);
 
 public:
-    Player(std::string name);
+    Player(void);
 
     /*
      * Position courante du personnage.

@@ -12,7 +12,6 @@
 
 
 Player::Player(std::string name) : entitie(PLAYER_SPRIT_PATH, 0, 0) {
-    this->name = name;
     this->animation = sf::Vector2i(1, 1);
     this->clock = sf::Clock();
 }

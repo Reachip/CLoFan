@@ -25,14 +25,14 @@ int main() {
     VideoMode videoMode = VideoMode(WIDTH, HEIGHT, sf::Style::Fullscreen);
     RenderWindow App(videoMode, WINDOWTITLE, sf::Style::Titlebar | sf::Style::Close);
     App.setFramerateLimit(FPS);
-    Player p1("rached");
+    Player player;
     std::vector<cScreen *> Screens;
 
-    mainMenuScreen mainMenu(p1);
-    scene1Screen scene1(p1);
-    scene2Screen scene2(p1);
-    scene3Screen scene3(p1);
-    scene4Screen scene4(p1);
+    mainMenuScreen mainMenu(player);
+    scene1Screen scene1(player);
+    scene2Screen scene2(player);
+    scene3Screen scene3(player);
+    scene4Screen scene4(player);
 
     Screens.push_back(&mainMenu);
     Screens.push_back(&scene1);
