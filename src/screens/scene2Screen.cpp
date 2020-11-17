@@ -109,7 +109,6 @@ int scene2Screen::Run(sf::RenderWindow &App) {
         if (animPlayer)
             player.update();
 
-        system("clear");
         App.clear();
         App.draw(background);
         App.draw(timer);
