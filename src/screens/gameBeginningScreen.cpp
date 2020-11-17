@@ -46,9 +46,7 @@ int gameBeginningScreen::Run(sf::RenderWindow &App) {
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
             message.clear();
             player.move_on_right();
-        }
-
-        else
+        } else
             animPlayer = false;
 
         if (!message.animationIsFinish())

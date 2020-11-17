@@ -11,6 +11,7 @@
 
 
 #include "cScreen.h"
+
 #define ECART_DE_PIXEL_COLLISION_FENETRE 25
 
 void cScreen::handleOutOfBackground(sf::RenderWindow &App) {
@@ -35,7 +36,7 @@ void cScreen::handleOutOfBackground(sf::RenderWindow &App) {
 }
 
 
-cScreen::cScreen(Player &player) : player(player)  {
+cScreen::cScreen(Player &player) : player(player) {
     player = player;
     is_running = true;
 }
@@ -45,21 +46,19 @@ cScreen::cScreen(Player &player) : player(player)  {
  * x = width
  */
 
-void cScreen::handleUp(sf::Image details)  {
+void cScreen::handleUp(sf::Image details) {
     bool collision = false;
-    for(int i=0; i < FULLSTEP; i++) {
-        for(int i=0; i<=WIDTH; i++)
-        {
+    for (int i = 0; i < FULLSTEP; i++) {
+        for (int i = 0; i <= WIDTH; i++) {
             int joueurx = player.currentPosition.getPosition().x;
-            int joueury = player.currentPosition.getPosition().y+HEIGHT/2;
+            int joueury = player.currentPosition.getPosition().y + HEIGHT / 2;
 
-            if(details.getPixel(joueurx+i, joueury) == sf::Color::Red)
-            {
+            if (details.getPixel(joueurx + i, joueury) == sf::Color::Red) {
                 collision = true;
             }
         }
 
-        if(!collision){
+        if (!collision) {
             player.move_up();
         }
     }
@@ -68,19 +67,17 @@ void cScreen::handleUp(sf::Image details)  {
 void cScreen::handleDown(sf::Image details) {
     bool collision = false;
 
-    for(int i=0; i < FULLSTEP; i++) {
-        for(int i=0; i<=WIDTH; i++)
-        {
+    for (int i = 0; i < FULLSTEP; i++) {
+        for (int i = 0; i <= WIDTH; i++) {
             int joueurx = player.currentPosition.getPosition().x;
-            int joueury = player.currentPosition.getPosition().y+HEIGHT;
+            int joueury = player.currentPosition.getPosition().y + HEIGHT;
 
-            if(details.getPixel(joueurx+i, joueury) == sf::Color::Red)
-            {
+            if (details.getPixel(joueurx + i, joueury) == sf::Color::Red) {
                 collision = true;
             }
         }
 
-        if(!collision){
+        if (!collision) {
             player.move_down();
         }
     }
@@ -89,19 +86,17 @@ void cScreen::handleDown(sf::Image details) {
 void cScreen::handleLeft(sf::Image details) {
     bool collision = false;
 
-    for(int i=0; i < FULLSTEP; i++) {
-        for(int i=2; i<=HEIGHT/2-2; i++)
-        {
-            int joueurx = player.currentPosition.getPosition().x-1;
-            int joueury = player.currentPosition.getPosition().y+HEIGHT/2;
+    for (int i = 0; i < FULLSTEP; i++) {
+        for (int i = 2; i <= HEIGHT / 2 - 2; i++) {
+            int joueurx = player.currentPosition.getPosition().x - 1;
+            int joueury = player.currentPosition.getPosition().y + HEIGHT / 2;
 
-            if(details.getPixel(joueurx, joueury+i) == sf::Color::Red)
-            {
+            if (details.getPixel(joueurx, joueury + i) == sf::Color::Red) {
                 collision = true;
             }
         }
 
-        if(!collision){
+        if (!collision) {
             player.move_on_left();
         }
     }
@@ -110,19 +105,17 @@ void cScreen::handleLeft(sf::Image details) {
 void cScreen::handleRight(sf::Image details) {
     bool collision = false;
 
-    for(int i=0; i < FULLSTEP; i++) {
-        for(int i=2; i<=HEIGHT/2-2; i++)
-        {
-            int joueurx = player.currentPosition.getPosition().x+WIDTH+1;
-            int joueury = player.currentPosition.getPosition().y+HEIGHT/2;
+    for (int i = 0; i < FULLSTEP; i++) {
+        for (int i = 2; i <= HEIGHT / 2 - 2; i++) {
+            int joueurx = player.currentPosition.getPosition().x + WIDTH + 1;
+            int joueury = player.currentPosition.getPosition().y + HEIGHT / 2;
 
-            if(details.getPixel(joueurx, joueury+i) == sf::Color::Red)
-            {
+            if (details.getPixel(joueurx, joueury + i) == sf::Color::Red) {
                 collision = true;
             }
         }
 
-        if(!collision){
+        if (!collision) {
             player.move_on_right();
         }
     }

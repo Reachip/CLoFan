@@ -6,6 +6,7 @@
 #define GAME_ENTITIE_H
 
 #include <SFML/Graphics.hpp>
+
 /*
  * entitie est la classe mère de toutes les entitées du jeu (porte, joueur, fond, PNJ etc.)
  * Elle hérite des comportements des classes sf::Drawable et sf::Transformable.

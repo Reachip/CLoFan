@@ -16,8 +16,8 @@
 using namespace sf;
 
 scene2Screen::scene2Screen(Player &player) : cScreen(player) {}
-int scene2Screen::Run(sf::RenderWindow &App)
-{
+
+int scene2Screen::Run(sf::RenderWindow &App) {
     bed lit(530, 560);
     messageBox message("truc");
 
@@ -32,22 +32,19 @@ int scene2Screen::Run(sf::RenderWindow &App)
     sf::Image details;
     details.loadFromFile(DETAILS);
 
-    while (is_running)
-    {
+    while (is_running) {
 
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-            player.currentPosition.setPosition(sf::Mouse::getPosition().x-490, sf::Mouse::getPosition().y-200);
+            player.currentPosition.setPosition(sf::Mouse::getPosition().x - 490, sf::Mouse::getPosition().y - 200);
         }
 
-        if(!message.animationIsFinish())
-        {
+        if (!message.animationIsFinish()) {
             message.animate();
         }
 
         bool animPlayer = true;
 
-        while (App.pollEvent(event))
-        {
+        while (App.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 is_running = false;
         }
@@ -55,30 +52,18 @@ int scene2Screen::Run(sf::RenderWindow &App)
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
             return 0;
 
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-        {
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
             handleUp(details);
-        }
-
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-        {
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
             handleDown(details);
-        }
-
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-        {
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
             handleLeft(details);
-        }
-
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-        {
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
             handleRight(details);
-        }
-
-        else
+        } else
             animPlayer = false;
 
-        if(animPlayer)
+        if (animPlayer)
             player.update();
 
         App.clear();

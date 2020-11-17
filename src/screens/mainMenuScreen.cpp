@@ -48,9 +48,9 @@ int mainMenuScreen::Run(sf::RenderWindow &App) {
         }
 
 
-        for(int i=0; i<6; i++){
-        player.move_on_right();
-        player.update();
+        for (int i = 0; i < 6; i++) {
+            player.move_on_right();
+            player.update();
         }
         App.clear();
         App.draw(background);

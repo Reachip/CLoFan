@@ -11,6 +11,7 @@
 class mainMenuScreen : public cScreen {
 public:
     mainMenuScreen(Player &player);
+
     virtual int Run(sf::RenderWindow &App);
 };
 

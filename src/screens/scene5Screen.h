@@ -7,6 +7,7 @@
 class scene5Screen : public cScreen {
 public:
     scene5Screen(Player &player);
+
     virtual int Run(sf::RenderWindow &App);
 };
 

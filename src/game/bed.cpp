@@ -3,6 +3,7 @@
 //
 
 #include "bed.h"
+
 #define BED "../assets/lit.png"
 
 bed::bed(int x, int y) : entitie(BED, x, y) {}

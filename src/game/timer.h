@@ -13,9 +13,13 @@
 class timer : public sf::Drawable, public sf::Transformable {
 public:
     timer(float _time);
+
     bool isFinish();
+
     void update();
+
     void destroy();
+
     virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 
 private:

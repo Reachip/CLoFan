@@ -3,10 +3,11 @@
 //
 
 #include "timer.h"
+
 #define FONT "../assets/LiberationSerif-Regular.ttf"
 
 timer::timer(float _time) {
-    if(!font.loadFromFile(FONT))
+    if (!font.loadFromFile(FONT))
         throw;
 
     time = _time;

@@ -4,6 +4,7 @@
 
 #ifndef GAME_BED_H
 #define GAME_BED_H
+
 #include "entitie.h"
 
 class bed : public entitie {

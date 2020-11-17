@@ -11,6 +11,7 @@
 class gameBeginningScreen : public cScreen {
 public:
     gameBeginningScreen(Player &player);
+
     virtual int Run(sf::RenderWindow &App);
 };
 

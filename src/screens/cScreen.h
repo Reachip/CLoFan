@@ -11,12 +11,17 @@
 class cScreen {
 public:
     cScreen(Player &player);
+
     virtual int Run(sf::RenderWindow &App) = 0;
+
     void handleOutOfBackground(sf::RenderWindow &App);
 
     void handleLeft(sf::Image details);
+
     void handleRight(sf::Image details);
+
     void handleUp(sf::Image details);
+
     void handleDown(sf::Image details);
 
 protected:

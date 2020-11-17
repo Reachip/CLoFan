@@ -15,7 +15,9 @@
 class background : public entitie {
 public:
     background(std::string spritePath, int x, int y);
+
     sf::Vector2u getSize();
+
     virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 };
 

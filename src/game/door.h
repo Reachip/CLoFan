@@ -16,6 +16,7 @@
 class door : public entitie {
 public:
     door(int x, int y);
+
     /*
      * La méthode open permet de changer le sprite d'une
      * porte fermée par un sprite d'une porte ouverte.

@@ -37,7 +37,7 @@ void messageBox::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 }
 
 void messageBox::animate() {
-    float new_x_position =  message.getPosition().y + ANIMATION_SPEED;
+    float new_x_position = message.getPosition().y + ANIMATION_SPEED;
     message.setPosition(POSITION_X, new_x_position);
 }
 
