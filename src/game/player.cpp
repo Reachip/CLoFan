@@ -48,7 +48,8 @@ void Player::move_on_right() {
 
 void Player::sleep(){
     this->animation.y = 1;
-if (clock.getElapsedTime().asMilliseconds() >= 1000) {
+
+    if (clock.getElapsedTime().asMilliseconds() >= 90) {
         if (this->animation.x * WIDTH > (2 * WIDTH))
             this->animation.x = 0;
 
