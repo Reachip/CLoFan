@@ -119,11 +119,11 @@ int scene2Screen::Run(sf::RenderWindow &App) {
 
         // CHAISE 2
         if (chair2.is_touched(player.currentPosition) && !chairIsTouched2) {
-            message.update("Vous venez de trouver un parchemin. Maintenez sur entrer pour l'ouvrir.");
+            message.update("Vous venez de trouver un parchemin. Maintenez la touche J pour l'ouvrir.");
             chairIsTouched2 = true;
         }
 
-        if (chair2.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
+        if (chair2.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::J)) {
             displayParcheminChaise2 = true;
         }
 
@@ -133,11 +133,11 @@ int scene2Screen::Run(sf::RenderWindow &App) {
 
         // PNJ 1
         if (pnj1.is_touched(player.currentPosition) && !pnj1IsTouched) {
-            message.update("Vous venez de trouver un parchemin. Maintenez sur entrer pour l'ouvrir.");
+            message.update("Vous venez de trouver un parchemin. Maintenez la touche J pour l'ouvrir.");
             pnj1IsTouched = true;
         }
 
-        if (pnj1.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
+        if (pnj1.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::J)) {
             displayParcheminStatue1 = true;
             pnj1IsTouched = true;
         }
@@ -148,7 +148,7 @@ int scene2Screen::Run(sf::RenderWindow &App) {
 
         // PORTE
         if (door.is_touched(player.currentPosition) && !doorIsTouched) {
-            message.update("Appuyer sur entrer pour essayer d'ouvrir la porte");
+            message.update("Appuyer sur la touche J pour essayer d'ouvrir la porte");
             doorIsTouched = true;
         }
 
