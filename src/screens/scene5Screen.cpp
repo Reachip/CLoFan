@@ -26,20 +26,24 @@ int scene5Screen::Run(sf::RenderWindow &App)
     bed lit(300, 360);
     messageBox message(" ");
 
-    bool collision = false;
     sf::Event event;
 
-    player.currentPosition.setPosition(270, 350);
+    player.currentPosition.setPosition(350, 500);
     player.move_up();
     player.update();
 
-    background background("../assets/scene2.png", 0, 0);
+    background background("../assets/scene4.png", 0, 0);
 
     sf::Image details;
-    details.loadFromFile("../assets/scene2_details.png");
+    details.loadFromFile("../assets/scene4_details.png");
 
     while (is_running)
     {
+
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+            player.currentPosition.setPosition(sf::Mouse::getPosition().x-490, sf::Mouse::getPosition().y-200);
+        }
+
         if(!message.animationIsFinish())
         {
             message.animate();
