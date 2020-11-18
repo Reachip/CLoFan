@@ -26,7 +26,7 @@ int main() {
     RenderWindow App(videoMode, WINDOWTITLE, sf::Style::Titlebar | sf::Style::Close);
     App.setFramerateLimit(FPS);
     Player player;
-    std::vector<cScreen *> Screens;
+    std::vector<baseScreen *> Screens;
 
     mainMenuScreen mainMenu(player);
     scene1Screen scene1(player);

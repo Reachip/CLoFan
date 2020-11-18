@@ -19,7 +19,7 @@
 using namespace sf;
 
 
-scene1Screen::scene1Screen(Player &player) : cScreen(player) {}
+scene1Screen::scene1Screen(Player &player) : baseScreen(player) {}
 
 
 int scene1Screen::Run(sf::RenderWindow &App) {

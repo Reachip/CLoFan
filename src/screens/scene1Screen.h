@@ -5,10 +5,10 @@
 #ifndef GAME_SCENE1SCREEN_H
 #define GAME_SCENE1SCREEN_H
 
-#include "cScreen.h"
+#include "baseScreen.h"
 
 
-class scene1Screen : public cScreen {
+class scene1Screen : public baseScreen {
 public:
     scene1Screen(Player &player);
 

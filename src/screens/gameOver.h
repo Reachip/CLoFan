@@ -5,9 +5,9 @@
 #ifndef GAME_GAMEOVER_H
 #define GAME_GAMEOVER_H
 
-#include "cScreen.h"
+#include "baseScreen.h"
 
-class gameOver : public cScreen {
+class gameOver : public baseScreen {
 public:
     gameOver(Player &player);
     virtual int Run(sf::RenderWindow &App);

@@ -25,7 +25,7 @@
 #define HEIGHT 32
 
 using namespace sf;
-scene3Screen::scene3Screen(Player &player) : cScreen(player) {}
+scene3Screen::scene3Screen(Player &player) : baseScreen(player) {}
 
 int scene3Screen::Run(sf::RenderWindow &App) {
     bool pnj1IsTouched = false;
@@ -125,7 +125,7 @@ int scene3Screen::Run(sf::RenderWindow &App) {
 
 
         if (pnj1.is_touched(player.currentPosition) && !pnj1IsTouched ) {
-            message.update("Vous ? Vous m'avez l'air I D I O T , résolvez cette enigme simple");
+            message.update("Vous ? Vous m'avez l'air I D I O T , rï¿½solvez cette enigme simple");
             pnj1IsTouched = true;
         }
 

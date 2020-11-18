@@ -14,7 +14,7 @@
 using namespace sf;
 
 
-scene4Screen::scene4Screen(Player &player) : cScreen(player) {}
+scene4Screen::scene4Screen(Player &player) : baseScreen(player) {}
 int scene4Screen::Run(sf::RenderWindow &App) {
 
 

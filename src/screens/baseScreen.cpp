@@ -10,11 +10,11 @@
 #define FULLSTEP 6
 
 
-#include "cScreen.h"
+#include "baseScreen.h"
 
 #define ECART_DE_PIXEL_COLLISION_FENETRE 25
 
-void cScreen::handleOutOfBackground(sf::RenderWindow &App) {
+void baseScreen::handleOutOfBackground(sf::RenderWindow &App) {
     sf::Vector2f playerPosition = player.getSprite().getPosition();
     sf::Vector2i windowPosition = sf::Vector2i(WIN_WIDTH, WIN_HEIGHT);
 
@@ -36,7 +36,7 @@ void cScreen::handleOutOfBackground(sf::RenderWindow &App) {
 }
 
 
-cScreen::cScreen(Player &player) : player(player) {
+baseScreen::baseScreen(Player &player) : player(player) {
     player = player;
     is_running = true;
 }
@@ -46,7 +46,7 @@ cScreen::cScreen(Player &player) : player(player) {
  * x = width
  */
 
-void cScreen::handleUp(sf::Image details) {
+void baseScreen::handleUp(sf::Image details) {
     bool collision = false;
     for (int i = 0; i < FULLSTEP; i++) {
         for (int i = 0; i <= WIDTH; i++) {
@@ -64,7 +64,7 @@ void cScreen::handleUp(sf::Image details) {
     }
 }
 
-void cScreen::handleDown(sf::Image details) {
+void baseScreen::handleDown(sf::Image details) {
     bool collision = false;
 
     for (int i = 0; i < FULLSTEP; i++) {
@@ -83,7 +83,7 @@ void cScreen::handleDown(sf::Image details) {
     }
 }
 
-void cScreen::handleLeft(sf::Image details) {
+void baseScreen::handleLeft(sf::Image details) {
     bool collision = false;
 
     for (int i = 0; i < FULLSTEP; i++) {
@@ -102,7 +102,7 @@ void cScreen::handleLeft(sf::Image details) {
     }
 }
 
-void cScreen::handleRight(sf::Image details) {
+void baseScreen::handleRight(sf::Image details) {
     bool collision = false;
 
     for (int i = 0; i < FULLSTEP; i++) {

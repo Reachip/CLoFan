@@ -9,7 +9,7 @@
 #include "mainMenuScreen.h"
 #include "../ui/button.h"
 
-mainMenuScreen::mainMenuScreen(Player &player) : cScreen(player) {
+mainMenuScreen::mainMenuScreen(Player &player) : baseScreen(player) {
     this->player = player;
 }
 

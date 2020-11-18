@@ -5,7 +5,7 @@
 #ifndef GAME_SCREENS_H
 #define GAME_SCREENS_H
 
-#include "cScreen.h"
+#include "baseScreen.h"
 #include "mainMenuScreen.h"
 #include "scene1Screen.h"
 #include "scene4Screen.h"

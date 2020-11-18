@@ -18,7 +18,7 @@
 using namespace sf;
 using namespace std;
 
-scene2Screen::scene2Screen(Player &player) : cScreen(player) {}
+scene2Screen::scene2Screen(Player &player) : baseScreen(player) {}
 
 int scene2Screen::Run(sf::RenderWindow &App) {
     sf::Clock clock;

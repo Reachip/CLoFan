@@ -6,9 +6,9 @@
 #define GAME_SCENE2SCREEN_H
 
 
-#include "cScreen.h"
+#include "baseScreen.h"
 
-class scene2Screen : public cScreen {
+class scene2Screen : public baseScreen {
 public:
     scene2Screen(Player &player);
 

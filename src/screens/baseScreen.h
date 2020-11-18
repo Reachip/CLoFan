@@ -2,15 +2,15 @@
 // Created by rached on 11/11/2020.
 //
 
-#ifndef GAME_CSCREEN_H
-#define GAME_CSCREEN_H
+#ifndef GAME_BASESCREEN_H
+#define GAME_BASESCREEN_H
 
 #include <SFML/Graphics.hpp>
 #include "../game/player.h"
 
-class cScreen {
+class baseScreen {
 public:
-    cScreen(Player &player);
+    baseScreen(Player &player);
 
     virtual int Run(sf::RenderWindow &App) = 0;
 
@@ -30,4 +30,4 @@ protected:
 };
 
 
-#endif //GAME_CSCREEN_H
+#endif //GAME_BASESCREEN_H

@@ -5,10 +5,10 @@
 #ifndef GAME_MAINMENUSCREEN_H
 #define GAME_MAINMENUSCREEN_H
 
-#include "cScreen.h"
+#include "baseScreen.h"
 #include "../game/player.h"
 
-class mainMenuScreen : public cScreen {
+class mainMenuScreen : public baseScreen {
 public:
     mainMenuScreen(Player &player);
 
