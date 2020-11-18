@@ -115,7 +115,7 @@ int baseScreen::getProgression() {
     std::ifstream saveFile(SAVEFILE);
 
     if (saveFile.is_open())
-         getline(saveFile, progression);
+        getline(saveFile, progression);
 
     try {
         return std::stoi(progression);

@@ -45,7 +45,7 @@ void Player::move_on_right() {
     this->animation.y = 1;
 }
 
-void Player::sleep(){
+void Player::sleep() {
     this->animation.y = 1;
 
     if (clock.getElapsedTime().asMilliseconds() >= 90) {
@@ -53,7 +53,7 @@ void Player::sleep(){
             this->animation.x = 0;
 
         this->animation.x += 1;
-        _addSprite(sf::IntRect(animation.x * WIDTH + 5*WIDTH, animation.y * HEIGHT, WIDTH, HEIGHT));
+        _addSprite(sf::IntRect(animation.x * WIDTH + 5 * WIDTH, animation.y * HEIGHT, WIDTH, HEIGHT));
         clock.restart();
     }
 }

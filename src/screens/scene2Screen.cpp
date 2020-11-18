@@ -170,8 +170,8 @@ int scene2Screen::Run(sf::RenderWindow &App) {
         }
 
         if (!door.is_touched(player.currentPosition) && !pnj1.is_touched(player.currentPosition) &&
-        !chair2.is_touched(player.currentPosition) && !chair.is_touched(player.currentPosition)
-        )
+            !chair2.is_touched(player.currentPosition) && !chair.is_touched(player.currentPosition)
+                )
             message.clear();
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
@@ -224,21 +224,24 @@ int scene2Screen::Run(sf::RenderWindow &App) {
 
 
 //Prise en charge des cheats code==============================================================================================================
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Equal)) {
-        return 3;
-    }
-
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::SemiColon)) {
-        return 1;
-    }
-
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Numpad1)) {
-        if(!pauseTimer){
-            timer.pause();
-        }else{
-            timer.unpause();
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) &&
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Equal)) {
+            return 3;
         }
-    }
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) &&
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::SemiColon)) {
+            return 1;
+        }
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) &&
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Numpad1)) {
+            if (!pauseTimer) {
+                timer.pause();
+            } else {
+                timer.unpause();
+            }
+        }
 //Prise en charge des cheats code==============================================================================================================
 
     }

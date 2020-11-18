@@ -4,6 +4,7 @@
 
 #define FONT_PATH "../assets/LiberationSerif-Regular.ttf"
 #define MENU_BG "../assets/menu_sfml.png"
+
 #include "../game/entities.h"
 #include "mainMenuScreen.h"
 #include "../ui/button.h"
@@ -65,9 +66,7 @@ int mainMenuScreen::Run(sf::RenderWindow &App) {
         }
 
         return -1;
-    }
-
-    else
+    } else
         return progression;
 }
 

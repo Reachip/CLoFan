@@ -11,6 +11,7 @@
 #include "../game/door.h"
 #include "../game/chair.h"
 #include"../game/pnj.h"
+
 #define PANCSIGN "../assets/pancsign.png"
 
 #define WIDTH 24
@@ -41,10 +42,10 @@ int scene1Screen::Run(sf::RenderWindow &App) {
     pancsign.setTexture(pancsignTexture);
 
     pnj panc("../assets/panc.png", 145, 110);
-    chair chaise(490,516);
+    chair chaise(490, 516);
     bed lit(530, 570);
-    door porte(425,30);
-    table table(380,516);
+    door porte(425, 30);
+    table table(380, 516);
 
     messageBox message("Bon reveil aventurier ");
 
@@ -61,19 +62,19 @@ int scene1Screen::Run(sf::RenderWindow &App) {
     player.update();
 
     while (is_running) {
-            bool displaypancsign = false;
-            int nbTouch = 0;
+        bool displaypancsign = false;
+        int nbTouch = 0;
 
 
         if (!message.animationIsFinish()) {
             message.animate();
         }
 
-//CHEAT Placement du joueur à la position de la souris======================================================================================
+//CHEAT Placement du joueur ï¿½ la position de la souris======================================================================================
         /*if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
             player.currentPosition.setPosition(sf::Mouse::getPosition().x - 490, sf::Mouse::getPosition().y - 200);
         }*/
-//CHEAT Placement du joueur à la position de la souris======================================================================================
+//CHEAT Placement du joueur ï¿½ la position de la souris======================================================================================
 
         bool animPlayer = true;
 
@@ -100,7 +101,6 @@ int scene1Screen::Run(sf::RenderWindow &App) {
             player.update();
 
 
-
         if (chaise.is_touched(player.currentPosition) && !chaiseisTouched) {
             message.update("Pas eu le temps de coder ca.");
             chaiseisTouched = true;
@@ -125,25 +125,27 @@ int scene1Screen::Run(sf::RenderWindow &App) {
 
         }
 
-        if(lit.is_touched(player.currentPosition)){
+        if (lit.is_touched(player.currentPosition)) {
             player.sleep();
 
-            }
+        }
         if (panc.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::J)) {
             displaypancsign = true;
             porteUnlocked = true;
         }
-        if (porte.is_touched(player.currentPosition) && (sf::Keyboard::isKeyPressed(sf::Keyboard::J)) && porteUnlocked)
-        {
+        if (porte.is_touched(player.currentPosition) && (sf::Keyboard::isKeyPressed(sf::Keyboard::J)) &&
+            porteUnlocked) {
             return 2;
         }
 
-        if (!panc.is_touched(player.currentPosition)&&!table.is_touched(player.currentPosition)&&!porte.is_touched(player.currentPosition) && !chaise.is_touched(player.currentPosition) && !lit.is_touched(player.currentPosition)) {
-        porteisTouched = false;
-        chaiseisTouched = false;
-        litisTouched = false;
-        tableisTouched = false;
-        message.clear();
+        if (!panc.is_touched(player.currentPosition) && !table.is_touched(player.currentPosition) &&
+            !porte.is_touched(player.currentPosition) && !chaise.is_touched(player.currentPosition) &&
+            !lit.is_touched(player.currentPosition)) {
+            porteisTouched = false;
+            chaiseisTouched = false;
+            litisTouched = false;
+            tableisTouched = false;
+            message.clear();
         }
 
 
@@ -163,13 +165,15 @@ int scene1Screen::Run(sf::RenderWindow &App) {
         App.display();
 
 //Prise en charge des cheats code==============================================================================================================
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Equal)) {
-        return 2;
-    }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) &&
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Equal)) {
+            return 2;
+        }
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::SemiColon)) {
-        return 0;
-    }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) &&
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::SemiColon)) {
+            return 0;
+        }
 
 //Prise en charge des cheats code==============================================================================================================
 

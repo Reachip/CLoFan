@@ -7,6 +7,7 @@
 #include "../game/background.h"
 #include "../game/entities.h"
 #include "../ui/messageBox.h"
+
 #define WIDTH 24
 #define HEIGHT 32
 
@@ -25,6 +26,7 @@
 #define HEIGHT 32
 
 using namespace sf;
+
 scene3Screen::scene3Screen(Player &player, int screenPosition) : baseScreen(player, screenPosition) {}
 
 int scene3Screen::Run(sf::RenderWindow &App) {
@@ -69,8 +71,8 @@ int scene3Screen::Run(sf::RenderWindow &App) {
     timer timer(80);
     pnj pnj1(PNJ_1, 750, 540);
     pnj pnj2(PNJ_2, 100, 540);
-    pnj pnj3(PNJ_3, 445,530);
-    pnj pnj4(PNJ_4, 445,140);
+    pnj pnj3(PNJ_3, 445, 530);
+    pnj pnj4(PNJ_4, 445, 140);
 
     messageBox message("");
 
@@ -110,7 +112,7 @@ int scene3Screen::Run(sf::RenderWindow &App) {
 
         // CHAISE 1
 
-        if (pnj3.is_touched(player.currentPosition) && !pnj3IsTouched ) {
+        if (pnj3.is_touched(player.currentPosition) && !pnj3IsTouched) {
             message.update("Appuie sur J pour lire le contenus de la pancarte ");
             pnj3IsTouched = true;
         }
@@ -118,7 +120,7 @@ int scene3Screen::Run(sf::RenderWindow &App) {
             displayaffiche1 = true;
         }
 
-        if (pnj4.is_touched(player.currentPosition) && !pnj4IsTouched ) {
+        if (pnj4.is_touched(player.currentPosition) && !pnj4IsTouched) {
             message.update("Appuie sur J pour lire le contenus de la pancarte ");
             pnj4IsTouched = true;
         }
@@ -127,7 +129,7 @@ int scene3Screen::Run(sf::RenderWindow &App) {
         }
 
 
-        if (pnj1.is_touched(player.currentPosition) && !pnj1IsTouched ) {
+        if (pnj1.is_touched(player.currentPosition) && !pnj1IsTouched) {
             message.update("Vous ? Vous m'avez l'air I D I O T , r�solvez cette enigme simple");
             pnj1IsTouched = true;
         }
@@ -145,7 +147,8 @@ int scene3Screen::Run(sf::RenderWindow &App) {
             displayenigme1 = true;
         }
 
-        if (!pnj1.is_touched(player.currentPosition) && !pnj2.is_touched(player.currentPosition) && !pnj3.is_touched(player.currentPosition) && !pnj4.is_touched(player.currentPosition)) {
+        if (!pnj1.is_touched(player.currentPosition) && !pnj2.is_touched(player.currentPosition) &&
+            !pnj3.is_touched(player.currentPosition) && !pnj4.is_touched(player.currentPosition)) {
             pnj1IsTouched = false;
             pnj2IsTouched = false;
             pnj3IsTouched = false;
@@ -153,13 +156,11 @@ int scene3Screen::Run(sf::RenderWindow &App) {
             message.clear();
         }
 
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::M))
-        {
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::M)) {
             player.currentPosition.setPosition(452, 200);
             player.update();
         }
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Numpad1))
-        {
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Numpad1)) {
             player.currentPosition.setPosition(452, 200);
             player.update();
         }
@@ -207,21 +208,24 @@ int scene3Screen::Run(sf::RenderWindow &App) {
         App.display();
 
 //Prise en charge des cheats code==============================================================================================================
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Equal)) {
-        return 0;
-    }
-
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::SemiColon)) {
-        return 3;
-    }
-
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Numpad1)) {
-        if(!pauseTimer){
-            timer.pause();
-        }else{
-            timer.unpause();
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) &&
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Equal)) {
+            return 0;
         }
-    }
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) &&
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::SemiColon)) {
+            return 3;
+        }
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) &&
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Numpad1)) {
+            if (!pauseTimer) {
+                timer.pause();
+            } else {
+                timer.unpause();
+            }
+        }
 //Prise en charge des cheats code==============================================================================================================
 
     }

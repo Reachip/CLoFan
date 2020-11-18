@@ -10,6 +10,7 @@
 class gameOver : public baseScreen {
 public:
     gameOver(Player &player, int screenPosition);
+
     virtual int Run(sf::RenderWindow &App);
 };
 
