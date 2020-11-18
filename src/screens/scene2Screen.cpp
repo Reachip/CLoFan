@@ -86,7 +86,7 @@ int scene2Screen::Run(sf::RenderWindow &App) {
         }
 
         if (timer.isFinish()) {
-            // Game over
+            return 5;
         } else {
             timer.update();
         }
