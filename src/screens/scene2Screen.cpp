@@ -199,7 +199,7 @@ int scene2Screen::Run(sf::RenderWindow &App) {
         App.draw(library1);
         App.draw(library2);
         App.draw(library3);
-        App.draw(player);
+
 
         if (displayParcheminChaise2)
             App.draw(parcheminChaise2);
@@ -216,6 +216,7 @@ int scene2Screen::Run(sf::RenderWindow &App) {
         }
 
         App.draw(door);
+        App.draw(player);
         App.display();
     }
 
