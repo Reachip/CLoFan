@@ -36,9 +36,10 @@ void baseScreen::handleOutOfBackground(sf::RenderWindow &App) {
 }
 
 
-baseScreen::baseScreen(Player &player) : player(player) {
+baseScreen::baseScreen(Player &player, int screenPosition) : player(player) {
     player = player;
     is_running = true;
+    this->screenPosition = screenPosition;
 }
 
 /*
@@ -99,6 +100,27 @@ void baseScreen::handleLeft(sf::Image details) {
         if (!collision) {
             player.move_on_left();
         }
+    }
+}
+
+void baseScreen::saveProgression() {
+    std::ofstream saveFile;
+    saveFile.open(SAVEFILE);
+    saveFile << std::to_string(screenPosition);
+    saveFile.close();
+}
+
+int baseScreen::getProgression() {
+    std::string progression;
+    std::ifstream saveFile(SAVEFILE);
+
+    if (saveFile.is_open())
+         getline(saveFile, progression);
+
+    try {
+        return std::stoi(progression);
+    } catch (const std::invalid_argument &e) {
+        return 0;
     }
 }
 

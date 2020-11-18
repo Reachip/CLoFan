@@ -26,12 +26,12 @@ int main() {
     Player player;
     std::vector<baseScreen *> Screens;
 
-    mainMenuScreen mainMenu(player);
-    scene1Screen scene1(player);
-    scene2Screen scene2(player);
-    scene3Screen scene3(player);
-    scene4Screen scene4(player);
-    gameOver gameOver(player);
+    mainMenuScreen mainMenu(player, 0);
+    scene1Screen scene1(player, 1);
+    scene2Screen scene2(player, 2);
+    scene3Screen scene3(player, 4);
+    scene4Screen scene4(player, 3);
+    gameOver gameOver(player, 0);
 
     Screens.push_back(&mainMenu);
     Screens.push_back(&scene1);

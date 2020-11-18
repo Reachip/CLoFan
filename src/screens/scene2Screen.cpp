@@ -18,9 +18,10 @@
 using namespace sf;
 using namespace std;
 
-scene2Screen::scene2Screen(Player &player) : baseScreen(player) {}
+scene2Screen::scene2Screen(Player &player, int screenPosition) : baseScreen(player, screenPosition) {}
 
 int scene2Screen::Run(sf::RenderWindow &App) {
+    saveProgression();
     sf::Clock clock;
 
     bool chairIsTouched1 = false;

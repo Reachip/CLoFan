@@ -6,7 +6,7 @@
 
 class scene4Screen : public baseScreen {
 public:
-    scene4Screen(Player &player);
+    scene4Screen(Player &player, int screenPosition);
 
     virtual int Run(sf::RenderWindow &App);
 };

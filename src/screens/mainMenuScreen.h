@@ -10,7 +10,7 @@
 
 class mainMenuScreen : public baseScreen {
 public:
-    mainMenuScreen(Player &player);
+    mainMenuScreen(Player &player, int screenPosition);
 
     virtual int Run(sf::RenderWindow &App);
 };

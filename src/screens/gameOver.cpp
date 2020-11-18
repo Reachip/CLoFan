@@ -7,8 +7,9 @@
 
 #define GAMEOVER "../assets/GAME_OVER.png"
 
-gameOver::gameOver(Player &player) : baseScreen(player) {}
+gameOver::gameOver(Player &player, int screenPosition) : baseScreen(player, screenPosition) {}
 int gameOver::Run(sf::RenderWindow &App) {
+    saveProgression();
     sf::Event event;
     background background(GAMEOVER, 0, 0);
 

@@ -4,62 +4,70 @@
 
 #define FONT_PATH "../assets/LiberationSerif-Regular.ttf"
 #define MENU_BG "../assets/menu_sfml.png"
-
 #include "../game/entities.h"
 #include "mainMenuScreen.h"
 #include "../ui/button.h"
 
-mainMenuScreen::mainMenuScreen(Player &player) : baseScreen(player) {
+mainMenuScreen::mainMenuScreen(Player &player, int screenPosition) : baseScreen(player, screenPosition) {
     this->player = player;
 }
 
 int mainMenuScreen::Run(sf::RenderWindow &App) {
-    player.currentPosition.setPosition(0, 530);
+    int progression = getProgression();
 
-    sf::Event Event;
-    sf::Text quitButton = quitMenuButton();
-    sf::Text startButton = startMenuButton();
-    sf::Font font;
+    if (progression == 0) {
+        saveProgression();
 
-    background background(MENU_BG, 0, 0);
+        player.currentPosition.setPosition(0, 530);
 
-    if (!font.loadFromFile(FONT_PATH))
-        throw;
+        sf::Event Event;
+        sf::Text quitButton = quitMenuButton();
+        sf::Text startButton = startMenuButton();
+        sf::Font font;
 
-    startButton.setFont(font);
-    quitButton.setFont(font);
+        background background(MENU_BG, 0, 0);
 
-    while (is_running) {
-        while (App.pollEvent(Event)) {
-            if (Event.type == sf::Event::Closed)
-                is_running = false;
-        }
+        if (!font.loadFromFile(FONT_PATH))
+            throw;
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
-            return 1;
+        startButton.setFont(font);
+        quitButton.setFont(font);
 
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-            if (buttonIsTouched(startButton, App)) {
-                return 1;
+        while (is_running) {
+            while (App.pollEvent(Event)) {
+                if (Event.type == sf::Event::Closed)
+                    is_running = false;
             }
 
-            if (buttonIsTouched(quitButton, App))
-                is_running = false;
-        }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
+                return 1;
+
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                if (buttonIsTouched(startButton, App)) {
+                    return 1;
+                }
+
+                if (buttonIsTouched(quitButton, App))
+                    is_running = false;
+            }
 
 
-        for (int i = 0; i < 6; i++) {
-            player.move_on_right();
-            player.update();
+            for (int i = 0; i < 6; i++) {
+                player.move_on_right();
+                player.update();
+            }
+            App.clear();
+            App.draw(background);
+            App.draw(quitButton);
+            App.draw(startButton);
+            App.draw(player);
+            App.display();
         }
-        App.clear();
-        App.draw(background);
-        App.draw(quitButton);
-        App.draw(startButton);
-        App.draw(player);
-        App.display();
+
+        return -1;
     }
 
-    return -1;
+    else
+        return progression;
 }
 

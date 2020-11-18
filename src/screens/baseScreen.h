@@ -4,13 +4,16 @@
 
 #ifndef GAME_BASESCREEN_H
 #define GAME_BASESCREEN_H
+#define SAVEFILE "./sauvegarde.txt"
 
 #include <SFML/Graphics.hpp>
+#include <fstream>
+#include <string>
 #include "../game/player.h"
 
 class baseScreen {
 public:
-    baseScreen(Player &player);
+    baseScreen(Player &player, int screenPosition);
 
     virtual int Run(sf::RenderWindow &App) = 0;
 
@@ -24,7 +27,12 @@ public:
 
     void handleDown(sf::Image details);
 
+    void saveProgression();
+
+    int getProgression();
+
 protected:
+    int screenPosition;
     Player player;
     bool is_running;
 };

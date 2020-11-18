@@ -25,9 +25,10 @@
 #define HEIGHT 32
 
 using namespace sf;
-scene3Screen::scene3Screen(Player &player) : baseScreen(player) {}
+scene3Screen::scene3Screen(Player &player, int screenPosition) : baseScreen(player, screenPosition) {}
 
 int scene3Screen::Run(sf::RenderWindow &App) {
+    saveProgression();
     bool pnj1IsTouched = false;
     bool pnj2IsTouched = false;
     bool pnj3IsTouched = false;
