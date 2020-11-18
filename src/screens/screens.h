@@ -11,5 +11,6 @@
 #include "scene4Screen.h"
 #include "scene2Screen.h"
 #include "scene3Screen.h"
+#include "gameOver.h"
 
 #endif //GAME_SCREENS_H

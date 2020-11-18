@@ -86,7 +86,7 @@ int scene2Screen::Run(sf::RenderWindow &App) {
         }
 
         if (timer.isFinish()) {
-            // Game over
+            return 5;
         } else {
             timer.update();
         }
@@ -95,7 +95,7 @@ int scene2Screen::Run(sf::RenderWindow &App) {
 
         // CHAISE 1
         if (chair.is_touched(player.currentPosition) && !chairIsTouched1 && !keyIsFound) {
-            message.update("Vous trouvez une cle sous la chaise. Appuyez sur S pour saisir cette cle. ");
+            message.update("Vous trouvez une cle sous la chaise. Appuyez sur J pour saisir cette cle. ");
             chairIsTouched1 = true;
         }
 
@@ -119,11 +119,11 @@ int scene2Screen::Run(sf::RenderWindow &App) {
 
         // CHAISE 2
         if (chair2.is_touched(player.currentPosition) && !chairIsTouched2) {
-            message.update("Vous venez de trouver un parchemin. Maintenez sur entrer pour l'ouvrir.");
+            message.update("Vous venez de trouver un parchemin. Maintenez la touche J pour l'ouvrir.");
             chairIsTouched2 = true;
         }
 
-        if (chair2.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
+        if (chair2.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::J)) {
             displayParcheminChaise2 = true;
         }
 
@@ -133,12 +133,13 @@ int scene2Screen::Run(sf::RenderWindow &App) {
 
         // PNJ 1
         if (pnj1.is_touched(player.currentPosition) && !pnj1IsTouched) {
-            message.update("Vous venez de trouver un parchemin. Maintenez sur entrer pour l'ouvrir.");
+            message.update("Vous venez de trouver un parchemin. Maintenez la touche J pour l'ouvrir.");
             pnj1IsTouched = true;
         }
 
-        if (pnj1.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
+        if (pnj1.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::J)) {
             displayParcheminStatue1 = true;
+            pnj1IsTouched = true;
         }
 
         if (!pnj1.is_touched(player.currentPosition)) {
@@ -147,7 +148,7 @@ int scene2Screen::Run(sf::RenderWindow &App) {
 
         // PORTE
         if (door.is_touched(player.currentPosition) && !doorIsTouched) {
-            message.update("Appuyer sur entrer pour essayer d'ouvrir la porte");
+            message.update("Appuyer sur la touche J pour essayer d'ouvrir la porte");
             doorIsTouched = true;
         }
 
@@ -157,7 +158,7 @@ int scene2Screen::Run(sf::RenderWindow &App) {
             doorIsTouched = true;
         }
 
-        if (door.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && !keyIsFound) {
+        if (door.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::J) && !keyIsFound) {
             message.update("Impossible d'ouvrir la porte ...");
             doorIsTouched = true;
         }
@@ -165,6 +166,11 @@ int scene2Screen::Run(sf::RenderWindow &App) {
         if (!door.is_touched(player.currentPosition)) {
             doorIsTouched = false;
         }
+
+        if (!door.is_touched(player.currentPosition) && !pnj1.is_touched(player.currentPosition) &&
+        !chair2.is_touched(player.currentPosition) && !chair.is_touched(player.currentPosition)
+        )
+            message.clear();
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
             return 0;
