@@ -38,8 +38,8 @@ int main() {
     Screens.push_back(&mainMenu);
     Screens.push_back(&scene1);
     Screens.push_back(&scene2);
-    Screens.push_back(&scene3);
     Screens.push_back(&scene4);
+    Screens.push_back(&scene3);
     Screens.push_back(&gameOver);
 
     while (screen >= 0)
