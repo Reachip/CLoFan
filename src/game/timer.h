@@ -20,7 +20,9 @@ public:
 
     void restart();
 
-    void destroy();
+    void pause();
+
+    void unpause();
 
     virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 
@@ -29,6 +31,7 @@ private:
     sf::Text text;
     sf::Font font;
     int time;
+    bool is_paused;
 };
 
 

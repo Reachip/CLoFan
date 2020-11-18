@@ -17,12 +17,14 @@ timer::timer(float _time) {
 }
 
 void timer::update() {
-    int elapsedTime = clock.getElapsedTime().asSeconds();
+    if (!is_paused) {
+        int elapsedTime = clock.getElapsedTime().asSeconds();
 
-    if (elapsedTime >= 1) {
-        this->time--;
-        text.setString(std::to_string(time));
-        clock.restart();
+        if (elapsedTime >= 1) {
+            this->time--;
+            text.setString(std::to_string(time));
+            clock.restart();
+        }
     }
 }
 
@@ -33,9 +35,13 @@ bool timer::isFinish() {
     return false;
 }
 
-void timer::destroy() {
-    text.setString("");
-    time = 0;
+void timer::pause() {
+    text.setString(std::to_string(time));
+    is_paused = true;
+}
+
+void timer::unpause() {
+    is_paused = false;
 }
 
 void timer::restart() {
