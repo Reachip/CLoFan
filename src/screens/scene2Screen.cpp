@@ -51,7 +51,7 @@ int scene2Screen::Run(sf::RenderWindow &App) {
     timer timer(80);
     pnj pnj1(PNJ, 98, 300);
     pnj pnj2(PNJ, 792, 300);
-    chair chair(45, 300);
+    chair chair(45, 350);
     library library1(320, 70);
     library library2(350, 70);
 
@@ -144,9 +144,6 @@ int scene2Screen::Run(sf::RenderWindow &App) {
             pnj1IsTouched = true;
         }
 
-        if (!pnj1.is_touched(player.currentPosition)) {
-            pnj1IsTouched = false;
-        }
 
         // PORTE
         if (door.is_touched(player.currentPosition) && !doorIsTouched) {
