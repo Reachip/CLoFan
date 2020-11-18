@@ -9,6 +9,8 @@
 #define HEIGHT 32
 #define FULLSTEP 6
 
+#define SAVEFILE "./sauvegarde"
+
 
 #include "baseScreen.h"
 

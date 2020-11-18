@@ -4,7 +4,6 @@
 
 #ifndef GAME_BASESCREEN_H
 #define GAME_BASESCREEN_H
-#define SAVEFILE "./sauvegarde.txt"
 
 #include <SFML/Graphics.hpp>
 #include <fstream>
