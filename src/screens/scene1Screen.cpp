@@ -28,6 +28,7 @@ int scene1Screen::Run(sf::RenderWindow &App) {
     bool chaiseisTouched = false;
     bool litisTouched = false;
     bool porteisTouched = false;
+    bool porteUnlocked = false;
 
     Texture pancsignTexture;
     if (!pancsignTexture.loadFromFile(PANCSIGN)) {
@@ -125,8 +126,9 @@ int scene1Screen::Run(sf::RenderWindow &App) {
             }
         if (panc.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::J)) {
             displaypancsign = true;
+            porteUnlocked = true;
         }
-        if (porte.is_touched(player.currentPosition) && (sf::Keyboard::isKeyPressed(sf::Keyboard::J)))
+        if (porte.is_touched(player.currentPosition) && (sf::Keyboard::isKeyPressed(sf::Keyboard::J)) && porteUnlocked)
         {
             return 2;
         }
