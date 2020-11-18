@@ -19,9 +19,11 @@ int scene4Screen::Run(sf::RenderWindow &App) {
 
 
 //Initialisation des variables propres � la sc�ne================================================================================================================================
-    bool statueIsTouched;
-    bool biblioIsTouched;
-    bool litIsTouched;
+    bool statueIsTouched = false;
+    bool biblioIsTouched = false;
+    bool litIsTouched = false;
+    bool chaiseIsTouched = false;
+    bool porteIsTouched = false;
 
     std::string taskList = "NULL";
 //Initialisation des variables propres � la sc�ne================================================================================================================================
@@ -32,6 +34,8 @@ int scene4Screen::Run(sf::RenderWindow &App) {
     bed lit(174, 280);
     messageBox message("Bienvenue dans la scene 4");
     library biblio(30, 185);
+    chair chaise(30,530);
+    door porte(425, 32);
 //Initialisation des entit�s=====================================================================================================================================================
 
     sf::Event event;
@@ -103,8 +107,21 @@ int scene4Screen::Run(sf::RenderWindow &App) {
             taskList = "S";
                 }
 
+                if(taskList=="S"){
+            message.update("Le temps est au repos, vivez une journee normale.");
+                }
+
                 if(taskList=="SB"){
             message.update("Prendre le temps de s'instruire est capital.");
+                }
+
+                if(taskList=="SBL"){
+                    message.update("Prenons une pause, trouvons un endroit pour s'asseoir.");
+                }
+
+                if(taskList=="SBLT"){
+                    message.update("Comment faisiez-vous pour rammasser un objet avant?");
+                    taskList="SBLTh";
                 }
 
 
@@ -113,10 +130,6 @@ int scene4Screen::Run(sf::RenderWindow &App) {
         }
 
 
-        if (biblio.is_touched(player.currentPosition) && !biblioIsTouched) {
-            message.update("Le savoir est la plus grande des armes.");
-            biblioIsTouched = true;
-        }
 
         if(taskList=='S'){
         if (lit.is_touched(player.currentPosition) && !litIsTouched) {
@@ -126,14 +139,62 @@ int scene4Screen::Run(sf::RenderWindow &App) {
             }
         }
 
+        if(taskList=="SB"){
+        if (biblio.is_touched(player.currentPosition) && !biblioIsTouched) {
+            message.update("Le savoir est la plus grande des armes.");
+            biblioIsTouched = true;
+            taskList = "SBL";
+            }
+        }
+
+        if(taskList=="SBL"){
+            if(chaise.is_touched(player.currentPosition) && !chaiseIsTouched){
+                message.update("Quelque chose brille sous la chaise.");
+                chaiseIsTouched = true;
+                taskList = "SBLT";
+            }
+        }
+
+
+
+            if(taskList=="SBLT"){
+
+            if(chaise.is_touched(player.currentPosition) && !chaiseIsTouched){
+                message.update("Quelque chose brille sous la chaise.");
+                chaiseIsTouched = true;
+            }
+
+            if(chaise.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::J)){
+                message.update("Oh, une piece, c'est votre jour de chance.");
+            }
+        }
+
+            if(taskList=="SBLTh"){
+
+            if(chaise.is_touched(player.currentPosition) && !chaiseIsTouched){
+                message.update("Quelque chose brille sous la chaise. Appuyez sur J pour le ramasser.");
+                chaiseIsTouched = true;
+            }
+
+            if(chaise.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::J)){
+                message.update("Oh, une piece, c'est votre jour de chance.");
+            }
+        }
+
+
+
+//Animation du personnage qui dort lorqu'il touche le lit ===========================================================================================================================================
         if(lit.is_touched(player.currentPosition)){
             player.sleep();
             }
+//Animation du personnage qui dort lorqu'il touche le lit ===========================================================================================================================================
 
-        if (!statue.is_touched(player.currentPosition) && !biblio.is_touched(player.currentPosition) && !lit.is_touched(player.currentPosition)) {
+
+        if (!statue.is_touched(player.currentPosition) && !biblio.is_touched(player.currentPosition) && !lit.is_touched(player.currentPosition) && !chaise.is_touched(player.currentPosition)) {
         statueIsTouched = false;
         biblioIsTouched = false;
         litIsTouched = false;
+        chaiseIsTouched = false;
         message.clear();
         }
 
@@ -144,6 +205,8 @@ int scene4Screen::Run(sf::RenderWindow &App) {
         App.draw(lit);
         App.draw(biblio);
         App.draw(statue);
+        App.draw(chaise);
+        App.draw(porte);
         App.draw(player);
         App.display();
     }
