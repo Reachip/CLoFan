@@ -142,9 +142,14 @@ int scene3Screen::Run(sf::RenderWindow &App) {
             displayenigme1 = true;
         }
 
-        if (!pnj1.is_touched(player.currentPosition)) {
+        if (!pnj1.is_touched(player.currentPosition) && !pnj2.is_touched(player.currentPosition) && !pnj3.is_touched(player.currentPosition) && !pnj4.is_touched(player.currentPosition)) {
             pnj1IsTouched = false;
+            pnj2IsTouched = false;
+            pnj3IsTouched = false;
+            pnj4IsTouched = false;
+            message.clear();
         }
+
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::M))
         {
             player.currentPosition.setPosition(452, 200);
