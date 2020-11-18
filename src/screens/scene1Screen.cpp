@@ -68,9 +68,11 @@ int scene1Screen::Run(sf::RenderWindow &App) {
             message.animate();
         }
 
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+//CHEAT Placement du joueur à la position de la souris======================================================================================
+        /*if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
             player.currentPosition.setPosition(sf::Mouse::getPosition().x - 490, sf::Mouse::getPosition().y - 200);
-        }
+        }*/
+//CHEAT Placement du joueur à la position de la souris======================================================================================
 
         bool animPlayer = true;
 
