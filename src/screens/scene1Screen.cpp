@@ -10,6 +10,8 @@
 #include"../game/pnj.h"
 #include "../game/door.h"
 #include "../game/chair.h"
+#include"../game/pnj.h"
+#define PANCSIGN "../assets/pancsign.png"
 
 #define WIDTH 24
 #define HEIGHT 32
@@ -21,12 +23,20 @@ scene1Screen::scene1Screen(Player &player) : cScreen(player) {}
 
 
 int scene1Screen::Run(sf::RenderWindow &App) {
-
+    bool pancisTouched = false;
     bool tableisTouched = false;
-    bool chaiseisTouched= false;
-    bool litisTouched= false;
-    bool porteisTouched= false;
+    bool chaiseisTouched = false;
+    bool litisTouched = false;
+    bool porteisTouched = false;
 
+    Texture pancsignTexture;
+    if (!pancsignTexture.loadFromFile(PANCSIGN)) {
+        throw;
+    }
+    Sprite pancsign;
+    pancsign.setTexture(pancsignTexture);
+
+    pnj panc("../assets/panc.png", 145, 110);
     chair chaise(490,516);
     bed lit(530, 570);
     door porte(425,30);
@@ -47,12 +57,16 @@ int scene1Screen::Run(sf::RenderWindow &App) {
     player.update();
 
     while (is_running) {
-
+            bool displaypancsign = false;
             int nbTouch = 0;
 
 
         if (!message.animationIsFinish()) {
             message.animate();
+        }
+
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+            player.currentPosition.setPosition(sf::Mouse::getPosition().x - 490, sf::Mouse::getPosition().y - 200);
         }
 
         bool animPlayer = true;
@@ -82,15 +96,19 @@ int scene1Screen::Run(sf::RenderWindow &App) {
 
 
         if (chaise.is_touched(player.currentPosition) && !chaiseisTouched) {
-            message.update("Pas eu le temps de coder �a.");
+            message.update("Pas eu le temps de coder ca.");
             chaiseisTouched = true;
         }
+        if (panc.is_touched(player.currentPosition) && !pancisTouched) {
+            message.update("Appuie sur J pour lire le contenus de la pancarte");
+            pancisTouched = true;
+        }
         if (table.is_touched(player.currentPosition) && !tableisTouched) {
-            message.update("On t'a jamais dis de pas mettre tes pieds sur la table?.");
+            message.update("On t'a jamais dis de pas mettre tes pieds sur la table?");
             tableisTouched = true;
         }
         if (porte.is_touched(player.currentPosition) && !porteisTouched) {
-            message.update("Appuie sur J pour continuer");
+            message.update("Avez vous lus la pancarte a droite ? Si Oui appuyez sur J pour continuer");
             porteisTouched = true;
         }
 
@@ -105,12 +123,15 @@ int scene1Screen::Run(sf::RenderWindow &App) {
             player.sleep();
 
             }
+        if (panc.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::J)) {
+            displaypancsign = true;
+        }
         if (porte.is_touched(player.currentPosition) && (sf::Keyboard::isKeyPressed(sf::Keyboard::J)))
         {
             return 2;
         }
 
-        if (!table.is_touched(player.currentPosition)&&!porte.is_touched(player.currentPosition) && !chaise.is_touched(player.currentPosition) && !lit.is_touched(player.currentPosition)) {
+        if (!panc.is_touched(player.currentPosition)&&!table.is_touched(player.currentPosition)&&!porte.is_touched(player.currentPosition) && !chaise.is_touched(player.currentPosition) && !lit.is_touched(player.currentPosition)) {
         porteisTouched = false;
         chaiseisTouched = false;
         litisTouched = false;
@@ -126,7 +147,12 @@ int scene1Screen::Run(sf::RenderWindow &App) {
         App.draw(chaise);
         App.draw(porte);
         App.draw(table);
+        App.draw(panc);
         App.draw(player);
+
+        if (displaypancsign)
+            App.draw(pancsign);
+
         App.display();
     }
 
