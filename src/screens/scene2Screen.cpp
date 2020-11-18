@@ -105,7 +105,7 @@ int scene2Screen::Run(sf::RenderWindow &App) {
             chairIsTouched1 = true;
         }
 
-        if (chair.is_touched(player.currentPosition) && !keyIsFound && sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+        if (chair.is_touched(player.currentPosition) && !keyIsFound && sf::Keyboard::isKeyPressed(sf::Keyboard::J)) {
             message.update("Vous venez de vous munir de la cle.");
             timer.restart();
             chairIsTouched1 = true;
