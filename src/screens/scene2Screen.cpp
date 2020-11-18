@@ -152,7 +152,7 @@ int scene2Screen::Run(sf::RenderWindow &App) {
             doorIsTouched = true;
         }
 
-        if (door.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && keyIsFound) {
+        if (door.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::J) && keyIsFound) {
             message.update("Entrez !");
             levelUnlocked = true;
             doorIsTouched = true;
