@@ -33,12 +33,14 @@ int main() {
     scene2Screen scene2(player);
     scene3Screen scene3(player);
     scene4Screen scene4(player);
+    gameOver gameOver(player);
 
     Screens.push_back(&mainMenu);
     Screens.push_back(&scene1);
     Screens.push_back(&scene2);
     Screens.push_back(&scene3);
     Screens.push_back(&scene4);
+    Screens.push_back(&gameOver);
 
     while (screen >= 0)
         screen = Screens[screen]->Run(App);
