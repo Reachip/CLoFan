@@ -18,7 +18,7 @@ public:
 
     void update();
 
-    void restart();
+    void restart(int newTime);
 
     void pause();
 

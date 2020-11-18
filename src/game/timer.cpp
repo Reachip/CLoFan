@@ -44,9 +44,9 @@ void timer::unpause() {
     is_paused = false;
 }
 
-void timer::restart() {
+void timer::restart(int newTime) {
     text.setString("");
-    time = 60;
+    time = newTime;
 }
 
 void timer::draw(sf::RenderTarget &target, sf::RenderStates states) const {
