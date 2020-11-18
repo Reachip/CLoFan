@@ -108,7 +108,7 @@ int scene1Screen::Run(sf::RenderWindow &App) {
             tableisTouched = true;
         }
         if (porte.is_touched(player.currentPosition) && !porteisTouched) {
-            message.update("Avez vous lus la pancarte a droite ? Si Oui appuyez sur J pour continuer");
+            message.update("Avez vous lus la pancarte a gauche ? Si Oui appuyez sur J pour continuer");
             porteisTouched = true;
         }
 
