@@ -33,6 +33,8 @@ int scene3Screen::Run(sf::RenderWindow &App) {
     bool pnj3IsTouched = false;
     bool pnj4IsTouched = false;
 
+    bool pauseTimer = false;
+
     sf::Texture affiche1Texture;
     if (!affiche1Texture.loadFromFile(AFFICHE_1)) {
         throw;
@@ -202,6 +204,25 @@ int scene3Screen::Run(sf::RenderWindow &App) {
             App.draw(enigme1);
 
         App.display();
+
+//Prise en charge des cheats code==============================================================================================================
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Equal)) {
+        return 0;
+    }
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::SemiColon)) {
+        return 3;
+    }
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Numpad1)) {
+        if(!pauseTimer){
+            timer.pause();
+        }else{
+            timer.unpause();
+        }
+    }
+//Prise en charge des cheats code==============================================================================================================
+
     }
 
     return (-1);

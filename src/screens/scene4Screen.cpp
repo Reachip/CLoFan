@@ -26,6 +26,8 @@ int scene4Screen::Run(sf::RenderWindow &App) {
     bool oldManIsTouched = false;
     bool porteIsTouched = false;
 
+    bool pauseTimer = false;
+
     std::string taskList = "NULL";
 //Initialisation des variables propres � la sc�ne================================================================================================================================
 
@@ -64,7 +66,7 @@ int scene4Screen::Run(sf::RenderWindow &App) {
         if (!message.animationIsFinish()) {
             message.animate();
         }
-
+//Prise en charge des cheats code==============================================================================================================
 
 //CHEAT Placement du joueur à la position de la souris======================================================================================
         /*if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
@@ -270,7 +272,29 @@ int scene4Screen::Run(sf::RenderWindow &App) {
         App.draw(oldMan);
         App.draw(player);
         App.display();
+
+
+
+//Prise en charge des cheats code==============================================================================================================
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Equal)) {
+        return 4;
     }
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::SemiColon)) {
+        return 2;
+    }
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Numpad1)) {
+        if(!pauseTimer){
+            countdown.pause();
+        }else{
+            countdown.unpause();
+        }
+    }
+//Prise en charge des cheats code==============================================================================================================
+
+
+}
 
 
     return (-1);

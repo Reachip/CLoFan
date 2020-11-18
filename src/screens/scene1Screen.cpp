@@ -30,6 +30,8 @@ int scene1Screen::Run(sf::RenderWindow &App) {
     bool porteisTouched = false;
     bool porteUnlocked = false;
 
+    bool pauseTimer = false;
+
     Texture pancsignTexture;
     if (!pancsignTexture.loadFromFile(PANCSIGN)) {
         throw;
@@ -156,6 +158,19 @@ int scene1Screen::Run(sf::RenderWindow &App) {
             App.draw(pancsign);
 
         App.display();
+
+//Prise en charge des cheats code==============================================================================================================
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Equal)) {
+        return 2;
+    }
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::SemiColon)) {
+        return 0;
+    }
+
+//Prise en charge des cheats code==============================================================================================================
+
+
     }
 
 
