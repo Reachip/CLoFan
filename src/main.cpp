@@ -2,24 +2,22 @@
 #define HEIGHT 683
 #define WIDTH 960
 #define WINDOWTITLE "A Way Out"
-#define MUSIC_PATH "../assets/music.ogg"
-#define MUSIC_VOLUME 0
+#define MUSIC_PATH "../assets/smash-bros-brawl-8-bit.ogg"
+#define MUSIC_VOLUME 5
 
 #include <SFML/Graphics.hpp>
-#include <iostream>
 #include <SFML/Audio.hpp>
 #include "screens/screens.h"
 
 using namespace sf;
 
 int main() {
-    //sf::Music music;
-    //music.setVolume(MUSIC_VOLUME);
+    sf::Music music;
+    music.setVolume(MUSIC_VOLUME);
 
-    //if (!music.openFromFile(MUSIC_PATH))
-    //    return -1; // erreur
+    if (!music.openFromFile(MUSIC_PATH))
+        return -1; // erreur
 
-    //music.play();
     int screen = 0;
 
     VideoMode videoMode = VideoMode(WIDTH, HEIGHT, sf::Style::Fullscreen);
@@ -41,6 +39,9 @@ int main() {
     Screens.push_back(&scene4);
     Screens.push_back(&scene3);
     Screens.push_back(&gameOver);
+
+    music.setLoop(true);
+    music.play();
 
     while (screen >= 0)
         screen = Screens[screen]->Run(App);
