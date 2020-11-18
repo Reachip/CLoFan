@@ -16,7 +16,7 @@
  */
 class Player : public entitie {
 private:
-    sf::Clock clock;
+        sf::Clock clock;
     /*
      * Vecteur qui permet de jouer l'animation en fonction de la touche pressé.
      */
