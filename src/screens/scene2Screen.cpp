@@ -21,6 +21,8 @@ using namespace std;
 scene2Screen::scene2Screen(Player &player) : cScreen(player) {}
 
 int scene2Screen::Run(sf::RenderWindow &App) {
+    sf::Clock clock;
+
     bool chairIsTouched1 = false;
     bool chairIsTouched2 = false;
     bool keyIsFound = false;
@@ -208,8 +210,13 @@ int scene2Screen::Run(sf::RenderWindow &App) {
         if (displayParcheminStatue1)
             App.draw(parcheminStatue1);
 
-        if (levelUnlocked)
+        if (levelUnlocked) {
             door.open();
+
+            if (clock.getElapsedTime().asSeconds() >= 1) {
+                return 3;
+            }
+        }
 
         App.draw(door);
         App.display();
