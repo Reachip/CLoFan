@@ -23,6 +23,7 @@ int scene4Screen::Run(sf::RenderWindow &App) {
     bool biblioIsTouched = false;
     bool litIsTouched = false;
     bool chaiseIsTouched = false;
+    bool oldManIsTouched = false;
     bool porteIsTouched = false;
 
     std::string taskList = "NULL";
@@ -36,6 +37,12 @@ int scene4Screen::Run(sf::RenderWindow &App) {
     library biblio(30, 185);
     chair chaise(30,530);
     door porte(425, 32);
+    porte.close();
+    pnj oldMan("../assets/old_man.png",530,530);
+    timer countdown(6000);
+
+    sf::Clock clock;
+    clock.restart();
 //Initialisation des entit�s=====================================================================================================================================================
 
     sf::Event event;
@@ -99,7 +106,7 @@ int scene4Screen::Run(sf::RenderWindow &App) {
 
 
 
-
+//Liste des différentes tâches à réaliser========================================================================================================================================
         if (statue.is_touched(player.currentPosition) && !statueIsTouched) {
 
                 if(taskList=="NULL"){
@@ -120,9 +127,20 @@ int scene4Screen::Run(sf::RenderWindow &App) {
                 }
 
                 if(taskList=="SBLT"){
-                    message.update("Comment faisiez-vous pour rammasser un objet avant?");
+                    message.update("Comment faisiez-vous pour ramasser un objet avant?");
                     taskList="SBLTh";
                 }
+
+                if(taskList=="SBLTP"){
+                    message.update("Ce vieux monsieur a l'air dans une situation plus que misereuse.");
+                    //taskList="SBLTh";
+                }
+
+                if(taskList=="SBLTPC"){
+                    message.update("Une clef, a quoi cela peut bien servir?");
+                    //taskList="SBLTh";
+                }
+
 
 
 
@@ -133,7 +151,8 @@ int scene4Screen::Run(sf::RenderWindow &App) {
 
         if(taskList=='S'){
         if (lit.is_touched(player.currentPosition) && !litIsTouched) {
-            message.update("ZZZZzzzzz...");
+            message.update("Vous dormez longtemps et le temps passe");
+            countdown.restart(70-clock.getElapsedTime().asSeconds());
             taskList = "SB";
             litIsTouched = true;
             }
@@ -141,7 +160,8 @@ int scene4Screen::Run(sf::RenderWindow &App) {
 
         if(taskList=="SB"){
         if (biblio.is_touched(player.currentPosition) && !biblioIsTouched) {
-            message.update("Le savoir est la plus grande des armes.");
+            message.update("Le savoir est la plus grande des armes. Vous lisez pendant un moment.");
+            countdown.restart(60-clock.getElapsedTime().asSeconds());
             biblioIsTouched = true;
             taskList = "SBL";
             }
@@ -157,8 +177,7 @@ int scene4Screen::Run(sf::RenderWindow &App) {
 
 
 
-            if(taskList=="SBLT"){
-
+        if(taskList=="SBLT"){
             if(chaise.is_touched(player.currentPosition) && !chaiseIsTouched){
                 message.update("Quelque chose brille sous la chaise.");
                 chaiseIsTouched = true;
@@ -166,11 +185,11 @@ int scene4Screen::Run(sf::RenderWindow &App) {
 
             if(chaise.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::J)){
                 message.update("Oh, une piece, c'est votre jour de chance.");
+                taskList = "SBLTP";
             }
         }
 
-            if(taskList=="SBLTh"){
-
+        if(taskList=="SBLTh"){
             if(chaise.is_touched(player.currentPosition) && !chaiseIsTouched){
                 message.update("Quelque chose brille sous la chaise. Appuyez sur J pour le ramasser.");
                 chaiseIsTouched = true;
@@ -178,9 +197,38 @@ int scene4Screen::Run(sf::RenderWindow &App) {
 
             if(chaise.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::J)){
                 message.update("Oh, une piece, c'est votre jour de chance.");
+                taskList = "SBLTP";
             }
         }
 
+        if(taskList=="SBLTP"){
+            if(oldMan.is_touched(player.currentPosition) && !oldManIsTouched){
+                oldManIsTouched = true;
+                message.update(" \"Oh c'est une jolie piece, je vous l'echange contre cette clef que j'ai trouve.\" ");
+            }
+
+            if(oldMan.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::J)){
+                message.update("Vous avez obtenu une clef.");
+                taskList = "SBLTPC";
+            }
+        }
+
+        if(taskList=="SBLTPC"){
+                if(porte.is_touched(player.currentPosition) && !porteIsTouched){
+                   porteIsTouched = true;
+                   message.update("Tenter d'ouvrir la porte?");
+                }
+
+                if(porte.is_touched(player.currentPosition) && sf::Keyboard::isKeyPressed(sf::Keyboard::Key::J)){
+                porte.open();
+                App.draw(porte);
+                App.draw(player);
+                App.display();
+                sleep(milliseconds(500));
+                return 4;
+                }
+        }
+//Liste des différentes tâches à réaliser========================================================================================================================================
 
 
 //Animation du personnage qui dort lorqu'il touche le lit ===========================================================================================================================================
@@ -190,23 +238,33 @@ int scene4Screen::Run(sf::RenderWindow &App) {
 //Animation du personnage qui dort lorqu'il touche le lit ===========================================================================================================================================
 
 
-        if (!statue.is_touched(player.currentPosition) && !biblio.is_touched(player.currentPosition) && !lit.is_touched(player.currentPosition) && !chaise.is_touched(player.currentPosition)) {
+        if (!statue.is_touched(player.currentPosition) && !biblio.is_touched(player.currentPosition) && !lit.is_touched(player.currentPosition) && !chaise.is_touched(player.currentPosition) && !oldMan.is_touched(player.currentPosition) && !porte.is_touched(player.currentPosition)) {
         statueIsTouched = false;
         biblioIsTouched = false;
         litIsTouched = false;
         chaiseIsTouched = false;
+        oldManIsTouched = false;
+        porteIsTouched = false;
         message.clear();
+        }
+
+        countdown.update();
+
+        if (countdown.isFinish()){
+            return 5;
         }
 
 
         App.clear();
         App.draw(background);
         App.draw(message);
+        App.draw(countdown);
         App.draw(lit);
         App.draw(biblio);
         App.draw(statue);
         App.draw(chaise);
         App.draw(porte);
+        App.draw(oldMan);
         App.draw(player);
         App.display();
     }
